@@ -22,10 +22,17 @@ class Game extends Component {
   constructor(props) {
     super(props);
 
-    this.state = getInitialState();
+    this.state = {
+      ...getInitialState(),
+      playing: false,
+      countdown: null, // Track countdown state
+    };
 
     this.onKey = (evt) => {
-      // rewrite as a switch statement
+      if (!this.state.playing && this.state.countdown === null) {
+        this.startCountdown();
+      }
+
       switch (evt.code) {
         case "ArrowRight":
         case "KeyD":
@@ -45,52 +52,59 @@ class Game extends Component {
     };
 
     this.timers = {
-      start: null,
       animate: null,
+      countdown: null,
     };
   }
 
   componentDidMount() {
     window.addEventListener("keydown", this.onKey);
-    this.step();
   }
 
   componentWillUnmount() {
     window.removeEventListener("keydown", this.onKey);
-
-    clearTimeout(this.timers.start);
     clearTimeout(this.timers.animate);
+    clearTimeout(this.timers.countdown);
+  }
+
+  startCountdown() {
+    let count = 3;
+    this.setState({ countdown: count });
+
+    this.timers.countdown = setInterval(() => {
+      count -= 1;
+      if (count === 0) {
+        clearInterval(this.timers.countdown);
+        this.setState(
+          { countdown: null, playing: true, ...getInitialState() },
+          () => {
+            this.step();
+          }
+        );
+      } else {
+        this.setState({ countdown: count });
+      }
+    }, 1000);
   }
 
   step() {
+    if (!this.state.playing) return;
+
     const result = animate(this.state);
-
     this.setState(result);
-
     clearTimeout(this.timers.animate);
     this.timers.animate = setTimeout(() => this.step(), 20);
   }
 
   changeDirection(direction) {
+    if (!this.state.playing) return;
     this.setState(changeDirection(this.state, { direction }));
   }
 
-  handleGhostCapture = (ghost) => {
-    const routes = {
-      blinky: "/about",
-      pinky: "/experience",
-      inky: "/projects",
-      clyde: "/music",
-    };
-
-    this.props.router.push(routes[ghost] || "/");
-  };
-
   restart = () => {
     clearTimeout(this.timers.animate);
-    this.setState(getInitialState(), () => {
-      this.step();
-    });
+    clearTimeout(this.timers.countdown);
+    this.setState({ playing: false, countdown: null, ...getInitialState() });
   };
 
   render() {
@@ -99,6 +113,13 @@ class Game extends Component {
 
     return (
       <div>
+        {!this.state.playing && this.state.countdown === null && (
+          <p>Press any key to start!</p>
+        )}
+        {this.state.countdown !== null && (
+          <p>Starting in {this.state.countdown}...</p>
+        )}
+
         <div className="pacman">
           <Board {...props} />
           <Food {...props} food={this.state.food} />
@@ -115,9 +136,6 @@ class Game extends Component {
           />
         </div>
 
-        <button onClick={() => this.handleGhostCapture("blinky")}>
-          Capture Blinky
-        </button>
         <button onClick={() => this.restart()}>Restart</button>
       </div>
     );

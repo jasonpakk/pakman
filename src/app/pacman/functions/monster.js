@@ -6,6 +6,7 @@ import {
   getNewPosition,
   snapToTrack,
 } from "./movement";
+import { useRouter } from "next/router";
 
 function getAvailableVectors({
   newPosition,
@@ -171,7 +172,8 @@ function getNavigatedMonsterVector(
     if (monster.eatingTime) {
       // monster got eaten
 
-      return { deadTime: constants.MONSTER_DEATH_TIME_SECONDS };
+      return { dead: true };
+      //return { deadTime: constants.MONSTER_DEAD_TIME };
     }
 
     // player got eaten
@@ -182,12 +184,14 @@ function getNavigatedMonsterVector(
 }
 
 function getNewMonsterVector(monster, player, time) {
+  /*
   if (monster.deadTime > time) {
     return {
       ...monster,
       deadTime: monster.deadTime - time,
     };
   }
+
   if (monster.deadTime > 0) {
     return {
       ...monster,
@@ -197,6 +201,7 @@ function getNewMonsterVector(monster, player, time) {
       direction: monster.startingDirection,
     };
   }
+  */
 
   const eatingTime = Math.max(0, monster.eatingTime - time);
 

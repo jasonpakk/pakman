@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { cssPosition } from "../functions/helpers";
 import "./style.scss";
@@ -15,20 +15,24 @@ function MonsterEye({ radius, offset, direction }) {
   const irisOffsetX = -horizontal * reverse;
   const irisOffsetY = vertical * reverse;
 
+  const outerProps = {
+    cx: eyeballCenterX,
+    cy: eyeballCenterY,
+    r: eyeballRadius,
+    fill: "white",
+  };
+
+  const irisProps = {
+    cx: eyeballCenterX + (eyeballRadius / 2) * irisOffsetX,
+    cy: eyeballCenterY + (eyeballRadius / 2) * irisOffsetY,
+    r: eyeballRadius / 2,
+    fill: "black",
+  };
+
   return (
     <g className="eye">
-      <circle
-        cx={eyeballCenterX}
-        cy={eyeballCenterY}
-        r={eyeballRadius}
-        fill="white"
-      />
-      <circle
-        cx={eyeballCenterX + (eyeballRadius / 2) * irisOffsetX}
-        cy={eyeballCenterY + (eyeballRadius / 2) * irisOffsetY}
-        r={eyeballRadius / 2}
-        fill="black"
-      />
+      <circle {...outerProps} />
+      <circle {...irisProps} />
     </g>
   );
 }
@@ -60,26 +64,26 @@ function getMonsterPath(radius) {
 }
 
 function WaveMouth({ gridSize, eating }) {
-  if (!eating) return null;
+  if (!eating) {
+    return null;
+  }
 
   const waveRadius = gridSize * 0.125;
   const yPos = gridSize * 0.95;
 
-  return (
-    <path
-      d={`M${waveRadius * 2},${yPos}
-               A${waveRadius},${waveRadius * 5} 0 0 1 ${3 * waveRadius},${yPos}
-               A${waveRadius},${waveRadius * 5} 0 0 0 ${4 * waveRadius},${yPos}
-               A${waveRadius},${waveRadius * 5} 0 0 1 ${5 * waveRadius},${yPos}
-               A${waveRadius},${waveRadius * 5} 0 0 0 ${6 * waveRadius},${yPos}
-               A${waveRadius},${waveRadius * 5} 0 0 1 ${7 * waveRadius},${yPos}
-               A${waveRadius},${waveRadius * 5} 0 0 0 ${8 * waveRadius},${yPos}
-               A${waveRadius},${waveRadius * 5} 0 0 1 ${9 * waveRadius},${yPos}
-               A${waveRadius},${waveRadius * 5} 0 0 0 ${10 * waveRadius},${yPos}`}
-      stroke="white"
-      strokeWidth={1}
-    />
-  );
+  const mouthPath = [
+    `M${waveRadius * 2},${yPos}`,
+    `A${waveRadius},${waveRadius * 5} 0 0 1 ${3 * waveRadius},${yPos}`,
+    `A${waveRadius},${waveRadius * 5} 0 0 0 ${4 * waveRadius},${yPos}`,
+    `A${waveRadius},${waveRadius * 5} 0 0 1 ${5 * waveRadius},${yPos}`,
+    `A${waveRadius},${waveRadius * 5} 0 0 0 ${6 * waveRadius},${yPos}`,
+    `A${waveRadius},${waveRadius * 5} 0 0 1 ${7 * waveRadius},${yPos}`,
+    `A${waveRadius},${waveRadius * 5} 0 0 0 ${8 * waveRadius},${yPos}`,
+    `A${waveRadius},${waveRadius * 5} 0 0 1 ${9 * waveRadius},${yPos}`,
+    `A${waveRadius},${waveRadius * 5} 0 0 0 ${10 * waveRadius},${yPos}`,
+  ].join(" ");
+
+  return <path d={mouthPath} stroke="white" strokeWidth={1} />;
 }
 
 WaveMouth.propTypes = {
@@ -87,13 +91,27 @@ WaveMouth.propTypes = {
   eating: PropTypes.bool.isRequired,
 };
 
-function getColor(eating, color) {
-  return eating ? "#06c" : color;
+function getColor(eating, eatingFlash, color) {
+  if (eating) {
+    return eatingFlash ? color : "#06c";
+  }
+  return color;
 }
 
-function MonsterIcon({ gridSize, eating, position, direction, color }) {
+function MonsterIcon({
+  gridSize,
+  eating,
+  eatingFlash,
+  position,
+  direction,
+  color,
+}) {
   const radius = gridSize * 0.75;
   const monsterPath = getMonsterPath(radius);
+  const pathProps = {
+    stroke: "none",
+    fill: getColor(eating, eatingFlash, color),
+  };
 
   const style = {
     ...cssPosition(position, gridSize),
@@ -105,7 +123,7 @@ function MonsterIcon({ gridSize, eating, position, direction, color }) {
 
   return (
     <svg className="pacman-monster" style={style}>
-      <path d={monsterPath} fill={getColor(eating, color)} stroke="none" />
+      <path d={monsterPath} {...pathProps} />
       <WaveMouth gridSize={gridSize} eating={eating} />
       <MonsterEye radius={radius} direction={direction} offset={-1} />
       <MonsterEye radius={radius} direction={direction} offset={1} />
@@ -115,38 +133,71 @@ function MonsterIcon({ gridSize, eating, position, direction, color }) {
 
 MonsterIcon.propTypes = {
   eating: PropTypes.bool.isRequired,
+  eatingFlash: PropTypes.number,
   gridSize: PropTypes.number.isRequired,
   position: PropTypes.array.isRequired,
   color: PropTypes.string.isRequired,
   direction: PropTypes.number.isRequired,
 };
 
-export default function Monster({
-  gridSize,
-  position,
-  direction,
-  color,
-  eatingTime,
-  deadTime,
-}) {
-  if (deadTime > 0) return null;
+export default class Monster extends Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <MonsterIcon
-      eating={eatingTime > 0}
-      gridSize={gridSize}
-      position={position}
-      color={getColor(eatingTime > 0, color)}
-      direction={direction}
-    />
-  );
+    this.state = {
+      eatingFlash: 0,
+      timerFlash: this.getTimerFlash(),
+      redirected: false,
+    };
+  }
+
+  getTimerFlash() {
+    if (this.state) {
+      clearInterval(this.state.timerFlash);
+    }
+
+    if (!this.props.eatingTime) {
+      return null;
+    }
+
+    return setInterval(() => {
+      this.setState({ eatingFlash: (this.state.eatingFlash + 1) % 2 });
+    }, 300);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.dead && !prevProps.dead) {
+      this.props.router.push("/" + this.props.name);
+    }
+
+    if (
+      (this.props.eatingTime > 0 && prevProps.eatingTime === 0) ||
+      (this.props.eatingTime === 0 && prevProps.eatingTime > 0)
+    ) {
+      this.setState({ timerFlash: this.getTimerFlash() });
+    }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.timerFlash);
+  }
+  static propTypes = {
+    gridSize: PropTypes.number.isRequired,
+    position: PropTypes.array.isRequired,
+    direction: PropTypes.number.isRequired,
+    color: PropTypes.string.isRequired,
+    eatingTime: PropTypes.number.isRequired,
+    dead: PropTypes.bool.isRequired,
+  };
+
+  render() {
+    if (this.props.dead) {
+      return null;
+    }
+
+    const { eatingTime, ...props } = this.props;
+    const eating = eatingTime > 0;
+
+    return <MonsterIcon eating={eating} {...props} {...this.state} />;
+  }
 }
-
-Monster.propTypes = {
-  gridSize: PropTypes.number.isRequired,
-  position: PropTypes.array.isRequired,
-  direction: PropTypes.number.isRequired,
-  color: PropTypes.string.isRequired,
-  eatingTime: PropTypes.number.isRequired,
-  deadTime: PropTypes.number.isRequired,
-};
