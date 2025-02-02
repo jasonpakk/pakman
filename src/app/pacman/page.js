@@ -71,12 +71,12 @@ class Game extends Component {
   }
 
   calculateGridSize() {
-    return Math.floor(Math.min(window.innerWidth, window.innerHeight) / 35); // Adjust 30 based on your preferred grid size
+    return Math.floor(Math.min(window.innerWidth, window.innerHeight) / 35);
   }
 
   handleResize = () => {
     this.setState({
-      gridSize: this.calculateGridSize(), // Update grid size when window is resized
+      gridSize: this.calculateGridSize(),
     });
   };
 

@@ -6,7 +6,7 @@ export const SOUTH = 3;
 export const COMPASS = [EAST, NORTH, WEST, SOUTH];
 
 export const BOARD_WIDTH = 28;
-export const BOARD_HEIGHT = 36;
+export const BOARD_HEIGHT = 33;
 
 export const PLAYER_RADIUS = 0.8;
 

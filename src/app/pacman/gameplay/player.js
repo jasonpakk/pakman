@@ -92,7 +92,11 @@ export default function Player({ gridSize, lost, position, direction, onEnd }) {
 
   return (
     <svg className="pacman-player" style={style}>
-      <path d={pacmanPath(radius, angle, offset)} stroke="none" fill="yellow" />
+      <path
+        d={pacmanPath(radius, angle, offset)}
+        stroke="none"
+        fill="#ffdf00"
+      />
     </svg>
   );
 }
