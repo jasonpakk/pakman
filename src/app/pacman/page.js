@@ -25,7 +25,8 @@ class Game extends Component {
     this.state = {
       ...getInitialState(),
       playing: false,
-      countdown: null, // Track countdown state
+      countdown: null,
+      gridSize: this.calculateGridSize(),
     };
 
     this.onKey = (evt) => {
@@ -59,13 +60,25 @@ class Game extends Component {
 
   componentDidMount() {
     window.addEventListener("keydown", this.onKey);
+    window.addEventListener("resize", this.handleResize);
   }
 
   componentWillUnmount() {
     window.removeEventListener("keydown", this.onKey);
+    window.addEventListener("resize", this.handleResize);
     clearTimeout(this.timers.animate);
     clearTimeout(this.timers.countdown);
   }
+
+  calculateGridSize() {
+    return Math.floor(Math.min(window.innerWidth, window.innerHeight) / 35); // Adjust 30 based on your preferred grid size
+  }
+
+  handleResize = () => {
+    this.setState({
+      gridSize: this.calculateGridSize(), // Update grid size when window is resized
+    });
+  };
 
   startCountdown() {
     let count = 3;
@@ -109,7 +122,7 @@ class Game extends Component {
 
   render() {
     const { onEnd, ...otherProps } = this.props;
-    const props = { gridSize: 15, ...otherProps };
+    const props = { gridSize: this.state.gridSize, ...otherProps };
 
     return (
       <div>
@@ -119,6 +132,7 @@ class Game extends Component {
         {this.state.countdown !== null && (
           <p>Starting in {this.state.countdown}...</p>
         )}
+        {this.state.lost && <p>Game Over!</p>}
 
         <div className="pacman">
           <Board {...props} />
