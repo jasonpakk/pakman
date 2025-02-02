@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { cssPosition } from "../helpers";
+import { cssPosition } from "../functions/helpers";
 import "./style.scss";
 
 function MonsterEye({ radius, offset, direction }) {

@@ -1,3 +1,11 @@
+.pacman-board {
+  z-index: 1;
+}
+
+.pacman-player, .pacman-monster {
+  position: absolute;
+}
+
 .food-all {
   z-index: 2;
 }

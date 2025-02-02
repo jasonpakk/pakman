@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { cssPosition } from "../helpers";
+import { cssPosition } from "../functions/helpers";
 import "./style.scss";
 
 function FoodIcon({ gridSize, position, eaten, big }) {

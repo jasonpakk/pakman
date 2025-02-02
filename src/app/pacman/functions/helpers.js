@@ -1,4 +1,4 @@
-import { BOARD_HEIGHT } from "./constants";
+import { BOARD_HEIGHT } from "../constants";
 
 export function cssPosition(position, gridSize) {
   return {

@@ -1,4 +1,4 @@
-import { EAST, NORTH, WEST } from "./constants";
+import { EAST, NORTH, WEST } from "../constants";
 
 function isBigFood([posX, posY]) {
   return (posX === 0 || posX === 25) && (posY === 6 || posY === 26);
