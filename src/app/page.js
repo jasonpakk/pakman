@@ -605,7 +605,7 @@ export default function ParticlesTest() {
         <Particles id="tsparticles" options={options} />
         <div className="homeTitle">
           <img src="/pakman.png" alt="Pakman" />
-          <button onClick={() => router.push("/pacman")}>Start</button>
+          <button onClick={() => router.push("/pacman")}>START</button>
         </div>
       </>
     );

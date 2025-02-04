@@ -1,8 +1,12 @@
 export default function Music() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold">Music</h1>
-      <p>Welcome! You captured Blinky.</p>
+    <div>
+      <div className="pageHeader">
+        <img src="/orange.png" alt="orange" />
+        <h1>Music</h1>
+      </div>
+
+      <p>Welcome!</p>
     </div>
   );
 }
