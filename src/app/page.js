@@ -530,27 +530,27 @@ export default function ParticlesTest() {
             options: {
               images: [
                 {
-                  src: "/pacman.png",
+                  src: "/pacman/pacman.png",
                   width: 500,
                   height: 500,
                 },
                 {
-                  src: "/pink.png",
+                  src: "/pacman/pink.png",
                   width: 500,
                   height: 500,
                 },
                 {
-                  src: "/orange.png",
+                  src: "/pacman/orange.png",
                   width: 500,
                   height: 500,
                 },
                 {
-                  src: "/blue.png",
+                  src: "/pacman/blue.png",
                   width: 500,
                   height: 500,
                 },
                 {
-                  src: "/red.png",
+                  src: "/pacman/red.png",
                   width: 500,
                   height: 500,
                 },
