@@ -17,17 +17,45 @@ export default function Pacman(props) {
 
         <div className="game">
           <div className="panel">
-            <p>Hello</p>
-            <p>Text</p>
-            <p>Hello</p>
-            <p>Text</p>
+            <div id="pacmanText">
+              <img src="/pacman/pacman.png" alt="pacman" />
+              <p>Move me by using...</p>
+            </div>
+            <img className="arrows" src="/icons/arrowkeys.png" alt="arrow" />
+            <p>or</p>
+            <img className="arrows" src="/icons/wasd.png" alt="arrow" />
           </div>
+
           <Game ref={gameRef} {...props} router={router} />
+
           <div className="panel">
-            <p>Hello</p>
-            <p>Text</p>
-            <p>Hello</p>
-            <p>Text</p>
+            <p id="panelHeader">Eat me to learn about my...</p>
+
+            <button className="ghost" onClick={() => router.push("/about")}>
+              <img src="/pacman/red.png" alt="red" />
+              <p id="red">Bio</p>
+            </button>
+            <button
+              className="ghost"
+              onClick={() => router.push("/experience")}
+            >
+              <img src="/pacman/pink.png" alt="pink" />
+              <p id="pink">Experience</p>
+            </button>
+            <button className="ghost" onClick={() => router.push("/projects")}>
+              <img src="/pacman/orange.png" alt="orange" />
+              <p id="orange">Projects</p>
+            </button>
+            <button className="ghost" onClick={() => router.push("/music")}>
+              <img src="/pacman/blue.png" alt="blue" />
+              <p id="blue">Music</p>
+            </button>
+
+            <p id="footer">
+              Don't want to play?
+              <br />
+              Feel free to just click the ghosts above to navigate.
+            </p>
           </div>
         </div>
       </div>
