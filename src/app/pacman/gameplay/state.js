@@ -97,7 +97,7 @@ export default function getInitialState() {
     monsters: [
       {
         id: "monster-red",
-        name: "about",
+        name: "bio",
         direction: NORTH,
         startingDirection: NORTH,
         position: [12.5, 15],
@@ -108,7 +108,7 @@ export default function getInitialState() {
       },
       {
         id: "monster-cyan",
-        name: "experience",
+        name: "music",
         direction: EAST,
         startingDirection: EAST,
         position: [10.5, 15],
@@ -131,7 +131,7 @@ export default function getInitialState() {
       },
       {
         id: "monster-pink",
-        name: "music",
+        name: "experience",
         direction: NORTH,
         startingDirection: NORTH,
         position: [12.5, 17],

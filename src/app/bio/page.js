@@ -1,15 +1,15 @@
 "use client";
 import { useRouter } from "next/navigation";
 
-export default function Experience() {
+export default function Bio() {
   const router = useRouter();
 
   return (
     <div className="page">
       <div className="pageHeader">
         <div className="title">
-          <img src="/pacman/pink.png" alt="pink" />
-          <h1>Experience</h1>
+          <img src="/pacman/red.png" alt="red" />
+          <h1>Bio</h1>
         </div>
 
         <button onClick={() => router.push("/pacman")}>

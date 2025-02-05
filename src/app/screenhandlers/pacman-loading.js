@@ -2,9 +2,11 @@ import React from "react";
 
 const pathMap = {
   "/": "Home",
-  "/about": "About",
-  "/contact": "Contact",
-  "/pacman": "Pacman",
+  "/bio": "Bio",
+  "/experience": "Experience",
+  "/projects": "Projects",
+  "/music": "Music",
+  "/pacman": "to play Pakman",
 };
 
 const Loading = ({ pathname }) => (

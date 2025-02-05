@@ -31,7 +31,7 @@ export default function Pacman(props) {
           <div className="panel">
             <p id="panelHeader">Eat me to learn about my...</p>
 
-            <button className="ghost" onClick={() => router.push("/about")}>
+            <button className="ghost" onClick={() => router.push("/bio")}>
               <img src="/pacman/red.png" alt="red" />
               <p id="red">Bio</p>
             </button>

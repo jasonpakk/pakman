@@ -76,16 +76,55 @@ button {
   }
 }
 
-.pageHeader {
-  display: flex;
-  align-items: center;
+.page {
+  margin: 2rem 3rem;
 
-  h1 {
-    font-size: 3rem;
-    margin: 1rem;
-  }
+  .pageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  img {
-    width: 3rem;
+    .title {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        font-size: 4vw;
+      }
+
+      img {
+        width: 4vw;
+        margin-right: 1rem;
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      border: none;
+      background-color: #F07D00;
+      padding: 0.5rem 0.5rem;
+      border-radius: 0.5rem;
+
+      img {
+        width: 2vw;
+        margin-right: 0.2rem;
+      }
+
+      p {
+        font-size: 1.5vw;
+        color: white;
+      }
+
+      &:hover {
+        transform: scale(1.01);
+        background-color: #3a1e85;
+
+        p {
+          color: white;
+        }
+      }
+    }
+
   }
 }
