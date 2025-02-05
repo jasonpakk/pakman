@@ -15,7 +15,21 @@ export default function Pacman(props) {
           <img src="/pakman.png" alt="pacman" />
         </div>
 
-        <Game ref={gameRef} {...props} router={router} />
+        <div className="game">
+          <div className="panel">
+            <p>Hello</p>
+            <p>Text</p>
+            <p>Hello</p>
+            <p>Text</p>
+          </div>
+          <Game ref={gameRef} {...props} router={router} />
+          <div className="panel">
+            <p>Hello</p>
+            <p>Text</p>
+            <p>Hello</p>
+            <p>Text</p>
+          </div>
+        </div>
       </div>
 
       <div className="bottom">
@@ -28,19 +42,53 @@ export default function Pacman(props) {
           <img id="joystick" src="/joystick.png" alt="joystick" />
 
           <div className="buttons">
-            <button>
-              <img src="/buttons/white.png" />
-            </button>
-            <button>
-              <img src="/buttons/blue.png" />
-              <p>in</p>
-            </button>
-            <button>
-              <img src="/buttons/black.png" />
-            </button>
-            <button>
-              <img src="/buttons/yellow.png" />
-            </button>
+            <a
+              href="mailto:jaeyoung.pak8@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="email"
+            >
+              <button>
+                <img className="buttonImage" src="/buttons/white.png" />
+                <img className="buttonIcon" src="/icons/email.png" />
+              </button>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/jason-j-pak"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="linkedin"
+            >
+              <button>
+                <img className="buttonImage" src="/buttons/blue.png" />
+                <p>in</p>
+              </button>
+            </a>
+
+            <a
+              href="https://github.com/jasonpakk"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="github"
+            >
+              <button>
+                <img className="buttonImage" src="/buttons/black.png" />
+                <img className="buttonIcon" src="/icons/github.png" />
+              </button>
+            </a>
+
+            <a
+              href="https://drive.google.com/file/d/1SYXlT2gPGgJ6TZSmaoWf__ZdFXRMM-3R/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="resume"
+            >
+              <button>
+                <img className="buttonImage" src="/buttons/yellow.png" />
+                <img className="buttonIcon" src="/icons/resume.png" />
+              </button>
+            </a>
           </div>
         </div>
       </div>
