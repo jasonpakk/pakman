@@ -1,6 +1,5 @@
 import "./globals.scss";
-import LoadingHandler from "./loading-handler";
-import Head from "next/head";
+import LoadingHandler from "./screenhandlers/loading-handler";
 
 export const metadata = {
   title: "Pakman",
