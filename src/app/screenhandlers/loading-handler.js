@@ -7,23 +7,26 @@ import Loading from "./pacman-loading";
 const LoadingHandler = ({ children }) => {
   const [showLoadingScreen, setShowLoadingScreen] = useState(false);
   const [rendered, setRendered] = useState(null);
-
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
-
+  const [width, setWidth] = useState(1);
+  const [height, setHeight] = useState(1);
   const pathname = usePathname();
 
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setWidth(window.innerWidth);
-      setHeight(window.innerHeight);
-    });
-    return () =>
-      window.removeEventListener("resize", () => {
+  if (typeof window !== "undefined") {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+
+    useEffect(() => {
+      window.addEventListener("resize", () => {
         setWidth(window.innerWidth);
         setHeight(window.innerHeight);
       });
-  }, []);
+      return () =>
+        window.removeEventListener("resize", () => {
+          setWidth(window.innerWidth);
+          setHeight(window.innerHeight);
+        });
+    }, []);
+  }
 
   useEffect(() => {
     setShowLoadingScreen(true);

@@ -53,11 +53,13 @@ class Game extends Component {
   }
 
   componentDidMount() {
+    if (typeof window === "undefined") return;
     window.addEventListener("keydown", this.onKey);
     window.addEventListener("resize", this.handleResize);
   }
 
   componentWillUnmount() {
+    if (typeof window === "undefined") return;
     window.removeEventListener("keydown", this.onKey);
     window.addEventListener("resize", this.handleResize);
     clearTimeout(this.timers.animate);
@@ -65,6 +67,7 @@ class Game extends Component {
   }
 
   calculateGridSize() {
+    if (typeof window === "undefined") return;
     return Math.floor(Math.min(window.innerWidth, window.innerHeight) / 43);
   }
 
