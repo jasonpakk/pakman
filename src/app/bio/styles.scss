@@ -1,11 +1,12 @@
 #bioPage {
   display: flex;
   flex-direction: column;
+  height: 90vh;
 }
 
 #avatar {
   position: relative;
-  width: 18vw;
+  width: 15vw;
   margin: 2rem;
 }
 
@@ -19,12 +20,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 22vw;
+    width: 15vw;
     margin-left: 2vw;
 
     a {
-      width: 3.5vw;
-      height: 3.5vw;
+      width: 3vw;
+      height: 3vw;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -35,12 +36,12 @@
       
       img {
         transition: 0.7s ease;
-        width: 2.2vw;
+        width: 1.5vw;
       }
 
       p {
         transition: 0.7s ease;
-        font-size: 3vw;
+        font-size: 2vw;
         font-weight: bold;
       }
 
@@ -65,7 +66,7 @@
 .speechBubble {
   position: absolute;
   top: 12%;
-  left: 34%;
+  left: 31%;
   transform: translate(-50%, -50%);
 
   .speechImage {
@@ -114,7 +115,7 @@
 .browser {
   background-color: black;
   color: black;
-  border: 3px solid white;
+  border: 0.3vw solid white;
 
   .header {
     display: flex;
@@ -122,7 +123,7 @@
     align-items: center;
     height: 3vw;
     background-color: gold;
-    border-bottom: 3px solid white;
+    border-bottom: 0.3vw solid white;
     font-size: 2vw;
 
     .title {
@@ -132,7 +133,7 @@
 
     .x {
       padding: 0rem 0.3rem;
-      border-left: 4px solid white;
+      border-left: 0.3vw solid white;
     }
   }
 
@@ -161,6 +162,7 @@
 #bioObjects {
   img {
     position: absolute;
+    width: 2vw;
   }
 
   p {
@@ -172,23 +174,159 @@
     font-size: 2vw;
   }
 
-  #example1 {
-    top: 50%;
-    left: 50%;
-    width: 10vw;
+  #badminton {
+    top: 29%;
+    left: 33.5%;
+    width: 3vw;
   }
 
-  #example2 {
-    top: 30%;
-    left: 40%;
+  #catan {
+    top: 78%;
+    left: 66%;
+    width: 6vw;
+  }
+
+  #chicken {
+    top: 55%;
+    left: 50%;
+    width: 3vw;
+  }
+
+  #dartmouth {
+    top: 40%;
+    left: 65%;
+    width: 5vw;
+  }
+
+  #dumplings {
+    top: 68%;
+    left: 45%;
+    width: 3vw;
+  }
+
+  #egg {
+    top: 55%;
+    left: 46%;
+    width: 3vw;
+  }
+
+  #headphones {
+    top: 62%;
+    left: 28%;
+    width: 6vw;
+  }
+
+  #icecream {
+    top: 65%;
+    left: 50%;
+    width: 2vw;
+  }
+
+  #kirby {
+    top: 65%;
+    left: 66%;
+    width: 4vw;
+  }
+
+  #korea {
+    top: 42%;
+    left: 58%;
+    width: 5vw;
+  }
+
+  #latte {
+    top: 28%;
+    left: 47%;
+    width: 3vw;
+  }
+
+  #mango {
+    top: 55%;
+    left: 42%;
+    width: 3vw;
+  }
+
+  #matcha {
+    top: 22%;
+    left: 42%;
+    width: 4vw;
+  }
+
+  #notes {
+    top: 65%;
+    left: 36.5%;
+    width: 2vw;
+  }
+
+  #notes2 {
+    top: 76%;
+    left: 24%;
+    width: 1.8vw;
+  }
+
+  #paddle {
+    top: 27%;
+    left: 25%;
+    width: 6vw;
+  }
+
+  #piano {
+    top: 80%;
+    left: 28%;
+    width: 5vw;
+  }
+
+  #pickleball {
+    top: 42%;
+    left: 33%;
+    width: 3vw;
+  }
+
+  #plant {
+    top: 6%;
+    left: 48%;
+    width: 3vw;
+  }
+
+  #plant2 {
+    top: 2%;
+    left: 45%;
+    width: 2vw;
+  }
+
+  #ramen {
+    top: 78%;
+    left: 45%;
+    width: 4vw;
+  }
+
+  #salmon {
+    top: 85%;
+    left: 50%;
+    width: 3vw;
+  }
+
+  #shrimp {
+    top: 88%;
+    left: 54%;
+    width: 3vw;
+  }
+
+  #switch {
+    top: 72%;
+    left: 56%;
     width: 8vw;
   }
 
-  #example3 {
-    top: 70%;
-    left: 35%;
-    width: 12vw;
+  #tuna {
+    top: 92%;
+    left: 50%;
+    width: 3vw;
   }
 
-  
+  #viola {
+    top: 75%;
+    left: 36%;
+    width: 5vw;
+  }
 }
