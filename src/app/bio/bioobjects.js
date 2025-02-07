@@ -21,7 +21,11 @@ const HoverItem = ({ id, src, alt, text }) => {
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
       />
-      {isHovering && <p>{text}</p>}
+      {isHovering && (
+        <div className="hoverText">
+          <p>{text}</p>
+        </div>
+      )}
     </div>
   );
 };
@@ -33,152 +37,103 @@ export default function BioObjects() {
         id="badminton"
         src="/bio/badminton.png"
         alt="badminton"
-        text="This is badminton."
+        text="prove me wrong: badminton > tennis"
+      />
+      <HoverItem
+        id="plane"
+        src="/bio/plane.png"
+        alt="plane"
+        text="places i've been: 🇯🇵, 🇰🇷, 🇹🇼, 🇹🇭, 🇩🇪, 🇳🇱, 🇬🇧, 🇫🇷, 🇨🇦"
       />
       <HoverItem
         id="catan"
         src="/bio/catan.png"
         alt="catan"
-        text="This is catan."
-      />
-      <HoverItem
-        id="chicken"
-        src="/bio/chicken.png"
-        alt="chicken"
-        text="This is chicken."
+        text="always goin for that longest road..."
       />
       <HoverItem
         id="dartmouth"
         src="/bio/dartmouth.png"
         alt="dartmouth"
-        text="This is dartmouth."
+        text="4 years in NH taught me to survive the cold"
       />
       <HoverItem
-        id="dumplings"
-        src="/bio/dumplings.png"
-        alt="dumplings"
-        text="This is dumplings."
+        id="egg"
+        src="/bio/egg.png"
+        alt="egg"
+        text="over easy, soft boiled, or poached please"
       />
-      <HoverItem id="egg" src="/bio/egg.png" alt="egg" text="This is egg." />
       <HoverItem
         id="headphones"
         src="/bio/headphones.png"
         alt="headphones"
-        text="This is headphones."
-      />
-      <HoverItem
-        id="icecream"
-        src="/bio/icecream.png"
-        alt="icecream"
-        text="This is ice cream."
-      />
-      <HoverItem
-        id="kirby"
-        src="/bio/kirby.png"
-        alt="kirby"
-        text="This is kirby."
+        text="can't work without: noise-cancelling headphones"
       />
       <HoverItem
         id="korea"
         src="/bio/korea.png"
         alt="korea"
-        text="This is korea."
-      />
-      <HoverItem
-        id="latte"
-        src="/bio/latte.png"
-        alt="latte"
-        text="This is latte."
-      />
-      <HoverItem
-        id="mango"
-        src="/bio/mango.png"
-        alt="mango"
-        text="This is mango."
+        text="i was born in seoul, south korea"
       />
       <HoverItem
         id="matcha"
         src="/bio/matcha.png"
         alt="matcha"
-        text="This is matcha."
-      />
-      <HoverItem
-        id="notes"
-        src="/bio/notes.png"
-        alt="notes"
-        text="This is notes."
-      />
-      <HoverItem
-        id="notes2"
-        src="/bio/notes2.png"
-        alt="notes2"
-        text="This is notes."
+        text="a matcha latte starts my workday"
       />
       <HoverItem
         id="paddle"
         src="/bio/paddle.png"
         alt="paddle"
-        text="This is pickleball."
+        text="what i own: two pickleball paddles"
       />
       <HoverItem
         id="piano"
         src="/bio/piano.png"
         alt="piano"
-        text="This is piano."
+        text="started when i was 4 and have been playing ever since!"
       />
       <HoverItem
         id="pickleball"
         src="/bio/pickleball.png"
         alt="pickleball"
-        text="This is pickleball."
-      />
-      <HoverItem
-        id="plant"
-        src="/bio/plant.png"
-        alt="plant"
-        text="This is plant."
-      />
-      <HoverItem
-        id="plant2"
-        src="/bio/plant2.png"
-        alt="plant2"
-        text="This is plant."
+        text="what i don't own: a pickleball"
       />
       <HoverItem
         id="ramen"
         src="/bio/ramen.png"
         alt="ramen"
-        text="This is ramen."
+        text="i love all noodles. spicy? even better."
       />
       <HoverItem
         id="salmon"
         src="/bio/salmon.png"
         alt="salmon"
-        text="This is salmon."
+        text="add me on beli @pakman for some gooood eats"
       />
       <HoverItem
         id="shrimp"
         src="/bio/shrimp.png"
         alt="shrimp"
-        text="This is work."
+        text="yumm: szechuan, thai, japanese, korean, vietnamese"
       />
       <HoverItem
         id="switch"
         src="/bio/switch.png"
         alt="switch"
-        text="This is switch."
+        text="choice of console: my nintendo switch"
       />
       <HoverItem
         id="tuna"
         src="/bio/tuna.png"
         alt="tuna"
-        text="This is tuna."
+        text="formerly: yelp elite"
       />
       <HoverItem
         id="viola"
         src="/bio/viola.png"
         alt="viola"
-        text="This is viola."
+        text="find me: playing viola in orchestras and ensembles"
       />
     </div>
   );

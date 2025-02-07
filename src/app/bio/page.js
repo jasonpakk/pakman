@@ -94,6 +94,26 @@ export default function Bio() {
           </div>
         </div>
 
+        <div id="more" className="browser">
+          <div className="header">
+            <p className="title">more?</p>
+            <p className="x">X</p>
+          </div>
+          <div className="content">
+            <div className="entry">
+              <p>hover over any item to learn more!</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="fun" className="browser">
+          <div className="header">
+            <p className="title">:O</p>
+            <p className="x">X</p>
+          </div>
+          <div className="content"></div>
+        </div>
+
         <BioObjects />
       </div>
     </div>

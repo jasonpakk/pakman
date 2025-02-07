@@ -14,7 +14,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-top: 9vh;
 
   .socials {
     display: flex;
@@ -65,13 +65,13 @@
 
 .speechBubble {
   position: absolute;
-  top: 12%;
-  left: 31%;
+  top: 4%;
+  left: 24%;
   transform: translate(-50%, -50%);
 
   .speechImage {
     position: relative;
-    width: 25vw;
+    width: 23vw;
   }
 
   .speechText {
@@ -89,7 +89,6 @@
 }
 
 #currently {
-  position: absolute;
   top: 0%;
   left: 53%;
   width: 30vw;
@@ -97,7 +96,6 @@
 }
 
 #prev {
-  position: absolute;
   top: 20%;
   left: 75%;
   width: 20vw;
@@ -112,7 +110,34 @@
   }
 }
 
+#more {
+  top: 20%;
+  left: 23%;
+  width: 20vw;
+  height: 20vw;
+
+  .header {
+    background-color: #b4b0b7;
+  }
+
+  .entry p {
+    padding-left: 0.5vw;
+  }
+}
+
+#fun {
+  top: 60%;
+  left: 35%;
+  width: 22vw;
+  height: 13vw;
+
+  .header {
+    background-color: #b4b0b7;
+  }
+}
+
 .browser {
+  position: absolute;
   background-color: black;
   color: black;
   border: 0.3vw solid white;
@@ -122,7 +147,7 @@
     justify-content: space-between;
     align-items: center;
     height: 3vw;
-    background-color: gold;
+    background-color: #fad200;
     border-bottom: 0.3vw solid white;
     font-size: 2vw;
 
@@ -163,170 +188,125 @@
   img {
     position: absolute;
     width: 2vw;
+    transition: filter 0.7s ease;
+
+    &:hover {
+      transition: filter 0.7s ease;
+      filter: invert(30%);
+    }
   }
 
-  p {
+  .hoverText {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 71%;
+    left: 36%;
     color: white;
     padding: 0.3vw 0.6vw;
-    font-size: 2vw;
+    font-size: 1.8vw;
+    height: 8vw;
+    width: 20vw;
+    z-index: 0;
   }
 
   #badminton {
-    top: 29%;
-    left: 33.5%;
-    width: 3vw;
+    top: -7%;
+    left: 49%;
+    width: 2.5vw;
   }
 
   #catan {
-    top: 78%;
-    left: 66%;
-    width: 6vw;
-  }
-
-  #chicken {
-    top: 55%;
-    left: 50%;
-    width: 3vw;
+    top: 65%;
+    left: 63%;
+    width: 7vw;
   }
 
   #dartmouth {
-    top: 40%;
-    left: 65%;
+    top: 85%;
+    left: 73%;
     width: 5vw;
-  }
-
-  #dumplings {
-    top: 68%;
-    left: 45%;
-    width: 3vw;
   }
 
   #egg {
-    top: 55%;
-    left: 46%;
-    width: 3vw;
-  }
-
-  #headphones {
-    top: 62%;
-    left: 28%;
-    width: 6vw;
-  }
-
-  #icecream {
-    top: 65%;
-    left: 50%;
-    width: 2vw;
-  }
-
-  #kirby {
-    top: 65%;
-    left: 66%;
-    width: 4vw;
-  }
-
-  #korea {
-    top: 42%;
-    left: 58%;
+    top: 95%;
+    left: 24%;
     width: 5vw;
   }
 
-  #latte {
-    top: 28%;
-    left: 47%;
-    width: 3vw;
+  #headphones {
+    top: 87%;
+    left: 55%;
+    width: 7vw;
   }
 
-  #mango {
-    top: 55%;
-    left: 42%;
-    width: 3vw;
+  #korea {
+    top: 30%;
+    left: 46%;
+    width: 4.5vw;
   }
 
   #matcha {
-    top: 22%;
-    left: 42%;
-    width: 4vw;
-  }
-
-  #notes {
-    top: 65%;
-    left: 36.5%;
-    width: 2vw;
-  }
-
-  #notes2 {
-    top: 76%;
-    left: 24%;
-    width: 1.8vw;
+    top: 90%;
+    left: 32%;
+    width: 5vw;
   }
 
   #paddle {
-    top: 27%;
-    left: 25%;
-    width: 6vw;
+    top: 38%;
+    left: 65%;
+    width: 4.5vw;
   }
 
   #piano {
-    top: 80%;
-    left: 28%;
+    top: 39%;
+    left: 54%;
     width: 5vw;
   }
 
   #pickleball {
-    top: 42%;
-    left: 33%;
-    width: 3vw;
-  }
-
-  #plant {
-    top: 6%;
-    left: 48%;
-    width: 3vw;
-  }
-
-  #plant2 {
-    top: 2%;
-    left: 45%;
+    top: 48%;
+    left: 71%;
     width: 2vw;
   }
 
+  #plane {
+    top: -16%;
+    left: 42%;
+    width: 5vw;
+  }
+
   #ramen {
-    top: 78%;
-    left: 45%;
-    width: 4vw;
+    top: 0%;
+    left: 40%;
+    width: 7vw;
   }
 
   #salmon {
-    top: 85%;
-    left: 50%;
-    width: 3vw;
+    top: 0%;
+    left: 87%;
+    width: 4vw;
   }
 
   #shrimp {
-    top: 88%;
-    left: 54%;
-    width: 3vw;
+    top: 0%;
+    left: 93%;
+    width: 4vw;
   }
 
   #switch {
-    top: 72%;
-    left: 56%;
+    top: 80%;
+    left: 23%;
     width: 8vw;
   }
 
   #tuna {
-    top: 92%;
-    left: 50%;
-    width: 3vw;
+    top: 7%;
+    left: 90%;
+    width: 4vw;
   }
 
   #viola {
-    top: 75%;
-    left: 36%;
-    width: 5vw;
+    top: 85%;
+    left: 94%;
+    width: 4vw;
   }
 }
