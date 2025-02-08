@@ -1,0 +1,59 @@
+#experiencePage {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+#experienceContent {
+  height: 100%;
+  position: relative;
+
+  #desk {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+  }
+
+  #backAvatar {
+    position: absolute;
+    top: 74%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 13vw;
+  }
+
+  #cabinet {
+    position: absolute;
+    top: 8%;
+    left: 69%;
+    width: 26vw;
+    z-index: -1;
+  }
+
+  .shelf {
+    position: absolute;
+    width: 13vw;
+  }
+
+  #one {
+    top: 25%;
+    left: 5%;
+  }
+
+  #two {
+    top: 15%;
+    left: 28%;
+  }
+
+  #three {
+    top: 22%;
+    left: 48%;
+  }
+
+  #four {
+    top: 50%;
+    left: 5%;
+  }
+}

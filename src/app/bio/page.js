@@ -1,33 +1,8 @@
 "use client";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 import BioObjects from "./bioobjects";
 import Socials from "./socials";
 import "./styles.scss";
-
-const HoverItem = ({ id, src, alt, text }) => {
-  const [isHovering, setIsHovering] = useState(false);
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
-
-  return (
-    <div className="hoverItem">
-      <img
-        id={id}
-        src={src}
-        alt={alt}
-        onMouseOver={handleMouseOver}
-        onMouseOut={handleMouseOut}
-      />
-      {isHovering && <p>{text}</p>}
-    </div>
-  );
-};
 
 export default function Bio() {
   const router = useRouter();
@@ -47,7 +22,7 @@ export default function Bio() {
       </div>
 
       <div id="bioContent">
-        <img id="avatar" src="/avatar.png" alt="avatar" />
+        <img id="avatar" src="/avatar/avatar.gif" alt="avatar" />
 
         <Socials />
 
@@ -59,7 +34,7 @@ export default function Bio() {
         <div id="currently" className="browser">
           <div className="header">
             <p className="title">currently</p>
-            <p className="x">X</p>
+            <p className="x">x</p>
           </div>
           <div className="content">
             <div className="entry">
@@ -76,7 +51,7 @@ export default function Bio() {
         <div id="prev" className="browser">
           <div className="header">
             <p className="title">prev</p>
-            <p className="x">X</p>
+            <p className="x">x</p>
           </div>
           <div className="content">
             <div className="entry">
@@ -97,7 +72,7 @@ export default function Bio() {
         <div id="more" className="browser">
           <div className="header">
             <p className="title">more?</p>
-            <p className="x">X</p>
+            <p className="x">x</p>
           </div>
           <div className="content">
             <div className="entry">
@@ -109,7 +84,7 @@ export default function Bio() {
         <div id="fun" className="browser">
           <div className="header">
             <p className="title">:O</p>
-            <p className="x">X</p>
+            <p className="x">x</p>
           </div>
           <div className="content"></div>
         </div>
