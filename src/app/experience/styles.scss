@@ -32,28 +32,76 @@
     z-index: -1;
   }
 
-  .shelf {
+  .shelfContainer {
     position: absolute;
-    width: 13vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .companyImage {
+      position: absolute;
+      bottom: 65%;
+      width: 13vw;
+    }
+
+    .shelf {
+      width: 13vw;
+    }
+
+    p {
+      position: absolute;
+      bottom: 45%;
+      padding: 0 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      right: 0;
+    }
   }
 
-  #one {
+  #capitalone {
     top: 25%;
     left: 5%;
+
+    .companyImage {
+      width: 15vw;
+    }
   }
 
-  #two {
-    top: 15%;
-    left: 28%;
-  }
-
-  #three {
-    top: 22%;
-    left: 48%;
-  }
-
-  #four {
+  #mathworks {
     top: 50%;
     left: 5%;
+
+    .companyImage {
+      width: 11vw;
+      bottom: 10%;
+    }
   }
+
+  #dalilab {
+    top: 15%;
+    left: 28%;
+
+    .companyImage {
+      width: 16vw;
+      bottom: 0%;
+    }
+  }
+
+  #vitalize {
+    top: 22%;
+    left: 48%;
+
+    .companyImage {
+      width: 11vw;
+    }
+  }
+
+  
 }

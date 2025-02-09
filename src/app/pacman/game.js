@@ -10,7 +10,6 @@ import Board from "./gameplay/board";
 import Monster from "./gameplay/monster";
 import Food from "./gameplay/food";
 import Player from "./gameplay/player";
-import "./style.scss";
 
 class Game extends Component {
   constructor(props) {

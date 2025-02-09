@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
+import WorkExperience from "./work";
 import "./styles.scss";
 
 export default function Experience() {
@@ -24,30 +25,7 @@ export default function Experience() {
         <img id="backAvatar" src="/avatar/back.png" alt="back" />
         <img id="cabinet" src="/experience/cabinet.png" alt="cabinet" />
 
-        <img
-          id="one"
-          className="shelf"
-          src="/experience/shelf.png"
-          alt="shelf"
-        />
-        <img
-          id="two"
-          className="shelf"
-          src="/experience/shelf.png"
-          alt="shelf"
-        />
-        <img
-          id="three"
-          className="shelf"
-          src="/experience/shelf.png"
-          alt="shelf"
-        />
-        <img
-          id="four"
-          className="shelf"
-          src="/experience/shelf.png"
-          alt="shelf"
-        />
+        <WorkExperience />
       </div>
     </div>
   );

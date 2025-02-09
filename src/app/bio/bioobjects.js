@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import "./styles.scss";
 
 const HoverItem = ({ id, src, alt, text }) => {
   const [isHovering, setIsHovering] = useState(false);
