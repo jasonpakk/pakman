@@ -11,7 +11,7 @@
   #desk {
     position: absolute;
     top: 60%;
-    left: 50%;
+    left: 44%;
     transform: translate(-50%, -50%);
     width: 60vw;
   }
@@ -19,17 +19,63 @@
   #backAvatar {
     position: absolute;
     top: 74%;
-    left: 40%;
+    left: 36%;
     transform: translate(-50%, -50%);
     width: 13vw;
   }
 
-  #cabinet {
+  #cabinetContainer {
     position: absolute;
     top: 8%;
     left: 69%;
-    width: 26vw;
     z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    #cabinet {
+      width: 26vw;
+    }
+
+    #cabinetTop {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      top: -10%;
+      width: 80%;
+
+      img {
+        width: 8vw;
+        margin: 0 1vw;
+      }
+    }
+
+    #cabinetContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      justify-content: space-between;
+      top: 17%;
+      width: 100%;
+      height: 75%;
+
+      .cabinetRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+
+        img {
+          max-width: 3.5vw;
+          max-height: 3.5vw;
+        }
+      }
+    }
+
+    
   }
 
   .shelfContainer {
@@ -66,8 +112,8 @@
   }
 
   #capitalone {
-    top: 25%;
-    left: 5%;
+    top: 54%;
+    left: 0%;
 
     .companyImage {
       width: 15vw;
@@ -75,9 +121,8 @@
   }
 
   #mathworks {
-    top: 50%;
+    top: 25%;
     left: 5%;
-
     .companyImage {
       width: 11vw;
       bottom: 10%;
@@ -85,8 +130,8 @@
   }
 
   #dalilab {
-    top: 15%;
-    left: 28%;
+    top: 12%;
+    left: 25%;
 
     .companyImage {
       width: 16vw;
