@@ -1,33 +1,4 @@
-"use client";
-import { useState } from "react";
-
-const HoverItem = ({ id, src, alt, text }) => {
-  const [isHovering, setIsHovering] = useState(false);
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
-
-  return (
-    <div className="hoverItem">
-      <img
-        id={id}
-        src={src}
-        alt={alt}
-        onMouseOver={handleMouseOver}
-        onMouseOut={handleMouseOut}
-      />
-      {isHovering && (
-        <div className="hoverText">
-          <p>{text}</p>
-        </div>
-      )}
-    </div>
-  );
-};
+import HoverItem from "../components/hover";
 
 export default function BioObjects() {
   return (

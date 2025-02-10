@@ -1,9 +1,13 @@
 "use client";
 
-export default function WorkExperience() {
+export default function WorkExperience({ setBrowserContent }) {
   return (
     <>
-      <div className="shelfContainer" id="capitalone">
+      <div
+        className="shelfContainer"
+        id="capitalone"
+        onClick={() => setBrowserContent("c1")}
+      >
         <img
           className="companyImage"
           src="/experience/capitalone.png"
@@ -11,10 +15,14 @@ export default function WorkExperience() {
         />
         <img className="shelf" src="/experience/shelf.png" alt="shelf" />
         <p className="left">2023</p>
-        <p className="right">- - - -</p>
+        <p className="right">present</p>
       </div>
 
-      <div className="shelfContainer" id="dalilab">
+      <div
+        className="shelfContainer"
+        id="dalilab"
+        onClick={() => setBrowserContent("dali")}
+      >
         <img
           className="companyImage"
           src="/experience/dalilab.png"
@@ -25,7 +33,11 @@ export default function WorkExperience() {
         <p className="right">2024</p>
       </div>
 
-      <div className="shelfContainer" id="vitalize">
+      <div
+        className="shelfContainer"
+        id="vitalize"
+        onClick={() => setBrowserContent("vitalize")}
+      >
         <img
           className="companyImage"
           src="/experience/vitalize.png"
@@ -36,7 +48,11 @@ export default function WorkExperience() {
         <p className="right">2022</p>
       </div>
 
-      <div className="shelfContainer" id="mathworks">
+      <div
+        className="shelfContainer"
+        id="mathworks"
+        onClick={() => setBrowserContent("mathworks")}
+      >
         <img
           className="companyImage"
           src="/experience/mathworks.png"

@@ -11,24 +11,25 @@
   #desk {
     position: absolute;
     top: 60%;
-    left: 44%;
+    left: 41%;
     transform: translate(-50%, -50%);
     width: 60vw;
+    z-index: 2;
   }
 
   #backAvatar {
     position: absolute;
     top: 74%;
-    left: 36%;
+    left: 39%;
     transform: translate(-50%, -50%);
     width: 13vw;
+    z-index: 3;
   }
 
   #cabinetContainer {
     position: absolute;
-    top: 8%;
+    top: 10%;
     left: 69%;
-    z-index: -1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,6 +37,26 @@
 
     #cabinet {
       width: 26vw;
+    }
+
+    .hoverImage {
+      transition: 0.5s ease;
+
+      &:hover {
+        transition: 0.5s ease;
+        transform: scale(1.05);
+        filter: invert(30%);
+      }
+    }
+
+    .hoverText {
+      position: absolute;
+      bottom: -21%;
+      right: 5%;
+      color: white;
+      padding: 0.3vw 0.6vw;
+      font-size: 2vw;
+      z-index: 2;
     }
 
     #cabinetTop {
@@ -49,6 +70,12 @@
       img {
         width: 8vw;
         margin: 0 1vw;
+      }
+
+      .hoverText {
+        bottom: -560%;
+        right: -9%;
+        font-size: 1.5vw;
       }
     }
 
@@ -69,13 +96,12 @@
         width: 75%;
 
         img {
-          max-width: 3.5vw;
-          max-height: 3.5vw;
+          width: 3.5vw;
+          height: 3.5vw;
+          object-fit: contain;
         }
       }
     }
-
-    
   }
 
   .shelfContainer {
@@ -84,11 +110,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    z-index: 3;
+    transition: 0.5s ease;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.02);
+      transition: 0.5s ease;
+      
+      .companyImage {
+        transition: 0.5s ease;
+        filter: invert(30%);
+      }
+    }
 
     .companyImage {
       position: absolute;
       bottom: 65%;
       width: 13vw;
+      transition: 0.5s ease;
     }
 
     .shelf {
@@ -97,9 +137,9 @@
 
     p {
       position: absolute;
-      bottom: 45%;
+      bottom: 40%;
       padding: 0 0.5rem;
-      font-size: 0.8rem;
+      font-size: 1vw;
     }
 
     .left {
@@ -123,9 +163,10 @@
   #mathworks {
     top: 25%;
     left: 5%;
+
     .companyImage {
       width: 11vw;
-      bottom: 10%;
+      bottom: 0%;
     }
   }
 
@@ -149,4 +190,112 @@
   }
 
   
+}
+
+#experiencePage .browser {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  color: black;
+  border: 0.3vw solid white;
+  width: 60vw;
+  height: 65vh;
+  z-index: 10;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8%;
+    background-color: #fad200;
+    border-bottom: 0.3vw solid white;
+    font-size: 1.8vw;
+
+    .title {
+      font-weight: bold;
+      padding: 0rem 1rem;
+    }
+
+    .close {
+      background-color: transparent;
+      border: none;
+      font-size: 2vw;
+      padding: 0rem 0.3rem;
+      border-left: 0.3vw solid white;
+
+      &:hover {
+        cursor: pointer;
+        color: blue;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    color: white;
+    font-size: 1.5vw;
+    height: 92%;
+    overflow-y: scroll;
+  }
+
+  .contentHeader {
+    display: flex;
+    align-items: center;
+
+    .companyImage {
+      width: 20vw;
+      height: 14vh;
+      object-fit: contain;
+      margin-right: 5vw;
+    }
+
+    .companyInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      img {
+        width: 1.5vw;
+        height: 2vw;
+        margin-right: 1vw;
+        margin-left: 0.3vw;
+        object-fit: contain;
+      }
+
+      div { // row
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0.5vw 0;
+
+        p {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .experienceEntry {
+    font-size: 1.2vw;
+    margin-top: 2vw;
+    
+    b {
+      font-size: 1.7vw;
+      font-weight: bold;
+    }
+    
+    ul {
+      margin: 0.5rem 2rem;
+
+      li {
+        margin: 0.2rem 0;
+      }
+    }
+  }
 }
