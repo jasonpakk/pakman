@@ -1,10 +1,4 @@
-#bioPage {
-  display: flex;
-  flex-direction: column;
-  height: 90vh;
-}
-
-#avatar {
+#bioPage #avatar {
   position: relative;
   width: 15vw;
   margin: 2rem;
@@ -63,7 +57,7 @@
   }
 }
 
-.speechBubble {
+#bioPage .speechBubble {
   position: absolute;
   top: 4%;
   left: 24%;
@@ -110,7 +104,7 @@
   }
 }
 
-#more {
+#bioPage #more {
   top: 20%;
   left: 23%;
   width: 20vw;
@@ -125,7 +119,7 @@
   }
 }
 
-#fun {
+#bioPage #fun {
   top: 60%;
   left: 35%;
   width: 22vw;
@@ -136,7 +130,7 @@
   }
 }
 
-.browser {
+#bioPage .browser {
   position: absolute;
   background-color: black;
   color: black;

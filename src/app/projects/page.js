@@ -1,11 +1,12 @@
 "use client";
 import { useRouter } from "next/navigation";
+import "./styles.scss";
 
 export default function Projects() {
   const router = useRouter();
 
   return (
-    <div className="page">
+    <div id="projectPage" className="page">
       <div className="pageHeader">
         <div className="title">
           <img src="/pacman/orange.png" alt="orange" />
@@ -18,7 +19,11 @@ export default function Projects() {
         </button>
       </div>
 
-      <p>Welcome!</p>
+      <img src="/avatar/projects.gif" alt="projects" />
+      <img src="/projects/web.png" alt="web" />
+      <img src="/projects/mobile.png" alt="mobile" />
+      <img src="/projects/vr.png" alt="vr" />
+      <img src="/projects/other.png" alt="other" />
     </div>
   );
 }
