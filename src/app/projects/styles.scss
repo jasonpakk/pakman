@@ -78,7 +78,7 @@
       width: 20vw;
       height: 20vw;
       transition: 0.7s ease;
-      object-fit: contain;
+      object-fit: cover;
 
       &:hover {
         transition: 0.7s ease;
@@ -108,4 +108,10 @@
       width: fit-content
     }
   }
+
+  #fitkitch, #terracesurvival, #doodlegram, #spacecolony, #holisticranching {
+    img {
+        object-fit: contain;
+    }
+  } 
 }
