@@ -1,7 +1,11 @@
-#bioPage #avatar {
-  position: relative;
-  width: 15vw;
-  margin: 2rem;
+#bioPage {
+  height: 90vh;
+  
+  #avatar {
+    position: relative;
+    width: 15vw;
+    margin: 2rem;
+  }
 }
 
 #bioContent {

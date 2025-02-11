@@ -3,6 +3,7 @@
 export default function WorkExperience({ setBrowserContent }) {
   return (
     <>
+      <p id="clickme">click to learn more!</p>
       <div
         className="shelfContainer"
         id="capitalone"

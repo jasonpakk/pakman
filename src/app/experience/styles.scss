@@ -1,3 +1,14 @@
+#experiencePage {
+  height: 90vh;
+
+  #clickme {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    font-size: 1.2vw;
+  }
+}
+
 #experienceContent {
   height: 100%;
   position: relative;
@@ -28,6 +39,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    #hoverme {
+      position: absolute;
+      top: 10%;
+      left: 69%;
+      text-align: center;
+      font-size: 1vw;
+    }
 
     #cabinet {
       width: 26vw;

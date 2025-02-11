@@ -1,0 +1,111 @@
+#projectCategories  {
+  height: 80vh;
+  position: relative;
+
+  h2 {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5vw;
+    z-index: 2;
+  }
+
+  #projectAvatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25vw;
+  }
+
+  .projectCategory {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transition: 0.5s ease;
+
+    &:hover {
+      transition: 0.5s ease;
+      transform: scale(1.02);
+      filter: invert(0.2);
+    }
+
+    img {
+      max-width: 8vw;
+      height: 8vw;
+      object-fit: contain;
+    }
+
+    p {
+      font-size: 2.5vw;
+      margin: 0 1rem;
+    }
+  }
+
+  #web {
+    top: 60%;
+    left: 10%;
+  }
+
+  #mobile {
+    top: 25%;
+    left: 17%;
+  }
+
+  #vr {
+    top: 25%;
+    left: 65%;
+  }
+
+  #other {
+    top: 60%;
+    left: 72%;
+  }
+}
+
+#projectList {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+  .project {
+    width: 20vw;
+    margin: 3vw;
+    
+    img {
+      width: 20vw;
+      height: 20vw;
+      transition: 0.7s ease;
+      object-fit: contain;
+
+      &:hover {
+        transition: 0.7s ease;
+        cursor: pointer;
+      }
+    }
+
+    .projectImage {
+      position: absolute;
+      
+      &:hover {
+        opacity: 0;
+      }
+    }
+
+    h3 {
+      font-size: 2.2vw;
+      font-weight: bold;
+      margin: 0.5vw 0;
+    }
+
+    .categoryTag {
+      background-color: white;
+      color: black;
+      padding: 0.2vw 0.5vw;
+      margin: 0.5vw 0;
+      width: fit-content
+    }
+  }
+}
