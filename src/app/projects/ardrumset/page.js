@@ -64,14 +64,19 @@ export default function ARDrumSet() {
           </div>
 
           <p style={{ marginTop: "1vw" }}>
-            as a programmer + musician, i wanted to integrate my two interests
-            into a single project.
+            another project integrating my interests as a programmer + musician.
           </p>
           <br />
           <p>
-            senior year of high school, i partnered with my friend to design,
-            build, and program a xylophone-playing robot that can perform any
-            tune.
+            also an opportunity to learn and develop for augmented reality [ar]!
+            from pokemon go, to google translate, ar has been a growing field in
+            tech.
+          </p>
+          <br />
+          <p>
+            i wanted to explore how i could use ar to create a fun and
+            interactive music experience, so i partnered with a modeler to
+            create an ar drum set.
           </p>
         </div>
       </div>
@@ -85,26 +90,31 @@ export default function ARDrumSet() {
 
           <ul>
             <li>
-              <strong>found:</strong> existing instrument-playing robots heavily
-              focus on musical technicality
+              <strong>found:</strong> people want to learn the drums, but it
+              isn't always accessible
               <ul>
-                <li>pitch accuracy, agility, precise timing, etc.</li>
+                <li>
+                  <strong>expensive:</strong> as even instruments for beginners
+                  start in the hundreds
+                </li>
+                <li>
+                  <strong>bulky:</strong> drum sets take up a lot of space and
+                  are difficult for one person to transport
+                </li>
+                <li>
+                  <strong>noisy:</strong> difficult to practice without
+                  disrupting others
+                </li>
               </ul>
             </li>
             <li>
-              <strong>lacks:</strong> the expressive musicianship of a human
-              performer
-            </li>
-            <li>
-              humans achieve <strong>musicality</strong> in ways such as:
+              <strong>lacking:</strong> accessible ways to play and create drum
+              tracks
               <ul>
+                <li>drum tracks are the backbone of many songs</li>
                 <li>
-                  <strong>dynamics</strong> - varying volume for emotional
-                  expression
-                </li>
-                <li>
-                  <strong>articulation</strong> - differences in clarity and
-                  attack of notes
+                  easy to get started, as it doesn't required learning notes or
+                  pitches
                 </li>
               </ul>
             </li>
@@ -121,7 +131,10 @@ export default function ARDrumSet() {
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-          <p>watch bot-thoven perform popular classical tunes</p>
+          <p>
+            watch how you can interact with a drum set directly in your
+            environment
+          </p>
         </div>
       </div>
 
@@ -134,54 +147,145 @@ export default function ARDrumSet() {
 
           <ul>
             <li>
-              <strong>goal:</strong> build a robot that plays with human-like
-              musical expression
+              <strong>goal:</strong> create an accessible way to play and create
+              drum tracks
             </li>
             <li>
-              <strong>instrument of choice:</strong> xylophone
+              users shoud be able to:
               <ul>
                 <li>
-                  <strong>why?</strong>
-                  can easily strike keys with different force to achieve
-                  different musical effects
+                  place a drum set anywhere in their environment and interact
+                  with it
+                </li>
+                <li>easily use their phone and hands to play the drums</li>
+                <li>create, record, and save drum tracks</li>
+              </ul>
+            </li>
+            <li>
+              <strong>use:</strong> vuforia engine to create ar experience
+            </li>
+            <li>
+              <strong>design + code:</strong> in maya & unity (c#)
+              <ul>
+                <li>create 3d model of drum set</li>
+                <li>create drum sounds and drum set interaction</li>
+                <li>create recording and saving functionality</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div className="photo">
+          <img src="/projects/ardrum/1.png" alt="ardrum" />
+          <p>initial sketches</p>
+        </div>
+      </div>
+
+      <div className="projectDetailRow">
+        <div className="text">
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>PROTOTYPE</h2>
+          </div>
+
+          <ul>
+            <li>
+              <strong>learn:</strong> how to use vuforia engine to create ar
+              <ul>
+                <li>
+                  integrate with unity with a simple cube to test tracking
                 </li>
               </ul>
             </li>
             <li>
-              <strong>use:</strong> servo motors to strike xylophone keys
+              <strong>test:</strong> ar tracking on mobile phone
               <ul>
-                <li>can control force of strike by varying the motor speed</li>
+                <li>ensure ar experience can work using phone camera</li>
+                <li>
+                  test detection of surfaces and objects, as well as motion
+                  tracking
+                </li>
               </ul>
             </li>
             <li>
-              <strong>code:</strong> in arduino / c++
+              <strong>design:</strong> interactive drum set experience
               <ul>
+                <li>model drum set in maya</li>
                 <li>
-                  write program to collectively control servo motor based on
-                  music note input
+                  create animations for each interaction with the different
+                  parts of the drum set
+                </li>
+                <li>
+                  create vuforia image targets for each part of the drum set
                 </li>
               </ul>
             </li>
           </ul>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/1.png" alt="botthoven" />
-          <p>initial design plan</p>
+          <img
+            src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTQwMTZvdmc0azlraHl3bG5vZDJqZXBpc3VpdmhybXZmbHJ1bXo0NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/caF2FhBhpb5njqE77z/giphy.gif"
+            alt="ardrum"
+          />
+          <p>learning ar using vuforia + unity with simple cube tracking</p>
         </div>
       </div>
 
       <div className="projectDetailRow">
         <div className="photo">
-          <img src="/projects/botthoven/2.png" alt="botthoven" />
-          <p>CAD mockup of servo-mallet system</p>
+          <img
+            src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYndweG9wb2tiZDF1MHUwdmoxOTUxZzBvc3AyMTl2anJzcjRnZDA2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LrukcJQqBdBuYBUIle/giphy.gif"
+            alt="ardrum"
+          />
+          <p>testing ar tracking on a mobile phone</p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/3.png" alt="botthoven" />
-          <p>3d printing servo stands</p>
+          <img src="/projects/ardrum/2.png" alt="ardrum" />
+          <p>drum set finished by modeler</p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/4.png" alt="botthoven" />
-          <p>finished servo-mallet system</p>
+          <img src="/projects/ardrum/3.png" alt="ardrum" />
+          <p>image target created to map drum set</p>
+        </div>
+      </div>
+
+      <div className="projectDetailRow">
+        <div className="photo">
+          <img
+            src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTBsazRxaGVlODV4cXhxYWd0OXR1MzBnbGtudWwwcmRsbHBwOWVoZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GnDCiHLuGZD7zmrNOM/giphy.gif"
+            alt="drumset"
+          />
+          <p>all done :0</p>
+        </div>
+        <div className="text">
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>FINAL</h2>
+          </div>
+
+          <ul>
+            <li>
+              <strong>integrate:</strong> mobile experience with vuforia + unity
+              implementation
+            </li>
+            <li>
+              <strong>map</strong> all parts of the drum set to vuforia image
+              <ul>
+                <li>
+                  trigger animations and sounds when user interacts with each
+                  part of the drum set
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>create:</strong> recording and saving functionality
+              <ul>
+                <li>
+                  ensure users can record their drum tracks and save them to
+                  their phone
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
 
