@@ -43,6 +43,16 @@ export default function WhatTheYap() {
           </div>
           <div className="entry buttons">
             <a
+              href="https://devpost.com/software/yabber"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="dev post"
+            >
+              <button>
+                <p>devpost</p>
+              </button>
+            </a>
+            <a
               href="https://www.whattheyap.study/"
               target="_blank"
               rel="noopener noreferrer"
@@ -74,14 +84,17 @@ export default function WhatTheYap() {
           </div>
 
           <p style={{ marginTop: "1vw" }}>
-            as a programmer + musician, i wanted to integrate my two interests
-            into a single project.
+            leveraging the power of AI to help students study more effectively
           </p>
           <br />
           <p>
-            senior year of high school, i partnered with my friend to design,
-            build, and program a xylophone-playing robot that can perform any
-            tune.
+            in my final term at dartmouth, i decided to participate in
+            dartmouth's annual hackathon. the theme was "blast from the past",
+            so our team combined old study techniques with new technology to
+            create "what the yap?" -{" "}
+            <strong style={{ fontWeight: "bold" }}>
+              which won first prize!
+            </strong>
           </p>
         </div>
       </div>
@@ -95,26 +108,28 @@ export default function WhatTheYap() {
 
           <ul>
             <li>
-              <strong>found:</strong> existing instrument-playing robots heavily
-              focus on musical technicality
+              <strong>found:</strong> preparing materials to study with is time
+              consuming
               <ul>
-                <li>pitch accuracy, agility, precise timing, etc.</li>
+                <li>manually have to rewrite notes to create flashcards</li>
+                <li>
+                  limited time to study for an exam, need a faster way to create
+                  study materials
+                </li>
+                <li>
+                  students want practice materials to study with, but it isn't
+                  provided by professors
+                </li>
               </ul>
             </li>
             <li>
-              <strong>lacks:</strong> the expressive musicianship of a human
-              performer
-            </li>
-            <li>
-              humans achieve <strong>musicality</strong> in ways such as:
+              <strong>also found:</strong> verbalizing study material can
+              significantly enhance learning outcomes
               <ul>
+                <li>speaking out loud can help with understanding</li>
                 <li>
-                  <strong>dynamics</strong> - varying volume for emotional
-                  expression
-                </li>
-                <li>
-                  <strong>articulation</strong> - differences in clarity and
-                  attack of notes
+                  engage in multiple cognitive processes that aid in memory
+                  retention
                 </li>
               </ul>
             </li>
@@ -131,7 +146,9 @@ export default function WhatTheYap() {
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-          <p>watch bot-thoven perform popular classical tunes</p>
+          <p>
+            demo of auto-generating study materials + studying with your voice
+          </p>
         </div>
       </div>
 
@@ -144,54 +161,114 @@ export default function WhatTheYap() {
 
           <ul>
             <li>
-              <strong>goal:</strong> build a robot that plays with human-like
-              musical expression
+              <strong>goal:</strong> facilitate creating study materials and
+              leverage verbalization to enhance learning
             </li>
             <li>
-              <strong>instrument of choice:</strong> xylophone
+              <strong>frontend:</strong> react
               <ul>
                 <li>
-                  <strong>why?</strong>
-                  can easily strike keys with different force to achieve
-                  different musical effects
+                  create interactive user interface to upload notes and study
                 </li>
               </ul>
             </li>
             <li>
-              <strong>use:</strong> servo motors to strike xylophone keys
+              <strong>backend:</strong> node.js, express, firebase
               <ul>
-                <li>can control force of strike by varying the motor speed</li>
+                <li>
+                  create api to handle user requests to generate flashcards
+                </li>
+                <li>store user data and study materials in firebase</li>
+                <li>write functions to invoke external apis</li>
               </ul>
             </li>
             <li>
-              <strong>code:</strong> in arduino / c++
+              <strong>use:</strong> openai's gpt-3, azure speech sdk
               <ul>
                 <li>
-                  write program to collectively control servo motor based on
-                  music note input
+                  openai's gpt-3 to generate flashcards and practice questions
+                </li>
+                <li>
+                  azure speech sdk to generate voice commands and interpret user
+                  voice inputs
                 </li>
               </ul>
             </li>
           </ul>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/1.png" alt="botthoven" />
-          <p>initial design plan</p>
+          <img
+            className="wide"
+            src="/projects/whattheyap/1.png"
+            alt="what the yap"
+          />
+          <p>welcome to what the yap?!</p>
         </div>
       </div>
 
       <div className="projectDetailRow">
         <div className="photo">
-          <img src="/projects/botthoven/2.png" alt="botthoven" />
-          <p>CAD mockup of servo-mallet system</p>
+          <img
+            className="wide"
+            src="/projects/whattheyap/2.png"
+            alt="what the yap"
+          />
+          <p>users can paste or upload file(s) of their notes</p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/3.png" alt="botthoven" />
-          <p>3d printing servo stands</p>
+          <img
+            className="wide"
+            src="/projects/whattheyap/3.png"
+            alt="what the yap"
+          />
+          <p>flashcards are auto-generated and users can edit or add more</p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/4.png" alt="botthoven" />
-          <p>finished servo-mallet system</p>
+          <img
+            className="wide"
+            src="/projects/whattheyap/4.png"
+            alt="what the yap"
+          />
+          <p>always study w/ a new set of questions + use your voice!</p>
+        </div>
+      </div>
+
+      <div className="projectDetailRow">
+        <div className="photo">
+          <img
+            className="long"
+            src="/projects/whattheyap/5.jpg"
+            alt="what the yap"
+          />
+          <p>after an all-nighter with lots of caffeine, we won first prize!</p>
+        </div>
+        <div className="text">
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>FINAL</h2>
+          </div>
+
+          <ul>
+            <li>
+              <strong>publish:</strong> ensure users can use and access our
+              site, deployed and made it public facing
+            </li>
+            <li>
+              <strong>showcase</strong>: demo-ed our project to hackathon judges
+              <ul>
+                <li>
+                  demonstrated end-to-end functionality with elevator pitch
+                </li>
+                <li>
+                  allowed judges to input their own notes, papers, and articles
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>results:</strong> we were announced as winners of
+              hackdartmouth ix !
+            </li>
+          </ul>
         </div>
       </div>
 
