@@ -13,52 +13,6 @@
   display: flex;
   flex-direction: column;
   margin-top: 9vh;
-
-  .socials {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 15vw;
-    margin-left: 2vw;
-
-    a {
-      width: 3vw;
-      height: 3vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 0.1rem;
-      transition: 0.7s ease;
-      box-shadow: 0.2vw 0.2vw 0 white;
-      border: 0.3vw solid black;
-      
-      img {
-        transition: 0.7s ease;
-        width: 1.5vw;
-      }
-
-      p {
-        transition: 0.7s ease;
-        font-size: 2vw;
-        font-weight: bold;
-      }
-
-      &:hover {
-        transition: 0.7s ease;
-        transform: scale(1.03);
-
-        img {
-          transition: 0.7s ease;
-          filter: invert(80%);
-        }
-
-        p {
-          transition: 0.7s ease;
-          color: black;
-        }
-      }
-    }
-  }
 }
 
 #bioPage .speechBubble {
@@ -306,5 +260,51 @@
     top: 85%;
     left: 94%;
     width: 4vw;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15vw;
+  margin-left: 2vw;
+
+  a {
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.1rem;
+    transition: 0.7s ease;
+    box-shadow: 0.2vw 0.2vw 0 white;
+    border: 0.3vw solid black;
+    
+    img {
+      transition: 0.7s ease;
+      width: 1.5vw;
+    }
+
+    p {
+      transition: 0.7s ease;
+      font-size: 2vw;
+      font-weight: bold;
+    }
+
+    &:hover {
+      transition: 0.7s ease;
+      transform: scale(1.03);
+
+      img {
+        transition: 0.7s ease;
+        filter: invert(80%);
+      }
+
+      p {
+        transition: 0.7s ease;
+        color: black;
+      }
+    }
   }
 }

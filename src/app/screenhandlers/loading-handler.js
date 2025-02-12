@@ -39,7 +39,7 @@ const LoadingHandler = ({ children }) => {
   if (width / height < 1.3) {
     return (
       <div className="mobile-warning">
-        <h2>Sorry, please increase the width of your screen size.</h2>
+        <h2>Sorry, please increase the WIDTH of your screen size.</h2>
       </div>
     );
   }

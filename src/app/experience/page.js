@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import WorkExperience from "./work";
 import SkillsLibrary from "./skills";
 import Browser from "./browser";
+import Socials from "../bio/socials";
 import "./styles.scss";
 
 export default function Experience() {
@@ -27,8 +28,10 @@ export default function Experience() {
       <div id="experienceContent">
         <WorkExperience setBrowserContent={setBrowserContent} />
         <SkillsLibrary />
+        <p id="clickme">click on an experience to learn more!</p>
         <img id="desk" src="/experience/desk.gif" alt="desk" />
         <img id="backAvatar" src="/avatar/back.png" alt="back" />
+        <Socials />
       </div>
 
       <Browser

@@ -1,3 +1,5 @@
+import "./styles.scss";
+
 export default function Socials() {
   return (
     <div className="socials">

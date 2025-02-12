@@ -2,10 +2,14 @@
   height: 90vh;
 
   #clickme {
+    z-index: 3;
     position: absolute;
-    top: 5%;
-    left: 0%;
-    font-size: 1.2vw;
+    top: 66%;
+    left: 45%;
+    width: 13vw;
+    text-align: center;
+    font-size: 1.1vw;
+    color: lightgray;
   }
 }
 
@@ -46,6 +50,7 @@
       left: 69%;
       text-align: center;
       font-size: 1vw;
+      color: lightgray;
     }
 
     #cabinet {
@@ -309,4 +314,28 @@
       }
     }
   }
+}
+
+#experienceContent .socials {
+  width: 11vw;
+  position: absolute;
+  top: 97%;
+  left: -2%;
+  z-index: 3;
+
+  a {
+    width: 2vw;
+    height: 2vw;
+    border: 0.2vw solid black;
+    box-shadow: 0.1vw 0.1vw 0 white;
+
+    img {
+      width: 1vw;
+    }
+
+    p {
+      font-size: 1.5vw;
+    }
+  }
+
 }
