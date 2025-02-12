@@ -64,14 +64,13 @@ export default function SpaceColony() {
           </div>
 
           <p style={{ marginTop: "1vw" }}>
-            as a programmer + musician, i wanted to integrate my two interests
-            into a single project.
+            similar to stardew valley, where you can farm and maintain animals,
+            but in outer space + virtual reality + 3d!
           </p>
           <br />
           <p>
-            senior year of high school, i partnered with my friend to design,
-            build, and program a xylophone-playing robot that can perform any
-            tune.
+            completed as a culminating project in the mixed reality course i was
+            taking - worked in a team of 3 devs and 2 modelers
           </p>
         </div>
       </div>
@@ -85,27 +84,12 @@ export default function SpaceColony() {
 
           <ul>
             <li>
-              <strong>found:</strong> existing instrument-playing robots heavily
-              focus on musical technicality
+              <strong>goal:</strong> recreate a farming game in virtual reality
               <ul>
-                <li>pitch accuracy, agility, precise timing, etc.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>lacks:</strong> the expressive musicianship of a human
-              performer
-            </li>
-            <li>
-              humans achieve <strong>musicality</strong> in ways such as:
-              <ul>
-                <li>
-                  <strong>dynamics</strong> - varying volume for emotional
-                  expression
-                </li>
-                <li>
-                  <strong>articulation</strong> - differences in clarity and
-                  attack of notes
-                </li>
+                <li>environment of outer space</li>
+                <li>growth of plants and animals based on daily cycles</li>
+                <li>maintenance required, otherwise colony will fail</li>
+                <li>currency system to buy and sell resources</li>
               </ul>
             </li>
           </ul>
@@ -121,7 +105,7 @@ export default function SpaceColony() {
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-          <p>watch bot-thoven perform popular classical tunes</p>
+          <p>watch a demo of how you can grow a colony in outer space!</p>
         </div>
       </div>
 
@@ -165,23 +149,68 @@ export default function SpaceColony() {
           </ul>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/1.png" alt="botthoven" />
-          <p>initial design plan</p>
+          <img
+            className="wide"
+            src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGluZmJ5bnBjd3RjOTE1dGVsM3Jtc2Jrbm5zM2FoeHk2MmQ1aGs1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QTrcJiuNDo6no3aHPu/giphy.gif"
+            alt="space colony"
+          />
+          <p>environment cycles between day and night to affect growth</p>
         </div>
       </div>
 
       <div className="projectDetailRow">
         <div className="photo">
-          <img src="/projects/botthoven/2.png" alt="botthoven" />
-          <p>CAD mockup of servo-mallet system</p>
+          <img
+            className="wide"
+            src="https://media.giphy.com/media/0TwoXuM3gnwjeJKb2B/giphy.gif"
+            alt="space colony"
+          />
+          <p>futuristic UI for users to interact with shop and items</p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/3.png" alt="botthoven" />
-          <p>3d printing servo stands</p>
+          <img src="/projects/spacecolony/1.png" alt="space colony" />
+          <p>shop with various inventory and a currency system</p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/4.png" alt="botthoven" />
-          <p>finished servo-mallet system</p>
+          <img src="/projects/spacecolony/2.png" alt="space colony" />
+          <p>users can buy, feed, and gain resources by maintaing animals</p>
+        </div>
+      </div>
+
+      <div className="projectDetailRow">
+        <div className="photo">
+          <img
+            className="wide"
+            src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTR5bml3NXMwaGk0MGN2ZnpvdndpbHV4dnIydnM4MW1qNW4zdGFkbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ym9dxZOxmMbGR1iTHJ/giphy.gif"
+            alt="space colony"
+          />
+          <p>all done! :o</p>
+        </div>
+        <div className="text">
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>FINAL</h2>
+          </div>
+
+          <ul>
+            <li>
+              <strong>publish:</strong> ensure users can use and download our
+              game onto their own VR headsets
+            </li>
+            <li>
+              <strong>showcase</strong>: demo-ed our project at dartmouth's
+              termly tech exhibition
+              <ul>
+                <li>
+                  allowed users to interact with our game and provide feedback
+                </li>
+                <li>
+                  tech exhibition was attended by 400+ students, faculty, and
+                  community members
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
 
