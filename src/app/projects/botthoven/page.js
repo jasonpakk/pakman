@@ -72,7 +72,7 @@ export default function Botthoven() {
             <h2>SUMMARY</h2>
           </div>
 
-          <p>
+          <p style={{ marginTop: "1vw" }}>
             as a programmer + musician, i wanted to integrate my two interests
             into a single project.
           </p>
