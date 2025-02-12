@@ -25,7 +25,9 @@ export default function LeafyLearn() {
         <img src="/projects/leafylearn.png" alt="leafy learn" />
         <div className="text">
           <h1>LEAFY LEARN</h1>
-          <p>solve coding puzzles to revive your virtual island</p>
+          <p>
+            learn how to code by playing an animal crossing like, aesthetic game
+          </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />
             <p>unity, c#, figma, maya</p>

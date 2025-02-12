@@ -20,7 +20,8 @@ const projectsList = [
   {
     id: "leafylearn",
     title: "LEAFY LEARN",
-    description: "solve coding puzzles to revive your virtual island",
+    description:
+      "learn how to code by playing an animal crossing like, aesthetic game",
     image: "/projects/leafylearn.png",
     demo: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmQwYnhnOHZwczlmZjZtbWw1eTFmeW9mZzRoa2VuMmxjMzBiOTN6diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PWpIYIMc2RiuQiXQPq/giphy.gif",
     category: "desktop game",
