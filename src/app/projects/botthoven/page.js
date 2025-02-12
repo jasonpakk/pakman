@@ -5,6 +5,13 @@ import "../styles.scss";
 export default function Botthoven() {
   const router = useRouter();
 
+  const handleScroll = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="page projectPage">
       <div className="pageHeader" style={{ alignSelf: "flex-end" }}>
@@ -60,7 +67,11 @@ export default function Botthoven() {
 
       <div className="projectDetailRow">
         <div className="text">
-          <h2>SUMMARY</h2>
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>SUMMARY</h2>
+          </div>
+
           <p>
             as a programmer + musician, i wanted to integrate my two interests
             into a single project.
@@ -76,7 +87,11 @@ export default function Botthoven() {
 
       <div className="projectDetailRow">
         <div className="text">
-          <h2>BACKGROUND</h2>
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>BACKGROUND</h2>
+          </div>
+
           <ul>
             <li>
               <strong>found:</strong> existing instrument-playing robots heavily
@@ -121,7 +136,11 @@ export default function Botthoven() {
 
       <div className="projectDetailRow">
         <div className="text">
-          <h2>APPROACH</h2>
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>APPROACH</h2>
+          </div>
+
           <ul>
             <li>
               <strong>goal:</strong> build a robot that plays with human-like
@@ -177,7 +196,11 @@ export default function Botthoven() {
 
       <div className="projectDetailRow">
         <div className="text">
-          <h2>PROTOTYPE</h2>
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>PROTOTYPE</h2>
+          </div>
+
           <ul>
             <li>
               <strong>goal:</strong> demonstrate on small scale that robot can
@@ -217,7 +240,11 @@ export default function Botthoven() {
           <p>all done :0</p>
         </div>
         <div className="text">
-          <h2>FINAL</h2>
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>FINAL</h2>
+          </div>
+
           <ul>
             <li>
               <strong>goal:</strong> expand upon prototype to support full range
@@ -235,6 +262,10 @@ export default function Botthoven() {
           </ul>
         </div>
       </div>
+
+      <p className="backtotop" onClick={() => handleScroll()}>
+        ↑ back to top ↑
+      </p>
     </div>
   );
 }
