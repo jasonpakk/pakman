@@ -11,10 +11,13 @@ export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const handleScroll = (down) => {
-    window.scrollTo({
-      top: down ? document.getElementById("projectList").offsetTop : 0,
-      behavior: "smooth",
-    });
+    const timeout = setTimeout(() => {
+      window.scrollTo({
+        top: down ? document.getElementById("projectList").offsetTop : 0,
+        behavior: "smooth",
+      });
+    }, 200);
+    return () => clearTimeout(timeout);
   };
 
   useEffect(() => {
@@ -43,11 +46,6 @@ export default function Projects() {
           ? (projectElement.style.opacity = 1)
           : (projectElement.style.opacity = 0.1);
       }
-
-      const timeout = setTimeout(() => {
-        handleScroll(true);
-      }, 200);
-      return () => clearTimeout(timeout);
     });
   }, [selectedCategory]);
 
@@ -108,9 +106,10 @@ export default function Projects() {
           className={
             "projectCategory" + (selectedCategory === "web" ? "" : " hidden")
           }
-          onClick={() =>
-            setSelectedCategory(selectedCategory === "web" ? "" : "web")
-          }
+          onClick={() => {
+            setSelectedCategory(selectedCategory === "web" ? "" : "web");
+            handleScroll(true);
+          }}
         >
           <img src="/projects/web.png" alt="web" />
           <p>web</p>
@@ -121,9 +120,10 @@ export default function Projects() {
           className={
             "projectCategory" + (selectedCategory === "mobile" ? "" : " hidden")
           }
-          onClick={() =>
-            setSelectedCategory(selectedCategory === "mobile" ? "" : "mobile")
-          }
+          onClick={() => {
+            setSelectedCategory(selectedCategory === "mobile" ? "" : "mobile");
+            handleScroll(true);
+          }}
         >
           <img src="/projects/mobile.png" alt="mobile" />
           <p>mobile</p>
@@ -134,9 +134,10 @@ export default function Projects() {
           className={
             "projectCategory" + (selectedCategory === "vr" ? "" : " hidden")
           }
-          onClick={() =>
-            setSelectedCategory(selectedCategory === "vr" ? "" : "vr")
-          }
+          onClick={() => {
+            setSelectedCategory(selectedCategory === "vr" ? "" : "vr");
+            handleScroll(true);
+          }}
         >
           <p>ar + vr</p>
           <img src="/projects/vr.png" alt="vr" />
@@ -147,9 +148,10 @@ export default function Projects() {
           className={
             "projectCategory" + (selectedCategory === "other" ? "" : " hidden")
           }
-          onClick={() =>
-            setSelectedCategory(selectedCategory === "other" ? "" : "other")
-          }
+          onClick={() => {
+            setSelectedCategory(selectedCategory === "other" ? "" : "other");
+            handleScroll(true);
+          }}
         >
           <p>other</p>
           <img src="/projects/other.png" alt="other" />

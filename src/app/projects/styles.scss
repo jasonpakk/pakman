@@ -155,17 +155,16 @@
       object-fit: cover;
 
       &:hover {
-        transition: 0.7s ease;
         cursor: pointer;
       }
     }
 
+    &:hover .projectImage {
+        opacity: 0;
+    }
+
     .projectImage {
       position: absolute;
-      
-      &:hover {
-        opacity: 0;
-      }
     }
 
     h3 {
