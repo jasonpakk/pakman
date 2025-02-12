@@ -26,7 +26,8 @@ export default function MGame() {
         <div className="text">
           <h1>mGAME</h1>
           <p>
-            program a xylophone-playing robot to perform your favorite tunes
+            set measurable goals and track your progress with your healthcare
+            provider
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />

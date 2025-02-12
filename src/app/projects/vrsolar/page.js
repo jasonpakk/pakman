@@ -26,7 +26,8 @@ export default function VRSolarSystem() {
         <div className="text">
           <h1>VR SOLAR SYSTEM</h1>
           <p>
-            program a xylophone-playing robot to perform your favorite tunes
+            experience the scale of the solar system, watching revolutions and
+            rotations at scale
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />

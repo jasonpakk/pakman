@@ -26,7 +26,8 @@ export default function WhatTheYap() {
         <div className="text">
           <h1>WHAT THE YAP?</h1>
           <p>
-            program a xylophone-playing robot to perform your favorite tunes
+            yap to learn! turn your notes into AI-generated flashcards and study
+            using just your voice
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />

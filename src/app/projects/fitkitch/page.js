@@ -26,7 +26,8 @@ export default function FitKitch() {
         <div className="text">
           <h1>FITKITCH</h1>
           <p>
-            program a xylophone-playing robot to perform your favorite tunes
+            bereal but for fitness! complete daily workouts within the timeframe
+            and work with your friends to reveal the surprise recipe
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />

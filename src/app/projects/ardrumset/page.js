@@ -26,7 +26,8 @@ export default function ARDrumSet() {
         <div className="text">
           <h1>AR DRUM SET</h1>
           <p>
-            program a xylophone-playing robot to perform your favorite tunes
+            drop a drum set anywhere in your environment and create beats on the
+            go
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />

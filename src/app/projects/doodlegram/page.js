@@ -26,7 +26,8 @@ export default function Doodlegram() {
         <div className="text">
           <h1>DOODLEGRAM</h1>
           <p>
-            program a xylophone-playing robot to perform your favorite tunes
+            a social media site for doodles? draw, share, and explore doodles
+            with your friends
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />

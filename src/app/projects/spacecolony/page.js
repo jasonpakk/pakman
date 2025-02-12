@@ -26,7 +26,8 @@ export default function SpaceColony() {
         <div className="text">
           <h1>SPACE COLONY</h1>
           <p>
-            program a xylophone-playing robot to perform your favorite tunes
+            farm, harvest, and build a thriving colony...except it's in outer
+            space. no pressure :]
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />

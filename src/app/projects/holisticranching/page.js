@@ -25,9 +25,7 @@ export default function HolisticRanching() {
         <img src="/projects/holistic.png" alt="holistic ranching" />
         <div className="text">
           <h1>HOLISTIC RANCHING</h1>
-          <p>
-            program a xylophone-playing robot to perform your favorite tunes
-          </p>
+          <p>helping ranchers manage their cattle in a sustainable way</p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />
             <p>react, express, node.js, mongodb, html, css, javascript</p>

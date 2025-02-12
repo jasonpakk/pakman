@@ -25,9 +25,7 @@ export default function LeafyLearn() {
         <img src="/projects/leafylearn.png" alt="leafy learn" />
         <div className="text">
           <h1>LEAFY LEARN</h1>
-          <p>
-            program a xylophone-playing robot to perform your favorite tunes
-          </p>
+          <p>solve coding puzzles to revive your virtual island</p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />
             <p>unity, c#, figma, maya</p>

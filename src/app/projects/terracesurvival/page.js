@@ -26,7 +26,8 @@ export default function TerraceSurvival() {
         <div className="text">
           <h1>TERRACE SURVIVAL</h1>
           <p>
-            program a xylophone-playing robot to perform your favorite tunes
+            to win, you must do ~whatever~ it takes to survive on a deserted
+            terrace
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />
