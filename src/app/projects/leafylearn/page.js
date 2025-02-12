@@ -40,7 +40,7 @@ export default function LeafyLearn() {
           </div>
           <div className="entry buttons">
             <a
-              href="https://www.youtube.com/embed/DfeqlA-RrQQ?si=bNInDXBrzxRWzQi0"
+              href="https://leafylearn.site/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="project website"
@@ -71,14 +71,14 @@ export default function LeafyLearn() {
           </div>
 
           <p style={{ marginTop: "1vw" }}>
-            as a programmer + musician, i wanted to integrate my two interests
-            into a single project.
+            wanted to create a game which could help lower the barriers to
+            learning how to code by making it approachable and fun.
           </p>
           <br />
           <p>
-            senior year of high school, i partnered with my friend to design,
-            build, and program a xylophone-playing robot that can perform any
-            tune.
+            senior year at dartmouth, i worked with a team of five to design and
+            program an interactive game that teaches individuals coding concepts
+            that can be difficult to grasp.
           </p>
         </div>
       </div>
@@ -92,26 +92,24 @@ export default function LeafyLearn() {
 
           <ul>
             <li>
-              <strong>found:</strong> existing instrument-playing robots heavily
-              focus on musical technicality
+              <strong>found:</strong> coding can be an intimidating skill to
+              acquire
               <ul>
-                <li>pitch accuracy, agility, precise timing, etc.</li>
+                <li>
+                  survey of 1000 us students found that 35% believe coding is a
+                  core life skill
+                </li>
               </ul>
             </li>
             <li>
-              <strong>lacks:</strong> the expressive musicianship of a human
-              performer
-            </li>
-            <li>
-              humans achieve <strong>musicality</strong> in ways such as:
+              <strong>however:</strong> many students fear taking an intro cs
+              course
               <ul>
+                <li>worries of being weeded out in an introductory course</li>
+                <li>concerns of not being able to keep up with the material</li>
                 <li>
-                  <strong>dynamics</strong> - varying volume for emotional
-                  expression
-                </li>
-                <li>
-                  <strong>articulation</strong> - differences in clarity and
-                  attack of notes
+                  difficulty of learning a new language and theoretical concepts
+                  simultaneously
                 </li>
               </ul>
             </li>
@@ -128,7 +126,7 @@ export default function LeafyLearn() {
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-          <p>watch bot-thoven perform popular classical tunes</p>
+          <p>watch leafy learn in action!</p>
         </div>
       </div>
 
@@ -141,54 +139,224 @@ export default function LeafyLearn() {
 
           <ul>
             <li>
-              <strong>goal:</strong> build a robot that plays with human-like
-              musical expression
+              <strong>goal:</strong> create an entertaining and effective
+              teaching experience
+              <ul>
+                <li>approachable, aesthetic, and story based</li>
+                <li>
+                  tailored for students to take before learning a programming
+                  language
+                </li>
+              </ul>
             </li>
             <li>
-              <strong>instrument of choice:</strong> xylophone
+              <strong>no coding languages used</strong>
               <ul>
                 <li>
                   <strong>why?</strong>
-                  can easily strike keys with different force to achieve
-                  different musical effects
+                  separate learning syntax from learning concepts
                 </li>
-              </ul>
-            </li>
-            <li>
-              <strong>use:</strong> servo motors to strike xylophone keys
-              <ul>
-                <li>can control force of strike by varying the motor speed</li>
-              </ul>
-            </li>
-            <li>
-              <strong>code:</strong> in arduino / c++
-              <ul>
                 <li>
-                  write program to collectively control servo motor based on
-                  music note input
+                  <strong>how?</strong> drag and drop blocks to solve puzzles,
+                  similar to scratch
                 </li>
               </ul>
+            </li>
+            <li>
+              <strong>use:</strong> maya and unity to create the game
             </li>
           </ul>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/1.png" alt="botthoven" />
+          <img
+            className="wide"
+            src="/projects/leafylearn/1.png"
+            alt="leafy learn"
+          />
           <p>initial design plan</p>
         </div>
       </div>
 
       <div className="projectDetailRow">
         <div className="photo">
-          <img src="/projects/botthoven/2.png" alt="botthoven" />
-          <p>CAD mockup of servo-mallet system</p>
+          <img
+            className="wide"
+            src="/projects/leafylearn/2.png"
+            alt="leafy learn"
+          />
+          <p>storyboarding the plot of leary learn</p>
+        </div>
+        <div className="text">
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>DESIGN</h2>
+          </div>
+          <ul>
+            <li>
+              team members experienced in maya, figma, and procreate made the
+              assets for the game
+              <ul>
+                <li>
+                  fun + cute characters to guide the user in the game experience
+                </li>
+                <li>vibrant environment leveraging both 2d + 3d assets</li>
+              </ul>
+            </li>
+            <li>
+              <strong>plot:</strong> need to revive the island by solving
+              puzzles
+              <ul>
+                <li>
+                  <strong>why?</strong>a story line keeps the user engaged and
+                  motivated
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>drag-and-drop:</strong> simple and intuitive way to solve
+              puzzles
+              <ul>
+                <li>no need to type or worry about syntax errors</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="projectDetailRow">
+        <div className="photo">
+          <img
+            className="wide"
+            src="/projects/leafylearn/3.png"
+            alt="leafylearn"
+          />
+          <p>initial character designs by modelers</p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/3.png" alt="botthoven" />
-          <p>3d printing servo stands</p>
+          <img
+            className="long"
+            src="/projects/leafylearn/5.png"
+            alt="leafylearn"
+          />
+          <p>drag-and-drop design for a language-free experience</p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/4.png" alt="botthoven" />
-          <p>finished servo-mallet system</p>
+          <img
+            className="wide"
+            src="/projects/leafylearn/4.png"
+            alt="leafylearn"
+          />
+          <p>assets created by team members for leafy learn environment</p>
+        </div>
+      </div>
+
+      <div className="projectDetailRow">
+        <div className="text">
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>DEVELOPMENT</h2>
+          </div>
+
+          <ul>
+            <li>
+              <strong>lesson plan:</strong> cover essential programming concepts
+              <ul>
+                <li>print statements and variable types</li>
+                <li>functions, nested functions, parameters</li>
+                <li>conditionals and loops</li>
+              </ul>
+            </li>
+            <li>
+              <strong>functionality:</strong> complete end-to-end implementation
+              of game
+              <ul>
+                <li>character movement and environment interactions</li>
+                <li>all puzzles created and tested</li>
+                <li>manage overall game state</li>
+                <li>save and load functionality</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div className="photo">
+          <img
+            className="wide"
+            src="/projects/leafylearn/6.png"
+            alt="leafy learn"
+          />
+          <p>environment becomes revived upon completing lessons</p>
+        </div>
+      </div>
+
+      <div className="projectDetailRow">
+        <div className="photo">
+          <img
+            className="wide"
+            src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzBkc3E0cG5jbmRidmN4ejk1dTRndzVtNXViOG55NjI2ZGRhZzZlMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yZcXWoejibuYm1MdSC/giphy.gif"
+            alt="leafylearn"
+          />
+          <p>
+            walk around and interact with game environment [+ musho follows
+            you!]
+          </p>
+        </div>
+        <div className="photo">
+          <img src="/projects/leafylearn/8.png" alt="leafylearn" />
+          <p>models were finalized by team members with character animations</p>
+        </div>
+        <div className="photo">
+          <img
+            className="wide"
+            src="/projects/leafylearn/7.png"
+            alt="leafylearn"
+          />
+          <p>
+            drag-and-drop coding puzzles with interactive display of results
+          </p>
+        </div>
+      </div>
+
+      <div className="projectDetailRow">
+        <div className="photo">
+          <img
+            className="long"
+            src="/projects/leafylearn/9.jpg"
+            alt="drumset"
+          />
+          <p>sharing our project at a tech exhibition</p>
+        </div>
+        <div className="text">
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>FINAL</h2>
+          </div>
+
+          <ul>
+            <li>
+              <strong>publish:</strong> ensure users can download and play our
+              game
+              <ul>
+                <li>packaged for windows and mac</li>
+                <li>website created for users to download</li>
+              </ul>
+            </li>
+            <li>
+              <strong>test</strong>: our product for continuous improvement
+              <ul>
+                <li>
+                  implemented game statistics logging to track user retention
+                </li>
+                <li>
+                  played game with cs professor at dartmouth who teaches
+                  introductory cs
+                </li>
+                <li>
+                  showcased game at termly dartmouth showcase twice to over 400+
+                  people
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
 

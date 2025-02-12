@@ -175,7 +175,7 @@ export default function ARDrumSet() {
           </ul>
         </div>
         <div className="photo">
-          <img src="/projects/ardrum/1.png" alt="ardrum" />
+          <img className="long" src="/projects/ardrum/1.png" alt="ardrum" />
           <p>initial sketches</p>
         </div>
       </div>
@@ -225,6 +225,7 @@ export default function ARDrumSet() {
           <img
             src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTQwMTZvdmc0azlraHl3bG5vZDJqZXBpc3VpdmhybXZmbHJ1bXo0NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/caF2FhBhpb5njqE77z/giphy.gif"
             alt="ardrum"
+            className="wide"
           />
           <p>learning ar using vuforia + unity with simple cube tracking</p>
         </div>
@@ -251,6 +252,7 @@ export default function ARDrumSet() {
       <div className="projectDetailRow">
         <div className="photo">
           <img
+            className="wide"
             src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTBsazRxaGVlODV4cXhxYWd0OXR1MzBnbGtudWwwcmRsbHBwOWVoZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GnDCiHLuGZD7zmrNOM/giphy.gif"
             alt="drumset"
           />

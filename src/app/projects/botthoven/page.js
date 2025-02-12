@@ -174,7 +174,11 @@ export default function Botthoven() {
           </ul>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/1.png" alt="botthoven" />
+          <img
+            className="wide"
+            src="/projects/botthoven/1.png"
+            alt="botthoven"
+          />
           <p>initial design plan</p>
         </div>
       </div>
@@ -189,7 +193,11 @@ export default function Botthoven() {
           <p>3d printing servo stands</p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/4.png" alt="botthoven" />
+          <img
+            className="wide"
+            src="/projects/botthoven/4.png"
+            alt="botthoven"
+          />
           <p>finished servo-mallet system</p>
         </div>
       </div>
@@ -236,7 +244,11 @@ export default function Botthoven() {
 
       <div className="projectDetailRow">
         <div className="photo">
-          <img src="/projects/botthoven/5.png" alt="botthoven" />
+          <img
+            className="wide"
+            src="/projects/botthoven/5.png"
+            alt="botthoven"
+          />
           <p>all done :0</p>
         </div>
         <div className="text">
@@ -249,6 +261,19 @@ export default function Botthoven() {
             <li>
               <strong>goal:</strong> expand upon prototype to support full range
               of keys
+              <ul>
+                <li>
+                  print more servo stands and attach to xylophone to cover all
+                  keys
+                </li>
+                <li>
+                  write program to control all servo motors based on music input
+                </li>
+                <li>
+                  extend microcontroller to support more servo motors and all
+                  inputs
+                </li>
+              </ul>
             </li>
             <li>
               <strong>flexibility</strong> to perform any tune

@@ -87,10 +87,21 @@
     }
   }
 
-  .photo img {
-    width: 20vw;
-    max-height: 20vw;
-    object-fit: contain;
+  .photo {
+    .wide {
+      width: 28vw;
+    }
+
+    .long {
+      width: 20vw;
+      max-height: 24vw;
+    }
+
+    img {
+      width: 20vw;
+      max-height: 20vw;
+      object-fit: contain;
+    }
   }
 
   .video {
