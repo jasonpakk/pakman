@@ -30,19 +30,19 @@ export default function WhatTheYap() {
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />
-            <p>arduino, c++, cad, 3d printing</p>
+            <p>react, express, node.js, firebase, html, css, javascript</p>
           </div>
           <div className="entry">
             <img src="/icons/calendar.png" alt="pin" />
-            <p>2020</p>
+            <p>2024</p>
           </div>
           <div className="entry">
             <img src="/icons/team.png" alt="pin" />
-            <p>team of 2</p>
+            <p>team of 3</p>
           </div>
           <div className="entry buttons">
             <a
-              href="https://hackaday.io/project/167574-bot-thoven-a-robot-musician"
+              href="https://www.whattheyap.study/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="project website"
@@ -52,7 +52,7 @@ export default function WhatTheYap() {
               </button>
             </a>
             <a
-              href="https://github.com/jasonpakk/bot-thoven"
+              href="https://github.com/b-sheldon/whattheyap"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="github repo"
@@ -123,8 +123,8 @@ export default function WhatTheYap() {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/9Ag7zkTR_XE?si=SE1SH0--3utFUcaT"
-            title="Bot-thoven Demo"
+            src="https://www.youtube.com/embed/jO4EMSMkdsw?si=GeMow4dxUbzSZxZH"
+            title="What the Yap? Demo"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"

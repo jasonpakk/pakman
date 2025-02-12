@@ -30,35 +30,35 @@ export default function Doodlegram() {
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />
-            <p>arduino, c++, cad, 3d printing</p>
+            <p>react, node.js, express, mongodb, html, css, javascript</p>
           </div>
           <div className="entry">
             <img src="/icons/calendar.png" alt="pin" />
-            <p>2020</p>
+            <p>2021</p>
           </div>
           <div className="entry">
             <img src="/icons/team.png" alt="pin" />
-            <p>team of 2</p>
+            <p>solo project</p>
           </div>
           <div className="entry buttons">
             <a
-              href="https://hackaday.io/project/167574-bot-thoven-a-robot-musician"
+              href="https://github.com/jasonpakk/doodlegram-FE"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="project website"
+              aria-label="frontend repo"
             >
               <button>
-                <p>project website</p>
+                <p>frontend repo</p>
               </button>
             </a>
             <a
-              href="https://github.com/jasonpakk/bot-thoven"
+              href="https://github.com/jasonpakk/doodlegram-BE"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="github repo"
+              aria-label="backend repo"
             >
               <button>
-                <p>code repo</p>
+                <p>backend repo</p>
               </button>
             </a>
           </div>

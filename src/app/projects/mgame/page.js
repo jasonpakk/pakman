@@ -30,37 +30,15 @@ export default function MGame() {
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />
-            <p>arduino, c++, cad, 3d printing</p>
+            <p>react, express, node.js, firebase, html, css, javascript</p>
           </div>
           <div className="entry">
             <img src="/icons/calendar.png" alt="pin" />
-            <p>2020</p>
+            <p>2023</p>
           </div>
           <div className="entry">
             <img src="/icons/team.png" alt="pin" />
-            <p>team of 2</p>
-          </div>
-          <div className="entry buttons">
-            <a
-              href="https://hackaday.io/project/167574-bot-thoven-a-robot-musician"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="project website"
-            >
-              <button>
-                <p>project website</p>
-              </button>
-            </a>
-            <a
-              href="https://github.com/jasonpakk/bot-thoven"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="github repo"
-            >
-              <button>
-                <p>code repo</p>
-              </button>
-            </a>
+            <p>team of 5 devs and designers</p>
           </div>
         </div>
       </div>

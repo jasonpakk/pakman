@@ -30,11 +30,11 @@ export default function Minesweeper() {
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />
-            <p>arduino, c++, cad, 3d printing</p>
+            <p>java</p>
           </div>
           <div className="entry">
             <img src="/icons/calendar.png" alt="pin" />
-            <p>2020</p>
+            <p>2018</p>
           </div>
           <div className="entry">
             <img src="/icons/team.png" alt="pin" />
@@ -42,17 +42,7 @@ export default function Minesweeper() {
           </div>
           <div className="entry buttons">
             <a
-              href="https://hackaday.io/project/167574-bot-thoven-a-robot-musician"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="project website"
-            >
-              <button>
-                <p>project website</p>
-              </button>
-            </a>
-            <a
-              href="https://github.com/jasonpakk/bot-thoven"
+              href="https://github.com/jasonpakk/minesweeper"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="github repo"

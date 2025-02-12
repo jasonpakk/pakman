@@ -30,29 +30,19 @@ export default function ARDrumSet() {
           </p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />
-            <p>arduino, c++, cad, 3d printing</p>
+            <p>unity, c#, vuforia, maya</p>
           </div>
           <div className="entry">
             <img src="/icons/calendar.png" alt="pin" />
-            <p>2020</p>
+            <p>2022</p>
           </div>
           <div className="entry">
             <img src="/icons/team.png" alt="pin" />
-            <p>team of 2</p>
+            <p>worked with a modeler</p>
           </div>
           <div className="entry buttons">
             <a
-              href="https://hackaday.io/project/167574-bot-thoven-a-robot-musician"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="project website"
-            >
-              <button>
-                <p>project website</p>
-              </button>
-            </a>
-            <a
-              href="https://github.com/jasonpakk/bot-thoven"
+              href="https://github.com/jasonpakk/AR-Drumset"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="github repo"
@@ -123,8 +113,8 @@ export default function ARDrumSet() {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/9Ag7zkTR_XE?si=SE1SH0--3utFUcaT"
-            title="Bot-thoven Demo"
+            src="https://www.youtube.com/embed/DfeqlA-RrQQ?si=bNInDXBrzxRWzQi0"
+            title="AR Drum Set Demo"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
