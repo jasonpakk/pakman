@@ -64,14 +64,14 @@ export default function VRSolarSystem() {
           </div>
 
           <p style={{ marginTop: "1vw" }}>
-            as a programmer + musician, i wanted to integrate my two interests
-            into a single project.
+            this was my first project working within the realm of virtual
+            reality.
           </p>
           <br />
           <p>
-            senior year of high school, i partnered with my friend to design,
-            build, and program a xylophone-playing robot that can perform any
-            tune.
+            i worked with one other developer and a modeler to leverage the
+            power of virtual reality to create an immersive experience of the
+            solar system.
           </p>
         </div>
       </div>
@@ -85,26 +85,20 @@ export default function VRSolarSystem() {
 
           <ul>
             <li>
-              <strong>found:</strong> existing instrument-playing robots heavily
-              focus on musical technicality
+              <strong>experience:</strong> the scale of the solar system in VR
               <ul>
-                <li>pitch accuracy, agility, precise timing, etc.</li>
+                <li>
+                  understand the differences in size and distance of planets
+                </li>
+                <li>watch the revolutions and rotations of planets at scale</li>
               </ul>
             </li>
             <li>
-              <strong>lacks:</strong> the expressive musicianship of a human
-              performer
-            </li>
-            <li>
-              humans achieve <strong>musicality</strong> in ways such as:
+              <strong>enable:</strong> users to view statistics of each planet
               <ul>
                 <li>
-                  <strong>dynamics</strong> - varying volume for emotional
-                  expression
-                </li>
-                <li>
-                  <strong>articulation</strong> - differences in clarity and
-                  attack of notes
+                  ability to change values to see how it affects the planet's
+                  orbit
                 </li>
               </ul>
             </li>
@@ -129,59 +123,106 @@ export default function VRSolarSystem() {
         <div className="text">
           <div className="title">
             <img src="/icons/rightarrow.png" alt="rightarrow" />
-            <h2>APPROACH</h2>
+            <h2>DESIGN</h2>
           </div>
 
           <ul>
             <li>
-              <strong>goal:</strong> build a robot that plays with human-like
-              musical expression
-            </li>
-            <li>
-              <strong>instrument of choice:</strong> xylophone
+              <strong>create:</strong> a realistc model of the solar system
               <ul>
-                <li>
-                  <strong>why?</strong>
-                  can easily strike keys with different force to achieve
-                  different musical effects
-                </li>
+                <li>planets from available modles on unity asset store</li>
+                <li>milky way galaxy background</li>
               </ul>
             </li>
             <li>
-              <strong>use:</strong> servo motors to strike xylophone keys
+              <strong>interact:</strong> with a modal to view planet statistics
               <ul>
-                <li>can control force of strike by varying the motor speed</li>
+                <li>change values to see how it affects the planet's orbit</li>
+                <li>draggable slider using vr controllers</li>
               </ul>
             </li>
             <li>
-              <strong>code:</strong> in arduino / c++
+              <strong>plot:</strong> user teleports to solar system
               <ul>
                 <li>
-                  write program to collectively control servo motor based on
-                  music note input
+                  start off in a classroom where user is learning about the
+                  solar system
                 </li>
+                <li>portal opens up for user to teleport to solar system</li>
               </ul>
             </li>
           </ul>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/1.png" alt="botthoven" />
-          <p>initial design plan</p>
+          <img
+            className="wide"
+            src="/projects/vrsolar/1.png"
+            alt="vr solar system"
+          />
+          <p>planet assets used for the project</p>
         </div>
       </div>
 
       <div className="projectDetailRow">
         <div className="photo">
-          <img src="/projects/botthoven/2.png" alt="botthoven" />
-          <p>CAD mockup of servo-mallet system</p>
+          <img
+            className="wide"
+            src="/projects/vrsolar/2.png"
+            alt="vr solar system"
+          />
+          <p>
+            user starts off in a classroom where they are learning about the
+            planets
+          </p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/3.png" alt="botthoven" />
-          <p>3d printing servo stands</p>
+          <img
+            src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2Q0YWdoN2t5Nm9yMzBtOG51dHNzcXN5NzhqZW15aTVhMGk5MDIzaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zTTH9KIqZ1Oevqr4Em/giphy.gif"
+            alt="vr solar system"
+          />
+          <p>ability to view and change planet statistics</p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/4.png" alt="botthoven" />
-          <p>finished servo-mallet system</p>
+          <img className="wide" src="/projects/vrsolar/3.png" alt="botthoven" />
+          <p>overall view of the solar system</p>
+        </div>
+      </div>
+
+      <div className="projectDetailRow">
+        <div className="photo">
+          <img
+            className="wide"
+            src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2c5M2ppeHVtamE2ZnhnMjhvYTlhaXJydmUzaXY0aHpxeGJqOW1sOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hS5OPOzNQnhmvrIkuN/giphy.gif"
+            alt="terrace survival"
+          />
+          <p>all done :0</p>
+        </div>
+        <div className="text">
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>FINAL</h2>
+          </div>
+
+          <ul>
+            <li>
+              <strong>sound:</strong> added sound effects to enhance immersive
+              experience
+              <ul>
+                <li>background music to feel like user is in space</li>
+                <li>ui interaction sounds</li>
+                <li>teleportation</li>
+              </ul>
+            </li>
+            <li>
+              <strong>delpoy</strong> and ensured game is available for users to
+              download onto their headsets
+              <ul>
+                <li>
+                  shared with classmates, friends, and professor for feedback
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
 
