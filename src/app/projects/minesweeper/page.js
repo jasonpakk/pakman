@@ -123,7 +123,7 @@ export default function Minesweeper() {
         <div className="photo">
           <img
             className="wide"
-            src="https://github.com/jasonpakk/minesweeper/blob/master/assets/demo.gif?raw=true"
+            src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExejV6aDFkbngxbmxna2swdHA4aG5zc3pvYzNlb2FubG04amxnZnl5OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/m1j2MEzdiePlGZ3pDW/giphy.gif"
             alt="minesweeper"
           />
           <p>final result!</p>

@@ -24,7 +24,7 @@ export default function HolisticRanching() {
       <div className="projectHeader">
         <img src="/projects/holistic.png" alt="holistic ranching" />
         <div className="text">
-          <h1 style={{ color: "#bfbdbd" }}>HOLISTIC RANCHING</h1>
+          <h1 style={{ color: "#aff3e5" }}>HOLISTIC RANCHING</h1>
           <p>helping ranchers manage their cattle in a sustainable way</p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />
@@ -49,14 +49,15 @@ export default function HolisticRanching() {
           </div>
 
           <p style={{ marginTop: "1vw" }}>
-            as a programmer + musician, i wanted to integrate my two interests
-            into a single project.
+            as a developer for the dali lab, i was contracted to develop a new
+            web application for holistic management international
           </p>
           <br />
           <p>
-            senior year of high school, i partnered with my friend to design,
-            build, and program a xylophone-playing robot that can perform any
-            tune.
+            as an international organization that helps ranchers manage their
+            cattle in a sustainable way, holistic management international
+            needed a new web application to help ranchers track their cattle and
+            manage their land
           </p>
         </div>
       </div>
@@ -70,43 +71,29 @@ export default function HolisticRanching() {
 
           <ul>
             <li>
-              <strong>found:</strong> existing instrument-playing robots heavily
-              focus on musical technicality
+              <strong>learned:</strong> ranchers need an organized way to manage
+              their cattle
               <ul>
-                <li>pitch accuracy, agility, precise timing, etc.</li>
+                <li>
+                  hundreds of cattle to track with different breeding cycles
+                </li>
+                <li>land to manage and rotate for sustainable grazing</li>
+                <li>collect bcs score and track over time for each cow</li>
               </ul>
             </li>
             <li>
-              <strong>lacks:</strong> the expressive musicianship of a human
-              performer
-            </li>
-            <li>
-              humans achieve <strong>musicality</strong> in ways such as:
-              <ul>
-                <li>
-                  <strong>dynamics</strong> - varying volume for emotional
-                  expression
-                </li>
-                <li>
-                  <strong>articulation</strong> - differences in clarity and
-                  attack of notes
-                </li>
-              </ul>
+              <strong>lacks:</strong> a technological tool to systematically
+              collect data that is also user friendly
             </li>
           </ul>
         </div>
-        <div className="video">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/9Ag7zkTR_XE?si=SE1SH0--3utFUcaT"
-            title="Bot-thoven Demo"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
-          <p>watch bot-thoven perform popular classical tunes</p>
+        <div className="photo">
+          <img
+            className="wide"
+            src="/projects/holistic/1.png"
+            alt="holistic ranching"
+          />
+          <p>initial design for holistic ranching</p>
         </div>
       </div>
 
@@ -119,54 +106,97 @@ export default function HolisticRanching() {
 
           <ul>
             <li>
-              <strong>goal:</strong> build a robot that plays with human-like
-              musical expression
+              <strong>goal:</strong> define a system to easily measure and track
+              data for hundreds of cattle audit
             </li>
             <li>
-              <strong>instrument of choice:</strong> xylophone
+              <strong>leverage:</strong> visual design to make data collection
               <ul>
                 <li>
                   <strong>why?</strong>
-                  can easily strike keys with different force to achieve
-                  different musical effects
+                  users had difficulty understanding holistic management
+                  guidelines, such as scoring cattle on a body condition scale
+                </li>
+                <li>
+                  visual diagrams and user intuitive data input interfaces ease
+                  the understanding for users
                 </li>
               </ul>
             </li>
             <li>
-              <strong>use:</strong> servo motors to strike xylophone keys
-              <ul>
-                <li>can control force of strike by varying the motor speed</li>
-              </ul>
-            </li>
-            <li>
-              <strong>code:</strong> in arduino / c++
+              <strong>ensure:</strong> application is user friendly and
+              accessible in remote areas
               <ul>
                 <li>
-                  write program to collectively control servo motor based on
-                  music note input
+                  if collecting data in remote areas, ensure offline access
                 </li>
+                <li>prevent data loss with automatic data syncing</li>
               </ul>
             </li>
           </ul>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/1.png" alt="botthoven" />
-          <p>initial design plan</p>
+          <img
+            className="wide"
+            src="https://media.giphy.com/media/b8ISw6C8bcvmdpv3b6/giphy.gif"
+            alt="holistic ranching"
+          />
+          <p>simple system to measure, track, and audit cattle data</p>
         </div>
       </div>
 
       <div className="projectDetailRow">
         <div className="photo">
-          <img src="/projects/botthoven/2.png" alt="botthoven" />
-          <p>CAD mockup of servo-mallet system</p>
+          <img
+            className="wide"
+            src="/projects/holistic/2.png"
+            alt="holistic ranching"
+          />
+          <p>final design for holistic ranching</p>
         </div>
-        <div className="photo">
-          <img src="/projects/botthoven/3.png" alt="botthoven" />
-          <p>3d printing servo stands</p>
-        </div>
-        <div className="photo">
-          <img src="/projects/botthoven/4.png" alt="botthoven" />
-          <p>finished servo-mallet system</p>
+        <div className="text">
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>DEVELOPMENT</h2>
+          </div>
+
+          <ul>
+            <li>
+              <strong>stack:</strong> mern
+            </li>
+
+            <li>
+              <strong>frontend:</strong> react
+              <ul>
+                <li>create interactive user interface for data collection</li>
+                <li>redux for state management</li>
+                <li>
+                  support offline access with local storage, trigger sync when
+                  back online
+                </li>
+                <li>
+                  implement calendar and data visualization libraries for user
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>backend:</strong> node.js, express, mongodb
+              <ul>
+                <li>
+                  create restful api to handle authentication and necessary
+                  endpoints
+                </li>
+                <li>mongoose for mongodb object modeling</li>
+              </ul>
+            </li>
+            <li>
+              <strong>delivery:</strong> from design to release in 10 weeks
+              <ul>
+                <li>launched beta version to meet client goals</li>
+                <li>effectively handed off the code for future development</li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
 
