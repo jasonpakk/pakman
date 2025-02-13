@@ -1,4 +1,3 @@
-"use client";
 import HoverItem from "../components/hover";
 
 export default function MusicImages() {

@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import MusicImages from "./images";
 import HoverItem from "../components/hover";
+import Compositions from "./compositions";
 import "./styles.scss";
 
 export default function Music() {
@@ -139,7 +140,7 @@ export default function Music() {
         </div>
       </div>
 
-      <div className="musicRow">
+      <div className="musicRow" style={{ marginBottom: "3vw" }}>
         <div className="text">
           <h2>PERFORMANCES</h2>
           <p>
@@ -199,7 +200,9 @@ export default function Music() {
         </div>
       </div>
 
-      <div className="musicRow videoSamples" style={{ margin: "8vw 0" }}>
+      <img className="divider" src="/music/divider2.png" alt="divider" />
+
+      <div className="musicRow videoSamples" style={{ margin: "4vw 0" }}>
         <div className="video">
           <iframe
             width="100%"
@@ -234,7 +237,7 @@ export default function Music() {
         </div>
       </div>
 
-      <img className="divider" src="/music/divider2.png" alt="divider" />
+      <Compositions />
 
       <p id="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
