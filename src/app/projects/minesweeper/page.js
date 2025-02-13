@@ -61,14 +61,19 @@ export default function Minesweeper() {
           </div>
 
           <p style={{ marginTop: "1vw" }}>
-            as a programmer + musician, i wanted to integrate my two interests
-            into a single project.
+            the first programming language i learned was java: i learned it in
+            my high school's computer science class.
           </p>
           <br />
           <p>
-            senior year of high school, i partnered with my friend to design,
-            build, and program a xylophone-playing robot that can perform any
-            tune.
+            during the class, if we finished our work early, we had free time to
+            do whatever we wanted. me and my friend would always play
+            minesweeper to pass the time.
+          </p>
+          <br />
+          <p>
+            when it was announced that our final project would be to create a
+            game, we knew exactly what we wanted to recreate :]!
           </p>
         </div>
       </div>
@@ -82,47 +87,48 @@ export default function Minesweeper() {
 
           <ul>
             <li>
-              <strong>found:</strong> existing instrument-playing robots heavily
-              focus on musical technicality
+              <strong>learned:</strong> object-oriented programming in java
               <ul>
-                <li>pitch accuracy, agility, precise timing, etc.</li>
+                <li>data structures such as arrays, lists, maps</li>
+                <li>recursion, loops, conditionals</li>
+                <li>abstraction, polymorphism</li>
+                <li>GUIs</li>
               </ul>
             </li>
             <li>
-              <strong>lacks:</strong> the expressive musicianship of a human
-              performer
-            </li>
-            <li>
-              humans achieve <strong>musicality</strong> in ways such as:
+              <strong>found:</strong> minesweeper to encompass all these topics,
+              making it the perfect culminating project
               <ul>
+                <li>data structures for game board and components</li>
                 <li>
-                  <strong>dynamics</strong> - varying volume for emotional
-                  expression
+                  recursion for revealing empty spaces, loops and conditionals
+                  for game logic
                 </li>
-                <li>
-                  <strong>articulation</strong> - differences in clarity and
-                  attack of notes
-                </li>
+                <li>use of file i/o for high scores</li>
               </ul>
             </li>
           </ul>
         </div>
-        <div className="video">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/9Ag7zkTR_XE?si=SE1SH0--3utFUcaT"
-            title="Bot-thoven Demo"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
-          <p>watch bot-thoven perform popular classical tunes</p>
+        <div className="photo">
+          <img
+            className="wide"
+            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM25rOXM1aGpmbnFtOG5pZjcycTJsbjBtcGluc3k4c2xhcTd0c3B5NyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l3V0GQMoaDLVbjXEI/giphy.gif"
+            alt="minesweeper"
+          />
+          <p>our goal was to recreate minesweeper using java</p>
         </div>
       </div>
 
       <div className="projectDetailRow">
+        <div className="photo">
+          <img
+            className="wide"
+            src="https://github.com/jasonpakk/minesweeper/blob/master/assets/demo.gif?raw=true"
+            alt="minesweeper"
+          />
+          <p>final result!</p>
+        </div>
+
         <div className="text">
           <div className="title">
             <img src="/icons/rightarrow.png" alt="rightarrow" />
@@ -131,54 +137,33 @@ export default function Minesweeper() {
 
           <ul>
             <li>
-              <strong>goal:</strong> build a robot that plays with human-like
-              musical expression
-            </li>
-            <li>
-              <strong>instrument of choice:</strong> xylophone
+              <strong>define data structures:</strong> game board, cells, mines,
+              empty spaces
               <ul>
+                <li>2d array for game board</li>
+                <li>cell object for each cell</li>
                 <li>
-                  <strong>why?</strong>
-                  can easily strike keys with different force to achieve
-                  different musical effects
+                  polymorphism with cells being either mine, a number, or empty
                 </li>
               </ul>
             </li>
             <li>
-              <strong>use:</strong> servo motors to strike xylophone keys
+              <strong>implement game logic:</strong> reveal cells, flag mines,
+              handle different mouse click events
               <ul>
-                <li>can control force of strike by varying the motor speed</li>
+                <li>recursion to reveal empty spaces</li>
+                <li>loops and conditionals to handle game state</li>
               </ul>
             </li>
             <li>
-              <strong>code:</strong> in arduino / c++
-              <ul>
-                <li>
-                  write program to collectively control servo motor based on
-                  music note input
-                </li>
-              </ul>
+              <strong>create GUI:</strong> game board, buttons, labels, as well
+              as different screens and levels
+            </li>
+            <li>
+              <strong>track high scores</strong>: leverage file i/o to store and
+              sort high scores
             </li>
           </ul>
-        </div>
-        <div className="photo">
-          <img src="/projects/botthoven/1.png" alt="botthoven" />
-          <p>initial design plan</p>
-        </div>
-      </div>
-
-      <div className="projectDetailRow">
-        <div className="photo">
-          <img src="/projects/botthoven/2.png" alt="botthoven" />
-          <p>CAD mockup of servo-mallet system</p>
-        </div>
-        <div className="photo">
-          <img src="/projects/botthoven/3.png" alt="botthoven" />
-          <p>3d printing servo stands</p>
-        </div>
-        <div className="photo">
-          <img src="/projects/botthoven/4.png" alt="botthoven" />
-          <p>finished servo-mallet system</p>
         </div>
       </div>
 
