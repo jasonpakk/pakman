@@ -124,12 +124,11 @@ export default function ARDrumSet() {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/DfeqlA-RrQQ?si=bNInDXBrzxRWzQi0"
+            src="https://www.youtube.com/embed/DfeqlA-RrQQ?si=bNInDXBrzxRWzQi0&amp;start=11"
             title="AR Drum Set Demo"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
           ></iframe>
           <p>
             watch how you can interact with a drum set directly in your

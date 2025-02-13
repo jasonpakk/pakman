@@ -98,12 +98,11 @@ export default function SpaceColony() {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/qVChgCFsS1k?si=0ZGJGUHtSwPC16Rn"
+            src="https://www.youtube.com/embed/qVChgCFsS1k?si=0ZGJGUHtSwPC16Rn&amp;start=8"
             title="Space Colony Demo"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
           ></iframe>
           <p>watch a demo of how you can grow a colony in outer space!</p>
         </div>

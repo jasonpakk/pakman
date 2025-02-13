@@ -61,6 +61,7 @@
     transform: translate(-50%, 0);
     width: 100%;
     text-align: center;
+    font-size: 1.5vw;
   }
 }
 
@@ -95,7 +96,7 @@
 
 #thesisMedia {
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   width: 52%;
 
@@ -167,6 +168,7 @@
     left: 50%;
     transform: translate(-50%, 0);
     width: 100%;
+    font-size: 1.5vw;
   }
 }
 
@@ -181,5 +183,14 @@
     transition: 0.5s ease;
     cursor: pointer;
     color: #3373FF;
+  }
+}
+
+.videoSamples {
+  margin-top: 0;
+
+  .video {
+    width: 25vw;
+    height: 25vw * .5625;
   }
 }

@@ -108,12 +108,11 @@ export default function VRSolarSystem() {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/jzn9STFVCxM?si=sRtbcBJJnuA5i10z"
+            src="https://www.youtube.com/embed/jzn9STFVCxM?si=sRtbcBJJnuA5i10z&amp;start=8"
             title="VR Solar System Demo"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
           ></iframe>
           <p>watch bot-thoven perform popular classical tunes</p>
         </div>

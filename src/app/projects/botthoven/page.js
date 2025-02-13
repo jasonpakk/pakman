@@ -123,12 +123,11 @@ export default function Botthoven() {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/9Ag7zkTR_XE?si=SE1SH0--3utFUcaT"
+            src="https://www.youtube.com/embed/9Ag7zkTR_XE?si=SE1SH0--3utFUcaT&amp;start=4"
             title="Bot-thoven Demo"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
           ></iframe>
           <p>watch bot-thoven perform popular classical tunes</p>
         </div>
@@ -236,7 +235,6 @@ export default function Botthoven() {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
           ></iframe>
           <p>watch bot-thoven perform in 3 different styles</p>
         </div>

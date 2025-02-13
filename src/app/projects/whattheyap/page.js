@@ -144,7 +144,6 @@ export default function WhatTheYap() {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
           ></iframe>
           <p>
             demo of auto-generating study materials + studying with your voice

@@ -113,12 +113,11 @@ export default function TerraceSurvival() {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/THqoeknpMg0?si=iZEKpk9_IdDiHBM8"
+            src="https://www.youtube.com/embed/THqoeknpMg0?si=iZEKpk9_IdDiHBM8&amp;start=9"
             title="Terrace Survival Demo"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
           ></iframe>
           <p>
             watch a demo of how to save yourself from starvation out in the

@@ -53,9 +53,8 @@ export default function Music() {
         <div className="text" style={{ width: "40%" }}>
           <h2>THESIS</h2>
           <p>
-            I'm part of a viola trio that arranges and performs music for
-            violas. We have a lot of fun playing together and creating new
-            arrangements.
+            I double-majored in music + computer science at Dartmouth, where I
+            earned high honors for my thesis on arrangements and transcriptions.
           </p>
         </div>
 
@@ -84,7 +83,6 @@ export default function Music() {
               title="Cafe Music"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
             ></iframe>
             <p>
               watch a performance of my transaction of cafe music for
@@ -127,7 +125,7 @@ export default function Music() {
             <HoverItem
               src="/music/abroad6.jpeg"
               alt="music image"
-              text="wrapping up the program on a dinner cruise"
+              text="with my friends from the program!"
             />
           </div>
         </div>
@@ -151,18 +149,87 @@ export default function Music() {
           </p>
         </div>
         <div className="media">
-          <img src="/music/hummel.png" alt="performances" />
+          <img
+            src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExenV1dDk0MjVnOWQ4Z3FzaTdiczJ2MHR3djdyazFubXpzdzA5Yzh4bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XiCKHfN7ESnnht1YG8/giphy.gif"
+            alt="performances"
+          />
+          <p>in rehearsal as a soloist with the dartmouth symphony orchestra</p>
         </div>
       </div>
 
-      <div className="musicRow">
-        <div className="media"></div>
-        <div className="text" style={{ textAlign: "right" }}>
+      <div className="musicRow videoSamples">
+        <div className="video">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/tUo7kLDjtFQ?si=EWFdKtBc_2QIa_-Q"
+            title="Clarke Viola Sonata"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+          <p>sonata for viola + piano, by rebecca clarke</p>
+        </div>
+        <div className="video">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/4bydyqrdc08?si=Uohf31XZkQtN4HDM"
+            title="Souvenir de Florence"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+          <p>
+            tchaikovsky's souvenir de florence, performed at the kennedy
+            center's millennium stage
+          </p>
+        </div>
+        <div className="video">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/PQb8vSSSEzA?si=0rN2ljmduOY3V-Pu&amp;start=368"
+            title="NSO-SMI"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+          <p>
+            don juan + brahms 1 with the national symphony's summer music
+            institute
+          </p>
+        </div>
+      </div>
+
+      <div className="musicRow videoSamples" style={{ margin: "8vw 0" }}>
+        <div className="video">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/qP1NytR8urI?si=JTqo_2GjbN0XNFsx&amp;start=4"
+            title="NSO-SMI"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+          <p>b rossette arranged for piano quintet!</p>
+        </div>
+        <div className="video">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/E1wcT70dbjI?si=HgIpeXz60Z9HdIma&amp;start=2"
+            title="NSO-SMI"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+          <p>
+            dobon's spin on "pop! goes the weasel" rearranged for viola trio
+          </p>
+        </div>
+        <div className="text" style={{ textAlign: "right", width: "30%" }}>
           <h2>COMPOSING</h2>
           <p>
-            I'm part of a viola trio that arranges and performs music for
-            violas. We have a lot of fun playing together and creating new
-            arrangements.
+            I arrange music to play with the ensembles that I play with.
+            Currently, my viola trio and ext description goes here
+            akjflkdjlkfsdj jdskfljdlfjdslk.
           </p>
         </div>
       </div>
