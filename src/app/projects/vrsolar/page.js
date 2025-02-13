@@ -57,7 +57,7 @@ export default function VRSolarSystem() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="text">
+        <div className="text" style={{ width: "95%" }}>
           <div className="title">
             <img src="/icons/rightarrow.png" alt="rightarrow" />
             <h2>SUMMARY</h2>

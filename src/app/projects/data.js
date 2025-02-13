@@ -18,6 +18,15 @@ const projectsList = [
     category: "augmented reality",
   },
   {
+    id: "fitkitch",
+    title: "FITKITCH",
+    description:
+      "bereal but for fitness! complete daily workouts within the timeframe and work with your friends to reveal the surprise recipe",
+    image: "/projects/fitkitch.png",
+    demo: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWVobGFoYmtwbDVpMThvanFxb3F2ZWo4NHY0b2c1OXU3MnF6ZGVoeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H8vnDy9YdgupWhFrl0/giphy.gif",
+    category: "mobile",
+  },
+  {
     id: "leafylearn",
     title: "LEAFY LEARN",
     description:
@@ -70,15 +79,6 @@ const projectsList = [
     image: "/projects/vrsolar.png",
     demo: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExODRyZTI4b3pwdWJ5dXkwYjlnaWZlZWQ4eHRkZXZ6dXoyemFxd2tiaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hS5OPOzNQnhmvrIkuN/giphy.gif",
     category: "virtual reality",
-  },
-  {
-    id: "fitkitch",
-    title: "FITKITCH",
-    description:
-      "bereal but for fitness! complete daily workouts within the timeframe and work with your friends to reveal the surprise recipe",
-    image: "/projects/fitkitch.png",
-    demo: "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWVobGFoYmtwbDVpMThvanFxb3F2ZWo4NHY0b2c1OXU3MnF6ZGVoeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H8vnDy9YdgupWhFrl0/giphy.gif",
-    category: "mobile",
   },
   {
     id: "minesweeper",
