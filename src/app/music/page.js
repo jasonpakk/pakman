@@ -35,14 +35,15 @@ export default function Music() {
       <div id="avatarHeader">
         <div className="text">
           <p>
-            When I'm not writing code, I'm making music — whether it be playing,
-            listening, or arranging.
+            when I'm not writing code, you'll find me involved with music —
+            whether it be playing, listening, or arranging.
           </p>
           <p>
-            I perform viola with local orchestras and love creating arrangements
-            to play with the groups I'm part of, like my viola trio.
+            i play the viola with orchestras in the area and enjoy writing
+            arrangements to play with the groups I'm a part of, like my viola
+            trio.
           </p>
-          <p>Feel free to explore my performances and arrangements below!</p>
+          <p>feel free to explore my performances and arrangements below!</p>
         </div>
         <img src="/avatar/music.gif" alt="avatar" />
       </div>
@@ -53,10 +54,13 @@ export default function Music() {
       <div className="musicRow">
         <div className="text" style={{ width: "40%" }}>
           <h2>THESIS</h2>
+          <p>i double-majored in music & cs at dartmouth.</p>
           <p>
-            I double-majored in music + computer science at Dartmouth, where I
-            earned high honors for my thesis on arrangements and transcriptions.
+            senior year, i was awarded high honors for my thesis on the
+            transcription process of rewriting paul schoenfield's café music to
+            perform with my trio of viola, cello, and piano.
           </p>
+          <p>feel free to check out our performance of the transcription!</p>
         </div>
 
         <div id="thesisMedia" className="media">
@@ -86,8 +90,8 @@ export default function Music() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>
             <p>
-              watch a performance of my transaction of cafe music for
-              viola-cello-piano!
+              watch a performance of my transcription - rewriting schoenfield's
+              café music for viola-cello-piano!
             </p>
           </div>
         </div>
@@ -133,9 +137,18 @@ export default function Music() {
         <div className="text" style={{ textAlign: "right" }}>
           <h2>ABROAD</h2>
           <p>
-            I also spent a term studying abroad in London, where I had the
-            opportunity to perform solo and chamber music while immersing myself
-            in the city's vibrant concert scene.
+            in the spring of 2022, i spent a term studying abroad in london, a
+            music capital of the world.
+          </p>{" "}
+          <p>
+            i had the opportunity to attend concerts on a daily basis, featuring
+            world-renowned musicians and ensembles performing solo, chamber, and
+            orchestral works.
+          </p>
+          <p>
+            learning from the best professors in london while immersing myself
+            in the city's rich musical culture was an experience i'll never
+            forget!
           </p>
         </div>
       </div>
@@ -144,9 +157,13 @@ export default function Music() {
         <div className="text">
           <h2>PERFORMANCES</h2>
           <p>
-            I'm part of a viola trio that arranges and performs music for
-            violas. We have a lot of fun playing together and creating new
-            arrangements.
+            over the years, i've had the opportunity to perform in a variety of
+            solo, chamber, and orchestral performances.
+          </p>
+          <p>
+            highlights have included playing at the kennedy center, performing
+            on abc-7 news, side by side rehearsals with the national symphony,
+            and soloing with the dartmouth symphony.
           </p>
         </div>
         <div className="media">
@@ -212,7 +229,10 @@ export default function Music() {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
-          <p>b rossette arranged for piano quintet!</p>
+          <p>
+            b rossette, a popular soundtrack from a k-drama, rearranged for
+            piano quintet!
+          </p>
         </div>
         <div className="video">
           <iframe
@@ -230,9 +250,12 @@ export default function Music() {
         <div className="text" style={{ textAlign: "right", width: "30%" }}>
           <h2>COMPOSING</h2>
           <p>
-            I arrange music to play with the ensembles that I play with.
-            Currently, my viola trio and ext description goes here
-            akjflkdjlkfsdj jdskfljdlfjdslk.
+            i enjoy arranging music for the groups i play with, such as my viola
+            trio.
+          </p>
+          <p>
+            it can be hard to find existing music for such a group of
+            instruments, so writing arrangements comes in handy!
           </p>
         </div>
       </div>
