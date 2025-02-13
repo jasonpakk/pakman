@@ -64,14 +64,13 @@ export default function TerraceSurvival() {
           </div>
 
           <p style={{ marginTop: "1vw" }}>
-            as a programmer + musician, i wanted to integrate my two interests
-            into a single project.
+            this was the first project i made in unity!
           </p>
           <br />
           <p>
-            senior year of high school, i partnered with my friend to design,
-            build, and program a xylophone-playing robot that can perform any
-            tune.
+            i worked with a modeler who created a 3d model of a terrace, and we
+            created a survival-based game where the player must scavenge the
+            resources on the terrace to save themselves from starvation.
           </p>
         </div>
       </div>
@@ -85,26 +84,26 @@ export default function TerraceSurvival() {
 
           <ul>
             <li>
-              <strong>found:</strong> existing instrument-playing robots heavily
-              focus on musical technicality
+              <strong>leverage:</strong> low-poly design for fun, yet futuristic
+              look
               <ul>
-                <li>pitch accuracy, agility, precise timing, etc.</li>
+                <li>add unexpected game events to keep player engaged</li>
+                <li>success is based on interactions with the environment</li>
               </ul>
             </li>
+
             <li>
-              <strong>lacks:</strong> the expressive musicianship of a human
-              performer
-            </li>
-            <li>
-              humans achieve <strong>musicality</strong> in ways such as:
+              first time working in <strong>unity</strong>:
               <ul>
                 <li>
-                  <strong>dynamics</strong> - varying volume for emotional
-                  expression
+                  leverage simple character movements and collision detection to
+                  interact with items
                 </li>
                 <li>
-                  <strong>articulation</strong> - differences in clarity and
-                  attack of notes
+                  implement game logic to track player health and resources
+                </li>
+                <li>
+                  crete a storage system to keep track of player inventory
                 </li>
               </ul>
             </li>
@@ -121,7 +120,10 @@ export default function TerraceSurvival() {
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           ></iframe>
-          <p>watch bot-thoven perform popular classical tunes</p>
+          <p>
+            watch a demo of how to save yourself from starvation out in the
+            terrace!
+          </p>
         </div>
       </div>
 
@@ -129,59 +131,142 @@ export default function TerraceSurvival() {
         <div className="text">
           <div className="title">
             <img src="/icons/rightarrow.png" alt="rightarrow" />
-            <h2>APPROACH</h2>
+            <h2>DESIGN</h2>
           </div>
 
           <ul>
             <li>
-              <strong>goal:</strong> build a robot that plays with human-like
-              musical expression
-            </li>
-            <li>
-              <strong>instrument of choice:</strong> xylophone
+              worked with a modeler who created all the necessary assets for the
+              game
               <ul>
                 <li>
-                  <strong>why?</strong>
-                  can easily strike keys with different force to achieve
-                  different musical effects
+                  <strong>terrace</strong>
+                  environment for player to explore, scavenge, and survive
+                </li>
+                <li>
+                  <strong>items</strong> the player can interact with to survive
+                </li>
+                <li>
+                  <strong>environmental</strong> assets like trees and pillars
                 </li>
               </ul>
             </li>
             <li>
-              <strong>use:</strong> servo motors to strike xylophone keys
+              <strong>prototype:</strong> integrate assets with player logic
               <ul>
-                <li>can control force of strike by varying the motor speed</li>
-              </ul>
-            </li>
-            <li>
-              <strong>code:</strong> in arduino / c++
-              <ul>
-                <li>
-                  write program to collectively control servo motor based on
-                  music note input
-                </li>
+                <li>ensure player can move around the terrace</li>
+                <li>detect collisions with items</li>
+                <li>implement necssary lighting and shading</li>
               </ul>
             </li>
           </ul>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/1.png" alt="botthoven" />
-          <p>initial design plan</p>
+          <img
+            className="long"
+            src="/projects/terracesurvival/1.png"
+            alt="terrace survival"
+          />
+          <p>initial design of terrace</p>
         </div>
       </div>
 
       <div className="projectDetailRow">
         <div className="photo">
-          <img src="/projects/botthoven/2.png" alt="botthoven" />
-          <p>CAD mockup of servo-mallet system</p>
+          <img
+            className="wide"
+            src="/projects/terracesurvival/2.png"
+            alt="terrace survival"
+          />
+          <p>model of final terrace with a low-poly, marble-look</p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/3.png" alt="botthoven" />
-          <p>3d printing servo stands</p>
+          <img src="/projects/terracesurvival/3.png" alt="terrace survival" />
+          <p>additional environmental and interactive objects</p>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/4.png" alt="botthoven" />
-          <p>finished servo-mallet system</p>
+          <img
+            className="wide"
+            src="https://media.giphy.com/media/XjQUmEHyxtUFqWKniA/giphy.gif"
+            alt="terrace survival"
+          />
+          <p>prototyping gameplay within terrace with simple cubes</p>
+        </div>
+      </div>
+
+      <div className="projectDetailRow">
+        <div className="text">
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>DEVELOPMENT</h2>
+          </div>
+
+          <ul>
+            <li>
+              <strong>inventory:</strong> manage player resources
+              <ul>
+                <li>add items to inventory when player interacts with them</li>
+                <li>remove items from inventory when player uses them</li>
+                <li>trigger game events based on inventory and items used</li>
+              </ul>
+            </li>
+            <li>
+              <strong>particle effects:</strong> low-poly fire and smoke
+            </li>
+            <li>
+              <strong>gameplay:</strong>
+              <ul>
+                <li>sound effects and intro typewriter text</li>
+                <li>player health and resource tracking</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div className="photo">
+          <img
+            className="wide"
+            style={{ width: "33vw" }}
+            src="/projects/terracesurvival/5.png"
+            alt="terrace survival"
+          />
+          <p>full shot of game environment</p>
+        </div>
+      </div>
+
+      <div className="projectDetailRow">
+        <div className="photo">
+          <img
+            className="wide"
+            src="https://media.giphy.com/media/O5q7a8MMCOAm9CiAXB/giphy.gif"
+            alt="terrace survival"
+          />
+          <p>all done :0</p>
+        </div>
+        <div className="text">
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>FINAL</h2>
+          </div>
+
+          <ul>
+            <li>
+              finished a complete game within my first weeks of working in
+              unity!
+            </li>
+
+            <li>
+              <strong>compiled</strong> and shareable game for others to play
+              <ul>
+                <li>
+                  converted to an executable format for windows and mac users to
+                  test and play
+                </li>
+                <li>
+                  shared with classmates, friends, and professor for feedback
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
 
