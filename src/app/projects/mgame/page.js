@@ -24,7 +24,7 @@ export default function MGame() {
       <div className="projectHeader">
         <img src="/projects/mgame.png" alt="mGAME" />
         <div className="text">
-          <h1>mGAME</h1>
+          <h1 style={{ color: "#bfbdbd" }}>mGAME</h1>
           <p>
             set measurable goals and track your progress with your healthcare
             provider

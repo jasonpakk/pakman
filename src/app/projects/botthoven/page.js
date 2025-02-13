@@ -24,7 +24,7 @@ export default function Botthoven() {
       <div className="projectHeader">
         <img src="/projects/botthoven.png" alt="botthoven" />
         <div className="text">
-          <h1>BOT-THOVEN</h1>
+          <h1 style={{ color: "#bdb5f7" }}>BOT-THOVEN</h1>
           <p>
             program a xylophone-playing robot to perform your favorite tunes
           </p>

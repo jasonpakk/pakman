@@ -24,7 +24,7 @@ export default function ARDrumSet() {
       <div className="projectHeader">
         <img src="/projects/ardrum.png" alt="ar drum" />
         <div className="text">
-          <h1>AR DRUM SET</h1>
+          <h1 style={{ color: "#ffa6a7" }}>AR DRUM SET</h1>
           <p>
             drop a drum set anywhere in your environment and create beats on the
             go

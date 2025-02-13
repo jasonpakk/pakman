@@ -24,7 +24,7 @@ export default function HolisticRanching() {
       <div className="projectHeader">
         <img src="/projects/holistic.png" alt="holistic ranching" />
         <div className="text">
-          <h1>HOLISTIC RANCHING</h1>
+          <h1 style={{ color: "#bfbdbd" }}>HOLISTIC RANCHING</h1>
           <p>helping ranchers manage their cattle in a sustainable way</p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />

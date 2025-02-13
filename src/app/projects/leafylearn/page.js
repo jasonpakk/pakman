@@ -24,7 +24,7 @@ export default function LeafyLearn() {
       <div className="projectHeader">
         <img src="/projects/leafylearn.png" alt="leafy learn" />
         <div className="text">
-          <h1>LEAFY LEARN</h1>
+          <h1 style={{ color: "#9fd8f5" }}>LEAFY LEARN</h1>
           <p>
             learn how to code by playing an animal crossing like, aesthetic game
           </p>

@@ -24,7 +24,7 @@ export default function SpaceColony() {
       <div className="projectHeader">
         <img src="/projects/spacecolony.png" alt="space colony" />
         <div className="text">
-          <h1>SPACE COLONY</h1>
+          <h1 style={{ color: "#c918a6" }}>SPACE COLONY</h1>
           <p>
             farm, harvest, and build a thriving colony...except it's in outer
             space. no pressure :]

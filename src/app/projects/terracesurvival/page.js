@@ -24,7 +24,7 @@ export default function TerraceSurvival() {
       <div className="projectHeader">
         <img src="/projects/terrace.png" alt="terrace survival" />
         <div className="text">
-          <h1>TERRACE SURVIVAL</h1>
+          <h1 style={{ color: "#477ef5" }}>TERRACE SURVIVAL</h1>
           <p>
             to win, you must do ~whatever~ it takes to survive on a deserted
             terrace

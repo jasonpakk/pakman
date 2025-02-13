@@ -24,7 +24,7 @@ export default function WhatTheYap() {
       <div className="projectHeader">
         <img src="/projects/whattheyap.png" alt="what the yap" />
         <div className="text">
-          <h1>WHAT THE YAP?</h1>
+          <h1 style={{ color: "#fcfaa2" }}>WHAT THE YAP?</h1>
           <p>
             yap to learn! turn your notes into AI-generated flashcards and study
             using just your voice

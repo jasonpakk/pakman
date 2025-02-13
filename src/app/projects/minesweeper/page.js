@@ -24,7 +24,7 @@ export default function Minesweeper() {
       <div className="projectHeader">
         <img src="/projects/minesweeper.png" alt="minesweeper" />
         <div className="text">
-          <h1>MINESWEEPER</h1>
+          <h1 style={{ color: "#bfbdbd" }}>MINESWEEPER</h1>
           <p>a classic: click wisely, or boom! the thrill never gets old</p>
           <div className="entry">
             <img src="/icons/wrench.png" alt="pin" />

@@ -24,7 +24,7 @@ export default function Doodlegram() {
       <div className="projectHeader">
         <img src="/projects/doodlegram.png" alt="doodlegram" />
         <div className="text">
-          <h1>DOODLEGRAM</h1>
+          <h1 style={{ color: "#c7e1f0" }}>DOODLEGRAM</h1>
           <p>
             a social media site for doodles? draw, share, and explore doodles
             with your friends

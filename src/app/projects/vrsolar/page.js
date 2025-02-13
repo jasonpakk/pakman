@@ -24,7 +24,7 @@ export default function VRSolarSystem() {
       <div className="projectHeader">
         <img src="/projects/vrsolar.png" alt="solar system" />
         <div className="text">
-          <h1>VR SOLAR SYSTEM</h1>
+          <h1 style={{ color: "#bfbdbd" }}>VR SOLAR SYSTEM</h1>
           <p>
             experience the scale of the solar system, watching revolutions and
             rotations at scale
