@@ -193,7 +193,9 @@ export default function HolisticRanching() {
               <strong>delivery:</strong> from design to release in 10 weeks
               <ul>
                 <li>launched beta version to meet client goals</li>
-                <li>effectively handed off the code for future development</li>
+                <li>
+                  effectively handed off the code for future development teams
+                </li>
               </ul>
             </li>
           </ul>

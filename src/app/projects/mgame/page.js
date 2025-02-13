@@ -24,7 +24,7 @@ export default function MGame() {
       <div className="projectHeader">
         <img src="/projects/mgame.png" alt="mGAME" />
         <div className="text">
-          <h1 style={{ color: "#bfbdbd" }}>mGAME</h1>
+          <h1 style={{ color: "#cbf9fd" }}>mGAME</h1>
           <p>
             set measurable goals and track your progress with your healthcare
             provider
@@ -52,14 +52,14 @@ export default function MGame() {
           </div>
 
           <p style={{ marginTop: "1vw" }}>
-            as a programmer + musician, i wanted to integrate my two interests
-            into a single project.
+            as a developer for the dali lab, i was contracted to develop a new
+            web application for dartmouth-hitchcock medical center
           </p>
           <br />
           <p>
-            senior year of high school, i partnered with my friend to design,
-            build, and program a xylophone-playing robot that can perform any
-            tune.
+            healthcare providers and patients needed a way to set measurable
+            goals and a way to track progress towards to improve the healthcare
+            experience.
           </p>
         </div>
       </div>
@@ -73,43 +73,37 @@ export default function MGame() {
 
           <ul>
             <li>
-              <strong>found:</strong> existing instrument-playing robots heavily
-              focus on musical technicality
+              <strong>found:</strong> difficulty in tracking patient progress
               <ul>
-                <li>pitch accuracy, agility, precise timing, etc.</li>
+                <li>unmeasurable, unclear on difference between visits</li>
+                <li>no motivation for patients to improve</li>
               </ul>
             </li>
             <li>
-              <strong>lacks:</strong> the expressive musicianship of a human
-              performer
-            </li>
-            <li>
-              humans achieve <strong>musicality</strong> in ways such as:
+              <strong>lacks:</strong> application to have patients set detailed,
+              measurable goals
               <ul>
                 <li>
-                  <strong>dynamics</strong> - varying volume for emotional
-                  expression
+                  must also meet <strong>HIPAA compliance</strong>
                 </li>
-                <li>
-                  <strong>articulation</strong> - differences in clarity and
-                  attack of notes
-                </li>
+              </ul>
+            </li>
+            <li>
+              patients said there was no <strong>motivation</strong> to
+              continue:
+              <ul>
+                <li>no way to track progress</li>
+                <li>no way to see improvement</li>
+                <li>want to capture their goals in a personalized way</li>
               </ul>
             </li>
           </ul>
         </div>
-        <div className="video">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/9Ag7zkTR_XE?si=SE1SH0--3utFUcaT"
-            title="Bot-thoven Demo"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
-          <p>watch bot-thoven perform popular classical tunes</p>
+        <div className="photo">
+          <img className="wide" src="/projects/mgame/1.png" alt="mgame" />
+          <p>
+            presenting mGAME, a platform to set goals using the SMART framework
+          </p>
         </div>
       </div>
 
@@ -122,54 +116,93 @@ export default function MGame() {
 
           <ul>
             <li>
-              <strong>goal:</strong> build a robot that plays with human-like
-              musical expression
-            </li>
-            <li>
-              <strong>instrument of choice:</strong> xylophone
+              <strong>leverage:</strong> SMART framework
               <ul>
+                <li>specific, measurable, achievable, relevant, time-bound</li>
+                <li>no more vauge goals like "i want my leg to heal"</li>
                 <li>
-                  <strong>why?</strong>
-                  can easily strike keys with different force to achieve
-                  different musical effects
+                  now say "i want to be able to walk my daughter down the aisle
+                  for the wedding in june"
                 </li>
               </ul>
             </li>
             <li>
-              <strong>use:</strong> servo motors to strike xylophone keys
+              <strong>patient view:</strong> see progress over time
               <ul>
-                <li>can control force of strike by varying the motor speed</li>
+                <li>
+                  set checkpoints to track progress towards goal completion
+                </li>
+                <li>see improvement over time</li>
               </ul>
             </li>
             <li>
-              <strong>code:</strong> in arduino / c++
+              <strong>provider view:</strong> organized view of progress across
+              all patients
               <ul>
-                <li>
-                  write program to collectively control servo motor based on
-                  music note input
-                </li>
+                <li>prevent forgetting about patient goals and progress</li>
+                <li>history of patient progress</li>
               </ul>
             </li>
           </ul>
         </div>
         <div className="photo">
-          <img src="/projects/botthoven/1.png" alt="botthoven" />
-          <p>initial design plan</p>
+          <img
+            className="wide"
+            src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2R0NzV6djhoaGVudnJsdnd6dDB3dTFvbHZvaG9lbm5ic25ieTljZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LWxgTX4enIkzUcJHTB/giphy.gif"
+            alt="mgame"
+          />
+          <p>goal setting interface with interactive questions</p>
         </div>
       </div>
 
       <div className="projectDetailRow">
         <div className="photo">
-          <img src="/projects/botthoven/2.png" alt="botthoven" />
-          <p>CAD mockup of servo-mallet system</p>
+          <img className="wide" src="/projects/mgame/3.png" alt="mgame" />
+          <p>recovery summary view to track progress</p>
         </div>
-        <div className="photo">
-          <img src="/projects/botthoven/3.png" alt="botthoven" />
-          <p>3d printing servo stands</p>
-        </div>
-        <div className="photo">
-          <img src="/projects/botthoven/4.png" alt="botthoven" />
-          <p>finished servo-mallet system</p>
+        <div className="text">
+          <div className="title">
+            <img src="/icons/rightarrow.png" alt="rightarrow" />
+            <h2>DEVELOPMENT</h2>
+          </div>
+
+          <ul>
+            <li>
+              <strong>stack:</strong> fern
+            </li>
+
+            <li>
+              <strong>frontend:</strong> react
+              <ul>
+                <li>
+                  create interactive user interface for goal setting and
+                  tracking
+                </li>
+                <li>redux for state management</li>
+              </ul>
+            </li>
+            <li>
+              <strong>backend:</strong> node.js, express, firebase
+              <ul>
+                <li>
+                  create restful api to handle authentication and necessary
+                  endpoints
+                </li>
+                <li>
+                  ensure <strong>HIPAA compliance</strong> with firebase
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>delivery:</strong> from design to release in 10 weeks
+              <ul>
+                <li>launched beta version to meet client goals</li>
+                <li>
+                  effectively handed off the code for future development teams
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
 
