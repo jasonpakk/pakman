@@ -1,9 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "../styles.scss";
 
 export default function Botthoven() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     window.scrollTo({
@@ -172,7 +189,12 @@ export default function Botthoven() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal("/projects/botthoven/1.png", "initial design plan")
+          }
+        >
           <img
             className="wide"
             src="/projects/botthoven/1.png"
@@ -183,15 +205,36 @@ export default function Botthoven() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/botthoven/2.png",
+              "CAD mockup of servo-mallet system"
+            )
+          }
+        >
           <img src="/projects/botthoven/2.png" alt="botthoven" />
           <p>CAD mockup of servo-mallet system</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal("/projects/botthoven/3.png", "3d printing servo stands")
+          }
+        >
           <img src="/projects/botthoven/3.png" alt="botthoven" />
           <p>3d printing servo stands</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/botthoven/4.png",
+              "finished servo-mallet system"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/botthoven/4.png"
@@ -241,7 +284,10 @@ export default function Botthoven() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() => openModal("/projects/botthoven/10.png", "all done :0")}
+        >
           <img
             className="wide"
             src="/projects/botthoven/5.png"
@@ -289,6 +335,18 @@ export default function Botthoven() {
       <p className="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

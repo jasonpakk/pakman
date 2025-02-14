@@ -1,5 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import MusicImages from "./images";
 import HoverItem from "../components/hover";
 import Compositions from "./compositions";
@@ -8,6 +9,22 @@ import "./styles.scss";
 
 export default function Music() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     const timeout = setTimeout(() => {
@@ -105,16 +122,19 @@ export default function Music() {
               src="/music/abroad1.jpg"
               alt="music image"
               text="presenting the dowb string quartet..."
+              openModal={openModal}
             />
             <HoverItem
               src="/music/abroad2.jpg"
               alt="music image"
               text="at the infamous royal albert hall"
+              openModal={openModal}
             />
             <HoverItem
               src="/music/abroad3.jpg"
               alt="music image"
               text="stonehenge :o"
+              openModal={openModal}
             />
           </div>
           <div className="row">
@@ -122,16 +142,19 @@ export default function Music() {
               src="/music/abroad4.jpg"
               alt="music image"
               text="performing bowen's viola sonata in his hometown"
+              openModal={openModal}
             />
             <HoverItem
               src="/music/abroad5.jpg"
               alt="music image"
               text="kitchen rehearsal?!"
+              openModal={openModal}
             />
             <HoverItem
               src="/music/abroad6.jpeg"
               alt="music image"
               text="with my friends from the program!"
+              openModal={openModal}
             />
           </div>
         </div>
@@ -167,7 +190,15 @@ export default function Music() {
             and soloing with the dartmouth symphony.
           </p>
         </div>
-        <div className="media">
+        <div
+          className="media"
+          onClick={() =>
+            openModal(
+              "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExenV1dDk0MjVnOWQ4Z3FzaTdiczJ2MHR3djdyazFubXpzdzA5Yzh4bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XiCKHfN7ESnnht1YG8/giphy.gif",
+              "in rehearsal as a soloist with the dartmouth symphony orchestra"
+            )
+          }
+        >
           <img
             src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExenV1dDk0MjVnOWQ4Z3FzaTdiczJ2MHR3djdyazFubXpzdzA5Yzh4bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XiCKHfN7ESnnht1YG8/giphy.gif"
             alt="performances"
@@ -268,6 +299,18 @@ export default function Music() {
       <p id="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

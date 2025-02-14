@@ -1,9 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "../styles.scss";
 
 export default function LeafyLearn() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     window.scrollTo({
@@ -168,7 +185,12 @@ export default function LeafyLearn() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal("/projects/leafylearn/1.png", "initial design plan")
+          }
+        >
           <img
             className="wide"
             src="/projects/leafylearn/1.png"
@@ -179,7 +201,15 @@ export default function LeafyLearn() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/leafylearn/2.png",
+              "storyboarding the plot of leary learn"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/leafylearn/2.png"
@@ -225,7 +255,15 @@ export default function LeafyLearn() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/leafylearn/3.png",
+              "initial character designs by modelers"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/leafylearn/3.png"
@@ -233,7 +271,15 @@ export default function LeafyLearn() {
           />
           <p>initial character designs by modelers</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/leafylearn/5.png",
+              "drag-and-drop design for a language-free experience"
+            )
+          }
+        >
           <img
             className="long"
             src="/projects/leafylearn/5.png"
@@ -241,7 +287,15 @@ export default function LeafyLearn() {
           />
           <p>drag-and-drop design for a language-free experience</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/leafylearn/4.png",
+              "assets created by team members for leafy learn environment"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/leafylearn/4.png"
@@ -279,7 +333,15 @@ export default function LeafyLearn() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/leafylearn/6.png",
+              "environment becomes revived upon completing lessons"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/leafylearn/6.png"
@@ -290,7 +352,15 @@ export default function LeafyLearn() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzBkc3E0cG5jbmRidmN4ejk1dTRndzVtNXViOG55NjI2ZGRhZzZlMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yZcXWoejibuYm1MdSC/giphy.gif",
+              "walk around and interact with game environment [+ musho follows you!]"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzBkc3E0cG5jbmRidmN4ejk1dTRndzVtNXViOG55NjI2ZGRhZzZlMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yZcXWoejibuYm1MdSC/giphy.gif"
@@ -301,11 +371,27 @@ export default function LeafyLearn() {
             you!]
           </p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/leafylearn/8.png",
+              "models were finalized by team members with character animations"
+            )
+          }
+        >
           <img src="/projects/leafylearn/8.png" alt="leafylearn" />
           <p>models were finalized by team members with character animations</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/leafylearn/7.png",
+              "drag-and-drop coding puzzles with interactive display of results"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/leafylearn/7.png"
@@ -318,7 +404,15 @@ export default function LeafyLearn() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/leafylearn/9.jpg",
+              "sharing our project at a tech exhibition"
+            )
+          }
+        >
           <img
             className="long"
             src="/projects/leafylearn/9.jpg"
@@ -364,6 +458,18 @@ export default function LeafyLearn() {
       <p className="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

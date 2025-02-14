@@ -1,9 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "../styles.scss";
 
 export default function MGame() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     window.scrollTo({
@@ -99,7 +116,15 @@ export default function MGame() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/mgame/1.png",
+              "presenting mGAME, a platform to set goals using the SMART framework"
+            )
+          }
+        >
           <img className="wide" src="/projects/mgame/1.png" alt="mgame" />
           <p>
             presenting mGAME, a platform to set goals using the SMART framework
@@ -145,7 +170,15 @@ export default function MGame() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2R0NzV6djhoaGVudnJsdnd6dDB3dTFvbHZvaG9lbm5ic25ieTljZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LWxgTX4enIkzUcJHTB/giphy.gif",
+              "goal setting interface with interactive questions"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2R0NzV6djhoaGVudnJsdnd6dDB3dTFvbHZvaG9lbm5ic25ieTljZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LWxgTX4enIkzUcJHTB/giphy.gif"
@@ -156,7 +189,15 @@ export default function MGame() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/mgame/3.png",
+              "recovery summary view to track progress"
+            )
+          }
+        >
           <img className="wide" src="/projects/mgame/3.png" alt="mgame" />
           <p>recovery summary view to track progress</p>
         </div>
@@ -209,6 +250,18 @@ export default function MGame() {
       <p className="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

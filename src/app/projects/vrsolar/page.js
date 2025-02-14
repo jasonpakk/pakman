@@ -1,9 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "../styles.scss";
 
 export default function VRSolarSystem() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     window.scrollTo({
@@ -152,7 +169,15 @@ export default function VRSolarSystem() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/vrsolar/1.png",
+              "planet assets used for the project"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/vrsolar/1.png"
@@ -163,7 +188,15 @@ export default function VRSolarSystem() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/vrsolar/2.png",
+              "user starts off in a classroom where they are learning about the planets"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/vrsolar/2.png"
@@ -174,21 +207,45 @@ export default function VRSolarSystem() {
             planets
           </p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2Q0YWdoN2t5Nm9yMzBtOG51dHNzcXN5NzhqZW15aTVhMGk5MDIzaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zTTH9KIqZ1Oevqr4Em/giphy.gif",
+              "ability to view and change planet statistics"
+            )
+          }
+        >
           <img
             src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2Q0YWdoN2t5Nm9yMzBtOG51dHNzcXN5NzhqZW15aTVhMGk5MDIzaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zTTH9KIqZ1Oevqr4Em/giphy.gif"
             alt="vr solar system"
           />
           <p>ability to view and change planet statistics</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/vrsolar/3.png",
+              "overall view of the solar system"
+            )
+          }
+        >
           <img className="wide" src="/projects/vrsolar/3.png" alt="botthoven" />
           <p>overall view of the solar system</p>
         </div>
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2c5M2ppeHVtamE2ZnhnMjhvYTlhaXJydmUzaXY0aHpxeGJqOW1sOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hS5OPOzNQnhmvrIkuN/giphy.gif",
+              "all done :0"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2c5M2ppeHVtamE2ZnhnMjhvYTlhaXJydmUzaXY0aHpxeGJqOW1sOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hS5OPOzNQnhmvrIkuN/giphy.gif"
@@ -228,6 +285,18 @@ export default function VRSolarSystem() {
       <p className="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

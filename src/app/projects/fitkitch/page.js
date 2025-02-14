@@ -1,9 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "../styles.scss";
 
 export default function FitKitch() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     window.scrollTo({
@@ -107,7 +124,15 @@ export default function FitKitch() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/fitkitch/1.png",
+              "fitwit, the initial idea proposed by the client"
+            )
+          }
+        >
           <img src="/projects/fitkitch/1.png" alt="fitkitch" />
           <p>fitwit, the initial idea proposed by the client</p>
         </div>
@@ -161,7 +186,15 @@ export default function FitKitch() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzkybW40bWNwdmd3em9teTl0cmcwMmZwdm9qbXpob2FwMmxodmRlNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H8vnDy9YdgupWhFrl0/giphy.gif",
+              "presenting...fitkitch!"
+            )
+          }
+        >
           <img
             className="long"
             src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzkybW40bWNwdmd3em9teTl0cmcwMmZwdm9qbXpob2FwMmxodmRlNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H8vnDy9YdgupWhFrl0/giphy.gif"
@@ -172,9 +205,12 @@ export default function FitKitch() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() => openModal("/projects/fitkitch/2.png", "fitkitch")}
+        >
           <img className="wide" src="/projects/fitkitch/2.png" alt="fitkitch" />
-          <p>sharing our project at a tech exhibition</p>
+          <p>initial sketches</p>
         </div>
         <div className="text">
           <div className="title">
@@ -206,8 +242,10 @@ export default function FitKitch() {
       </div>
 
       <img
+        onClick={() => openModal("/projects/fitkitch/3.png", "")}
         src="/projects/fitkitch/3.png"
         alt="botthoven"
+        className="fullImage"
         style={{
           width: "70%",
           alignSelf: "center",
@@ -264,6 +302,7 @@ export default function FitKitch() {
       </div>
 
       <img
+        onClick={() => openModal("/projects/fitkitch/4.png", "")}
         src="/projects/fitkitch/4.png"
         alt="fitkitch"
         style={{
@@ -272,11 +311,24 @@ export default function FitKitch() {
           marginTop: "2vw",
           marginBottom: "5vw",
         }}
+        className="fullImage"
       />
 
       <p className="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

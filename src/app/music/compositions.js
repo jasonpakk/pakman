@@ -6,6 +6,19 @@ export default function Compositions() {
     compositionsList["VIOLA, CELLO, PIANO"][0] // Default selection
   );
 
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+
+  const openModal = (imageSrc) => {
+    setModalImage(imageSrc);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+  };
+
   return (
     <div className="compositions">
       <div id="header">
@@ -59,7 +72,10 @@ export default function Compositions() {
             </div>
           </div>
 
-          <div id="samplePage">
+          <div
+            id="samplePage"
+            onClick={() => openModal(selectedComposition.samplePage)}
+          >
             <img src={selectedComposition.samplePage} alt="music" />
             <p>sample page</p>
           </div>
@@ -76,6 +92,17 @@ export default function Compositions() {
           </div>
         </div>
       </div>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,9 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "../styles.scss";
 
 export default function Minesweeper() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     window.scrollTo({
@@ -109,7 +126,15 @@ export default function Minesweeper() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM25rOXM1aGpmbnFtOG5pZjcycTJsbjBtcGluc3k4c2xhcTd0c3B5NyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l3V0GQMoaDLVbjXEI/giphy.gif",
+              "our goal was to recreate minesweeper using java"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM25rOXM1aGpmbnFtOG5pZjcycTJsbjBtcGluc3k4c2xhcTd0c3B5NyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l3V0GQMoaDLVbjXEI/giphy.gif"
@@ -120,7 +145,15 @@ export default function Minesweeper() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExejV6aDFkbngxbmxna2swdHA4aG5zc3pvYzNlb2FubG04amxnZnl5OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/m1j2MEzdiePlGZ3pDW/giphy.gif",
+              "final result!"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExejV6aDFkbngxbmxna2swdHA4aG5zc3pvYzNlb2FubG04amxnZnl5OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/m1j2MEzdiePlGZ3pDW/giphy.gif"
@@ -170,6 +203,18 @@ export default function Minesweeper() {
       <p className="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

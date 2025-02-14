@@ -1,9 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "../styles.scss";
 
 export default function Doodlegram() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     window.scrollTo({
@@ -116,7 +133,15 @@ export default function Doodlegram() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://github.com/jasonpakk/doodlegram-FE/blob/main/src/assets/demo.gif?raw=true",
+              "demo of doodlegram - draw and share!"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://github.com/jasonpakk/doodlegram-FE/blob/main/src/assets/demo.gif?raw=true"
@@ -162,7 +187,15 @@ export default function Doodlegram() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDI4NW0wd2Y1Y2MzZWI1NXppaHRqNG16anlhc3BxZm5oYTVqODFrMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9n58dfrlP0lZETdsbD/giphy.gif",
+              "used react-canvas-draw library for an interactive drawing interface"
+            )
+          }
+        >
           <img
             src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDI4NW0wd2Y1Y2MzZWI1NXppaHRqNG16anlhc3BxZm5oYTVqODFrMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9n58dfrlP0lZETdsbD/giphy.gif"
             alt="doodlegram"
@@ -174,7 +207,15 @@ export default function Doodlegram() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/doodlegram/3.png",
+              "profile page w/ bio + your doodles"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/doodlegram/3.png"
@@ -182,11 +223,27 @@ export default function Doodlegram() {
           />
           <p>profile page w/ bio + your doodles</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/doodlegram/1.png",
+              "gallery to see doodles by your friends"
+            )
+          }
+        >
           <img src="/projects/doodlegram/1.png" alt="doodlegram" />
           <p>interface to create your doodles</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/doodlegram/2.png",
+              "gallery to see doodles by your friends"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/doodlegram/2.png"
@@ -199,6 +256,18 @@ export default function Doodlegram() {
       <p className="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

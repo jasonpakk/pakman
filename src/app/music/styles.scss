@@ -50,6 +50,7 @@
       transition: 0.2s ease;
 
       &:hover {
+        cursor: pointer;
         transition: 0.2s ease;
         filter: invert(0.2);
       }
@@ -100,8 +101,17 @@
   }
 
   .media, .video {
+
+    &:hover img {
+      cursor: pointer;
+    }
     &:hover p {
-      color: lightskyblue;
+        color: lightskyblue;
+      }
+
+    p {
+      margin-top: 0.5vw;
+      font-size: 1.3vw;
     }
   }
 }
@@ -168,6 +178,7 @@
       transition: 0.2s ease;
 
       &:hover {
+        cursor: pointer;
         transition: 0.2s ease;
         filter: invert(0.2);
       }
@@ -399,6 +410,13 @@
       height: 14vw;
       background-color: white;
       border: 3px solid black;
+      transition: 0.3s ease;
+
+       &:hover {
+        transition: 0.3s ease;
+        filter: invert(0.2);
+        cursor: pointer;
+       }
     }
 
     p {
@@ -451,3 +469,6 @@
   margin-top: 4vw;
 
 }
+
+
+

@@ -130,3 +130,59 @@ button {
 
   }
 }
+
+.modal { // cover entire screen
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.close {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  font-size: 2vw;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 2.5vw;
+  height: 2.5vw;
+  text-align: center;
+  background-color: lightblue;
+  color: black;
+
+  &:hover {
+    background-color: black;
+    color: lightblue;
+    transition: 0.3s ease;
+  }
+}
+
+.modal-content {
+  position: relative;
+  
+  img {
+    object-fit: contain;
+    min-height: 60vh;
+    max-width: 85vw;
+    max-height: 85vh;
+    display: block;
+    margin: auto;
+    //border: 5px solid gray;
+  }
+
+  p {
+    text-align: center;
+    padding: 0.5vw 1vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: lightblue;
+  }
+}

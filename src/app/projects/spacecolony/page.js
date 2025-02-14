@@ -1,9 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "../styles.scss";
 
 export default function SpaceColony() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     window.scrollTo({
@@ -147,7 +164,15 @@ export default function SpaceColony() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGluZmJ5bnBjd3RjOTE1dGVsM3Jtc2Jrbm5zM2FoeHk2MmQ1aGs1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QTrcJiuNDo6no3aHPu/giphy.gif",
+              "environment cycles between day and night to affect growth"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGluZmJ5bnBjd3RjOTE1dGVsM3Jtc2Jrbm5zM2FoeHk2MmQ1aGs1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QTrcJiuNDo6no3aHPu/giphy.gif"
@@ -158,7 +183,15 @@ export default function SpaceColony() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media.giphy.com/media/0TwoXuM3gnwjeJKb2B/giphy.gif",
+              "futuristic UI for users to interact with shop and items"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://media.giphy.com/media/0TwoXuM3gnwjeJKb2B/giphy.gif"
@@ -166,18 +199,42 @@ export default function SpaceColony() {
           />
           <p>futuristic UI for users to interact with shop and items</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/spacecolony/1.png",
+              "shop with various inventory and a currency system"
+            )
+          }
+        >
           <img src="/projects/spacecolony/1.png" alt="space colony" />
           <p>shop with various inventory and a currency system</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/spacecolony/2.png",
+              "users can buy, feed, and gain resources by maintaing animals"
+            )
+          }
+        >
           <img src="/projects/spacecolony/2.png" alt="space colony" />
           <p>users can buy, feed, and gain resources by maintaing animals</p>
         </div>
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTR5bml3NXMwaGk0MGN2ZnpvdndpbHV4dnIydnM4MW1qNW4zdGFkbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ym9dxZOxmMbGR1iTHJ/giphy.gif",
+              "all done! :o"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTR5bml3NXMwaGk0MGN2ZnpvdndpbHV4dnIydnM4MW1qNW4zdGFkbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ym9dxZOxmMbGR1iTHJ/giphy.gif"
@@ -216,6 +273,18 @@ export default function SpaceColony() {
       <p className="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

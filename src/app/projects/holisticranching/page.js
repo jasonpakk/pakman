@@ -1,9 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "../styles.scss";
 
 export default function HolisticRanching() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     window.scrollTo({
@@ -87,7 +104,15 @@ export default function HolisticRanching() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/holistic/1.png",
+              "initial design for holistic ranching"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/holistic/1.png"
@@ -135,7 +160,15 @@ export default function HolisticRanching() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media.giphy.com/media/b8ISw6C8bcvmdpv3b6/giphy.gif",
+              "simple system to measure, track, and audit cattle data"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://media.giphy.com/media/b8ISw6C8bcvmdpv3b6/giphy.gif"
@@ -146,7 +179,15 @@ export default function HolisticRanching() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/holistic/2.png",
+              "final design for holistic ranching"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/holistic/2.png"
@@ -205,6 +246,18 @@ export default function HolisticRanching() {
       <p className="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

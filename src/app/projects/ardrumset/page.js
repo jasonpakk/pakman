@@ -1,9 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "../styles.scss";
 
 export default function ARDrumSet() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     window.scrollTo({
@@ -173,7 +190,12 @@ export default function ARDrumSet() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal("/projects/ardrum/1.png", "initial sketches")
+          }
+        >
           <img className="long" src="/projects/ardrum/1.png" alt="ardrum" />
           <p>initial sketches</p>
         </div>
@@ -220,7 +242,15 @@ export default function ARDrumSet() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTQwMTZvdmc0azlraHl3bG5vZDJqZXBpc3VpdmhybXZmbHJ1bXo0NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/caF2FhBhpb5njqE77z/giphy.gif",
+              "learning ar using vuforia + unity with simple cube tracking"
+            )
+          }
+        >
           <img
             src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTQwMTZvdmc0azlraHl3bG5vZDJqZXBpc3VpdmhybXZmbHJ1bXo0NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/caF2FhBhpb5njqE77z/giphy.gif"
             alt="ardrum"
@@ -231,25 +261,47 @@ export default function ARDrumSet() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYndweG9wb2tiZDF1MHUwdmoxOTUxZzBvc3AyMTl2anJzcjRnZDA2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LrukcJQqBdBuYBUIle/giphy.gif",
+              "testing ar tracking on a mobile phone"
+            )
+          }
+        >
           <img
             src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYndweG9wb2tiZDF1MHUwdmoxOTUxZzBvc3AyMTl2anJzcjRnZDA2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LrukcJQqBdBuYBUIle/giphy.gif"
             alt="ardrum"
           />
           <p>testing ar tracking on a mobile phone</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() => openModal("/projects/ardrum/2.png", "drum set in ar")}
+        >
           <img src="/projects/ardrum/2.png" alt="ardrum" />
           <p>drum set finished by modeler</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() => openModal("/projects/ardrum/3.png", "drum set in ar")}
+        >
           <img src="/projects/ardrum/3.png" alt="ardrum" />
           <p>image target created to map drum set</p>
         </div>
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTBsazRxaGVlODV4cXhxYWd0OXR1MzBnbGtudWwwcmRsbHBwOWVoZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GnDCiHLuGZD7zmrNOM/giphy.gif",
+              "all done :0"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTBsazRxaGVlODV4cXhxYWd0OXR1MzBnbGtudWwwcmRsbHBwOWVoZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GnDCiHLuGZD7zmrNOM/giphy.gif"
@@ -293,6 +345,18 @@ export default function ARDrumSet() {
       <p className="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

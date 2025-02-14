@@ -1,9 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "../styles.scss";
 
 export default function TerraceSurvival() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     window.scrollTo({
@@ -160,7 +177,15 @@ export default function TerraceSurvival() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/terracesurvival/1.png",
+              "initial design of terrace"
+            )
+          }
+        >
           <img
             className="long"
             src="/projects/terracesurvival/1.png"
@@ -171,7 +196,15 @@ export default function TerraceSurvival() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/terracesurvival/2.png",
+              "model of final terrace with a low-poly, marble-look"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/terracesurvival/2.png"
@@ -179,11 +212,27 @@ export default function TerraceSurvival() {
           />
           <p>model of final terrace with a low-poly, marble-look</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/terracesurvival/3.png",
+              "additional environmental and interactive objects"
+            )
+          }
+        >
           <img src="/projects/terracesurvival/3.png" alt="terrace survival" />
           <p>additional environmental and interactive objects</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media.giphy.com/media/XjQUmEHyxtUFqWKniA/giphy.gif",
+              "prototyping gameplay within terrace with simple cubes"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://media.giphy.com/media/XjQUmEHyxtUFqWKniA/giphy.gif"
@@ -221,7 +270,15 @@ export default function TerraceSurvival() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/terracesurvival/5.png",
+              "full shot of game environment"
+            )
+          }
+        >
           <img
             className="wide"
             style={{ width: "33vw" }}
@@ -233,7 +290,15 @@ export default function TerraceSurvival() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "https://media.giphy.com/media/O5q7a8MMCOAm9CiAXB/giphy.gif",
+              "all done :0"
+            )
+          }
+        >
           <img
             className="wide"
             src="https://media.giphy.com/media/O5q7a8MMCOAm9CiAXB/giphy.gif"
@@ -272,6 +337,18 @@ export default function TerraceSurvival() {
       <p className="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

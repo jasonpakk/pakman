@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function HoverItem({ id, src, alt, text }) {
+export default function HoverItem({ id, src, alt, text, openModal }) {
   const [isHovering, setIsHovering] = useState(false);
   const handleMouseOver = () => {
     setIsHovering(true);
@@ -11,7 +11,10 @@ export default function HoverItem({ id, src, alt, text }) {
   };
 
   return (
-    <div className="hoverItem">
+    <div
+      className="hoverItem"
+      onClick={() => (openModal ? openModal(src, text) : null)}
+    >
       <img
         id={id}
         src={src}

@@ -1,9 +1,26 @@
 "use client";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "../styles.scss";
 
 export default function WhatTheYap() {
   const router = useRouter();
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+  const [modalText, setModalText] = useState("");
+
+  const openModal = (imageSrc, caption) => {
+    setModalImage(imageSrc);
+    setModalText(caption);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setModalImage("");
+    setModalText("");
+  };
 
   const handleScroll = () => {
     window.scrollTo({
@@ -195,7 +212,12 @@ export default function WhatTheYap() {
             </li>
           </ul>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal("/projects/whattheyap/1.png", "welcome to what the yap?!")
+          }
+        >
           <img
             className="wide"
             src="/projects/whattheyap/1.png"
@@ -206,7 +228,15 @@ export default function WhatTheYap() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/whattheyap/2.png",
+              "users can paste or upload file(s) of their notes"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/whattheyap/2.png"
@@ -214,7 +244,15 @@ export default function WhatTheYap() {
           />
           <p>users can paste or upload file(s) of their notes</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/whattheyap/3.png",
+              "flashcards are auto-generated and users can edit or add more"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/whattheyap/3.png"
@@ -222,7 +260,15 @@ export default function WhatTheYap() {
           />
           <p>flashcards are auto-generated and users can edit or add more</p>
         </div>
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/whattheyap/4.png",
+              "always study w/ a new set of questions + use your voice!"
+            )
+          }
+        >
           <img
             className="wide"
             src="/projects/whattheyap/4.png"
@@ -233,7 +279,15 @@ export default function WhatTheYap() {
       </div>
 
       <div className="projectDetailRow">
-        <div className="photo">
+        <div
+          className="photo"
+          onClick={() =>
+            openModal(
+              "/projects/whattheyap/5.jpg",
+              "after an all-nighter with lots of caffeine, we won first prize!"
+            )
+          }
+        >
           <img
             className="long"
             src="/projects/whattheyap/5.jpg"
@@ -274,6 +328,18 @@ export default function WhatTheYap() {
       <p className="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑
       </p>
+
+      {modalOpen && (
+        <div className="modal" onClick={closeModal}>
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={modalImage} alt="sample page enlarged" />
+            <p>{modalText}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

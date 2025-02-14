@@ -81,16 +81,30 @@
     width: 30vw;
 
     p {
+      transition: 0.5s ease;
       width: 85%;
       margin-top: 0.5vw;
       transition: 2.7 ease;
       text-align: center;
     }
 
-    &:hover p {
-      transition: 2.7 ease;
-      color: gold;
-      font-weight: bold;
+    img {
+      transition: 0.5s ease;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      img {
+        transition: 0.5s ease;
+        filter: invert(0.2);
+      }
+
+      p {
+        transition: 0.5s ease;
+        color: gold;
+        font-weight: bold;
+      }
     }
   }
 
@@ -172,5 +186,29 @@
     transition: 0.5s ease;
     cursor: pointer;
     color: #3373FF;
+  }
+}
+
+.projectPage .fullImage {
+  transition: 0.5s ease;
+  &:hover {
+    transition: 0.5s ease;
+    cursor: pointer;
+    filter: invert(0.2);
+  }
+}
+
+.projectPage .modal {
+  .close {
+    background-color: gold;
+
+    &:hover {
+      background-color: black;
+      color: gold;
+    }
+  }
+
+  p {
+    color: gold;
   }
 }
