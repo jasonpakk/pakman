@@ -353,13 +353,20 @@
   h3 { // title
     font-weight: bold;
     font-size: 2vw;
-    margin: 0.5vw 1.5vw;
+    margin: 0 1.5vw;
     text-align: center;
+  }
+
+  .subtext {
+    text-align: center;
+    font-size: 0.9vw;
+    margin-top: 0.3vw;
   }
 
   #composer {
     display: flex;
     align-items: center;
+    margin-top: 0.5vw;
 
     img {
       width: 0.8vw;

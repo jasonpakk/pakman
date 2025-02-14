@@ -50,6 +50,7 @@ export default function Compositions() {
 
           <div className="text">
             <h3>{selectedComposition.title}</h3>
+            <p className="subtext">{selectedComposition.subtext}</p>
             <div id="composer">
               <img src="/icons/person.png" alt="composer" />
               <p>{selectedComposition.composer}</p>
