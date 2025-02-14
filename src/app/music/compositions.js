@@ -18,7 +18,7 @@ export default function Compositions() {
           {Object.keys(compositionsList).map((instrumentation) => (
             <div className="section" key={instrumentation}>
               <div className="sectionHeader">
-                <img src="/icons/music.png" alt="music" />
+                <img src="/icons/rightarrow.png" alt="music" />
                 <p>for</p>
                 <h3>{instrumentation}</h3>
               </div>
@@ -35,8 +35,10 @@ export default function Compositions() {
                         : ""
                     }
                   >
-                    <p>→</p>
-                    <p className="title">{composition.title}</p>
+                    <p className="title">
+                      ♪&nbsp;&nbsp;&nbsp;{composition.title}
+                    </p>
+                    <p className="composer">{composition.composer}</p>
                   </li>
                 ))}
               </ul>

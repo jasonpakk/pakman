@@ -277,7 +277,7 @@
       p {
         font-size: 1.4vw;
         margin-right: 0.5vw;
-        color: lightcyan;
+        color: white;
       }
 
       h3 {
@@ -288,13 +288,21 @@
     }
 
     ul {
-      padding-left: 2vw;
 
       li {
+        justify-content: space-between;
         display: flex;
         margin: 0.9vw 0;
         font-size: 1.4vw;
         color: lightcyan;
+        align-items: center;
+        transition: 0.3s ease;
+
+        &:hover {
+          transition: 0.3s ease;
+          color: lightseagreen;
+          cursor: pointer;
+        }
 
         img {
           width: 1.2vw;
@@ -303,21 +311,23 @@
 
         .title {
           margin-left: 1vw;
-          transition: 0.3s ease;
+          font-size: 1.3vw;
+        }
 
-          &:hover {
-            transition: 0.3s ease;
-            color: lightseagreen;
-            cursor: pointer;
-          }
+        .composer {
+          font-size: 1vw;
         }
       }
 
       .selected {
-        color: lightseagreen;
-        font-weight: bold;
+        background-color: lightcyan;
+        padding: 1vw 0;
+        padding-right: 1vw;
+        color: darkblue;
+        border: 4px solid lightblue;
 
-        .title {
+        .title, .composer {
+          font-weight: bold;
           text-decoration: underline;
         }
       }
@@ -355,12 +365,14 @@
     font-size: 2vw;
     margin: 0 1.5vw;
     text-align: center;
+    color: navy;
   }
 
   .subtext {
     text-align: center;
     font-size: 0.9vw;
     margin-top: 0.3vw;
+    color: darkslateblue;
   }
 
   #composer {
@@ -387,12 +399,13 @@
       width: 11vw;
       height: 14vw;
       background-color: white;
-      border: 2px solid black;
+      border: 3px solid black;
     }
 
     p {
-      margin-top: 0.3vw;
-      font-size: 1vw;
+      margin-top: 0.1vw;
+      font-size: 0.8vw;
+      color: rgb(85, 82, 82);
     }
   }
 
@@ -402,7 +415,6 @@
     background-color: lightseagreen;
     padding: 0.4vw 0.7vw;
     border: 2px solid black;
-    border-radius: 5px;
 
     img {
       width: 1.3vw;
@@ -428,8 +440,9 @@
 
     p {
       margin: 0 0.2vw;
-      font-size: 1.3vw;
+      font-size: 1.1vw;
       font-weight: bold;
+      color: brown;
     }
   }
 }
