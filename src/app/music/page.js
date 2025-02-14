@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import MusicImages from "./images";
 import HoverItem from "../components/hover";
 import Compositions from "./compositions";
+import Socials from "../bio/socials";
 import "./styles.scss";
 
 export default function Music() {
@@ -261,6 +262,8 @@ export default function Music() {
       </div>
 
       <Compositions />
+
+      <Socials />
 
       <p id="backtotop" onClick={() => handleScroll()}>
         ↑ back to top ↑

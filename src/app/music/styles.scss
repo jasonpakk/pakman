@@ -189,7 +189,6 @@
   align-self: center;
   font-size: 2vw;
   transition: 0.5s ease;
-  margin-top: 5vw;
 
   &:hover {
     transition: 0.5s ease;
@@ -447,3 +446,8 @@
   }
 }
 
+#musicPage .socials {
+  align-self: flex-end;
+  margin-top: 4vw;
+
+}

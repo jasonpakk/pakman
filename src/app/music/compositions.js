@@ -3,7 +3,7 @@ import compositionsList from "./data";
 
 export default function Compositions() {
   const [selectedComposition, setSelectedComposition] = useState(
-    compositionsList["3 VIOLAS"][0] // Default selection
+    compositionsList["VIOLA, CELLO, PIANO"][0] // Default selection
   );
 
   return (
