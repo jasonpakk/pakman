@@ -6,6 +6,7 @@ const compositionsList = {
       composer: "paul schoenfield",
       samplePage: "/music/sample/cafe_music.png",
       instrumentation: "PIANO, VIOLA, CELLO",
+      watch: "https://youtu.be/l7KYLZUCKrU?si=Oh_sSDx7LNP81EX7",
     },
     {
       title: "piano trio, no. 1 (mvt. 1)",
@@ -23,6 +24,7 @@ const compositionsList = {
       composer: "edward elgar",
       samplePage: "/music/sample/salut.png",
       instrumentation: "PIANO, VIOLIN, VIOLA",
+      watch: "https://youtu.be/WErtrZCS0Bc?si=zgKnblkPe1JVTa3n",
     },
   ],
 
@@ -33,6 +35,7 @@ const compositionsList = {
       composer: "vince guaraldi",
       samplePage: "/music/sample/charlie_brown.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/XybM3Z3K3UU",
     },
     {
       title: "a christmas festival",
@@ -53,6 +56,7 @@ const compositionsList = {
       composer: "mariah carey",
       samplePage: "/music/sample/all_i_want.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/5MZHWT7rqN0",
     },
 
     {
@@ -62,6 +66,7 @@ const compositionsList = {
       composer: "the beatles",
       samplePage: "/music/sample/beatles_medley.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/UFvboLc9Jnk",
     },
 
     {
@@ -71,6 +76,7 @@ const compositionsList = {
         "the famous rock medley of god rest ye merry, gentlemen and carol of the bells",
       samplePage: "/music/sample/sarajevo.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/PtHVDago-84",
     },
 
     {
@@ -78,6 +84,7 @@ const compositionsList = {
       composer: "antonio vivaldi",
       samplePage: "/music/sample/concerto_2_cellos.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/-l95C78hfbA",
     },
     {
       title: "concerto for 2 violins in a minor",
@@ -102,12 +109,14 @@ const compositionsList = {
         "from pinocchio, cinderella, sleeping beauty, up, lion king, aladdin, and the little mermaid",
       samplePage: "/music/sample/disney_medley.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/rv8BJUqu9p4",
     },
     {
       title: "frosty the snowman",
       composer: "holiday tune",
       samplePage: "/music/sample/frosty.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/5IkmjajrA1s",
     },
 
     {
@@ -137,6 +146,7 @@ const compositionsList = {
       composer: "john williams",
       samplePage: "/music/sample/williams_medley.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/Rvx9zs5QlIs",
     },
     {
       title: "jupiter from the “planets”",
@@ -144,12 +154,14 @@ const compositionsList = {
       composer: "gustav holst",
       samplePage: "/music/sample/jupiter.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/3nuPqdroCn8",
     },
     {
       title: "let it snow!",
       composer: "holiday tune",
       samplePage: "/music/sample/let_it_snow.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/cix7TaYsD00",
     },
 
     {
@@ -158,6 +170,7 @@ const compositionsList = {
       composer: "astor piazzolla",
       samplePage: "/music/sample/libertango.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/OKpxF48Czgc",
     },
     {
       title: "moonlight serenade",
@@ -165,6 +178,7 @@ const compositionsList = {
       composer: "glenn miller",
       samplePage: "/music/sample/moonlight_serenade.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/n7yur3JVqKc",
     },
     {
       title: "o christmas tree",
@@ -185,6 +199,7 @@ const compositionsList = {
       composer: "antonio vivaldi",
       samplePage: "/music/sample/presto_summer.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/ZZYwkgddLjk",
     },
     {
       title: "rondo from “american”",
@@ -198,12 +213,14 @@ const compositionsList = {
       composer: "holiday tune",
       samplePage: "/music/sample/rudolph.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/VmhDc9_9Bdc",
     },
     {
       title: "santa claus is coming to town",
       composer: "holiday tune",
       samplePage: "/music/sample/santa_claus.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/X0t9sSE288s",
     },
     {
       title: "silent night",
@@ -217,6 +234,7 @@ const compositionsList = {
       composer: "leroy anderson",
       samplePage: "/music/sample/sleigh_ride.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/g__ctUwCBt8",
     },
 
     {
@@ -232,6 +250,7 @@ const compositionsList = {
       composer: "y. dobon",
       samplePage: "/music/sample/zowie3.png",
       instrumentation: "3 VIOLAS",
+      watch: "https://youtu.be/E1wcT70dbjI",
     },
   ],
 
@@ -278,6 +297,7 @@ const compositionsList = {
       composer: "su jin kim",
       samplePage: "/music/sample/b_rossette.png",
       instrumentation: "2 VIOLINS, VIOLA, CELLO, PIANO",
+      watch: "https://youtu.be/qP1NytR8urI?si=_S_dyOGDNPBqqVWj",
     },
   ],
 

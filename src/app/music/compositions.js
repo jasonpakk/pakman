@@ -80,10 +80,32 @@ export default function Compositions() {
             <p>sample page</p>
           </div>
 
-          <div id="listen">
-            <img src="/icons/play.png" alt="music" />
-            <p>listen</p>
-          </div>
+          {selectedComposition.watch && (
+            <a
+              href={selectedComposition.watch}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="watch video"
+              className="listen available"
+            >
+              <img src="/icons/play.png" alt="music" />
+              <p>watch</p>
+            </a>
+          )}
+
+          {selectedComposition.listen && (
+            <div className="listen available">
+              <img src="/icons/play.png" alt="music" />
+              <p>listen</p>
+            </div>
+          )}
+
+          {!selectedComposition.watch && !selectedComposition.listen && (
+            <div className="listen">
+              <img src="/icons/play.png" alt="music" />
+              <p>coming soon</p>
+            </div>
+          )}
 
           <div id="instrumentation">
             <img src="/bio/viola.png" alt="instrumentation" />
