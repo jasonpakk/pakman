@@ -6,6 +6,7 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  font-size: 1vmin;
 
   .gameFrame {
   background-color: black;
@@ -14,9 +15,9 @@
   justify-content: flex-start;
   width: 70%;
   height: 90%;
-  border: white 2px solid;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border: white 0.4em solid;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
 
   .top { // yellow shell
     background-color: #FCCF00;
@@ -24,9 +25,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: white 2px solid;
-    border-top-left-radius: 0.6rem;
-    border-top-right-radius: 0.6rem;
+    border-bottom: white 0.4em solid;
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
 
     img { // logo
       width: 38vh;
@@ -37,41 +38,40 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 86%;
 
     .panel {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 25%;
+      width: 23%;
       height: 100%;
       padding: 0 2vw;
 
       #pacmanText {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         
         img {
-          width: 20%;
-          margin-right: 1vw;
+          width: 2.5em;
+          margin-right: 1.5em;
         }
 
         p {
           width: 70%;
-          font-size: 1.5vw;
           font-weight: bold;
           text-align: left;
         }
       }
 
       .arrows {
-        width: 5vw;
-        margin: 0.5vw 0;
+        width: 7em;
+        margin: 1em 0;
       }
 
        #panelHeader {
-          font-size: 1.4vw;
           font-weight: bold;
           text-align: left;
       }
@@ -81,7 +81,7 @@
         justify-content: flex-start;
         align-items: center;
         width: 90%;
-        margin: 0.5vw 0;
+        margin: 1em 0;
         background-color: transparent;
         color: white;
         border: none;
@@ -116,20 +116,23 @@
 
         img {
           transition: 0.7s ease;
-          width: 15%;
-          margin-right: 1vw;
+          width: 1.5vw;
+          margin-right: 0.7em;
         }
 
         p {
+          width: 80%;
+          text-align: left;
           transition: 0.7s ease;
-          font-size: 1.2vw;
+          font-size: 1.3vw;
+          
         }
       }
 
       #footer {
         font-style: italic;
-        font-size: 0.8vw;
-        margin-top: 0.5vw;
+        font-size: 1.5em;
+        margin-top: 0.3em;
       }
     }
   }
@@ -137,14 +140,14 @@
 
 .bottom {
     background-color: #4C4B53;
-    width: 80vw;
+    width: 85vw;
     height: 7%;
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    border: black 4px solid;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border: black 0.5em solid;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
 
     button {
         position: relative;
@@ -153,10 +156,10 @@
 
         p { // linkedin
           position: absolute;
-          font-size: 4vh;
+          font-size: 2.5vw;
           color: white;
           font-weight: bold;
-          top: 35%;
+          top: 37%;
           left: 50%;
           transform: translate(-50%, -50%);
         }
@@ -168,19 +171,19 @@
           cursor: pointer;
 
           p {
-            transition: 0.7s ease;
+            transition: color 0.7s ease;
             color: black;
           }
         }
       
       img {
-        width: 15vh;
+        width: 9vw;
       }
       
       p {
-        font-size: 2.4vh;
+        font-size: 1.4vw;
         top: 30%;
-        transition: 0.7s ease;
+        transition: color 0.7s ease;
       }
     }
 
@@ -188,14 +191,14 @@
       display: flex;
       align-items: flex-end;
       justify-content: space-evenly;
-      width: 40%;
+      min-width: 40%;
     }
 
     #joystick {
-      width: 7vh;
+      width: 3.5vw;
       z-index: 1;
-      margin-right: 1rem;
-      margin-bottom: 0.4rem;
+      margin-right: 0.5vw;
+      margin-bottom: 0.4vw;
     }
 
     .buttons { // socials
@@ -227,8 +230,8 @@
 
       .buttonImage {
         position: relative;
-        width: 9vh;
-        margin: 0rem 0.5rem;
+        width: 5vw;
+        margin: 0 0.7vw;
       }
 
       .buttonIcon {
@@ -236,7 +239,7 @@
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 3.5vh;
+        width: 2vw;
         transition: filter 0.7s ease;
       }
     }
@@ -259,16 +262,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.5rem;
   text-align: center;
   z-index: 1;
   margin: 0;
-  min-width: 30vw;
-  max-width: 90vw;
+  min-width: 35vw;
+  max-width: 95vw;
   
   p {
     background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
     color: white;
-    padding: 1rem 2rem;
+    padding: 1em 2em;
+    font-size: 1.5vw;
   }
 }

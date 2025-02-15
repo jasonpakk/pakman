@@ -22,13 +22,15 @@ export default function Bio() {
       </div>
 
       <div id="bioContent">
-        <img id="avatar" src="/avatar/avatar.gif" alt="avatar" />
+        <div className="avatarContainer">
+          <img id="avatar" src="/avatar/avatar.gif" alt="avatar" />
 
-        <Socials />
+          <Socials />
 
-        <div className="speechBubble">
-          <img className="speechImage" src="/icons/speech.png" alt="speech" />
-          <p className="speechText">HI, I'M JASON.</p>
+          <div className="speechBubble">
+            <img className="speechImage" src="/icons/speech.png" alt="speech" />
+            <p className="speechText">HI, I'M JASON.</p>
+          </div>
         </div>
 
         <div id="currently" className="browser">

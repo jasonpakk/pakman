@@ -1,26 +1,29 @@
 #musicPage {
-    #avatarHeader {
-      width: 90%;
-      align-self: center;
-      margin-top: 5vw;
+  #avatarHeader {
+    width: 90%;
+    align-self: center;
+    margin-top: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vw;
+    padding: 0 2vw;
+
+    .text {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 30vw;
-      padding: 0 2vw;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 60%;
+      height: 100%;
 
-      .text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+      p {
         font-size: 1.8vw;
-        width: 60%;
-        height: 100%;
       }
+    }
 
-      img {
-        height: 100%;
-      }
+    img {
+      height: 100%;
+    }
   }
 
   .divider {
@@ -118,7 +121,7 @@
 
 #thesisMedia {
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   width: 57%;
 
@@ -137,7 +140,7 @@
     
     img {
       transition: 0.7s ease;
-      width: 12vw;
+      width: 10.5vw;
       border: 2px solid white;
     }
 
@@ -145,20 +148,20 @@
       position: absolute;
       width: 85%;
       text-align: center;
-      font-size: 2vw;
+      font-size: 1.5vw;
       font-weight: bold;
       color: goldenrod;
     }
 
     #title {
-      top: 9%;
+      top: 7%;
       left: 50%;
       transform: translate(-50%, 0);
     }
 
     #description {
       bottom: 8%;
-      font-size: 0.7vw;
+      font-size: 0.6vw;
     }
   }
 }

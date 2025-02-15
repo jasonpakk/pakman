@@ -67,7 +67,9 @@ class Game extends Component {
 
   calculateGridSize() {
     if (typeof window === "undefined") return;
-    return Math.floor(Math.min(window.innerWidth, window.innerHeight) / 43);
+    if (window.innerWidth / window.innerHeight >= 2)
+      return Math.floor(window.innerHeight * 0.023);
+    return Math.floor(window.innerWidth * 0.013);
   }
 
   handleResize = () => {

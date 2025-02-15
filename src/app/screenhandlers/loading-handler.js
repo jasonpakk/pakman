@@ -36,7 +36,14 @@ const LoadingHandler = ({ children }) => {
     return () => clearTimeout(timer);
   }, [pathname]); // Run effect on URL change
 
-  if (width / height < 1.3) {
+  if (width / height >= 2.7) {
+    return (
+      <div className="mobile-warning">
+        <h2>Sorry, please increase the HEIGHT of your screen size.</h2>
+      </div>
+    );
+  }
+  if (width / height <= 1.2) {
     return (
       <div className="mobile-warning">
         <h2>Sorry, please increase the WIDTH of your screen size.</h2>
