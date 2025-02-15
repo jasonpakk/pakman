@@ -1,5 +1,6 @@
 import { useState } from "react";
 import compositionsList from "./data";
+import SoundCloudPlayer from "./soundcloud";
 
 export default function Compositions() {
   const [selectedComposition, setSelectedComposition] = useState(
@@ -62,7 +63,6 @@ export default function Compositions() {
         <div id="preview">
           <img id="note1" className="note" src="/icons/note.png" alt="music" />
           <img id="note2" className="note" src="/icons/note.png" alt="music" />
-
           <div className="text">
             <h3>{selectedComposition.title}</h3>
             <p className="subtext">{selectedComposition.subtext}</p>
@@ -71,7 +71,6 @@ export default function Compositions() {
               <p>{selectedComposition.composer}</p>
             </div>
           </div>
-
           <div
             id="samplePage"
             onClick={() => openModal(selectedComposition.samplePage)}
@@ -94,10 +93,7 @@ export default function Compositions() {
           )}
 
           {selectedComposition.listen && (
-            <div className="listen available">
-              <img src="/icons/play.png" alt="music" />
-              <p>listen</p>
-            </div>
+            <SoundCloudPlayer trackUrl={selectedComposition.listen} />
           )}
 
           {!selectedComposition.watch && !selectedComposition.listen && (
@@ -106,7 +102,6 @@ export default function Compositions() {
               <p>coming soon</p>
             </div>
           )}
-
           <div id="instrumentation">
             <img src="/bio/viola.png" alt="instrumentation" />
             <p style={{ fontWeight: "100" }}>for</p>
