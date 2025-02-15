@@ -147,7 +147,6 @@ export default class Monster extends Component {
     this.state = {
       eatingFlash: 0,
       timerFlash: this.getTimerFlash(),
-      redirected: false,
     };
   }
 

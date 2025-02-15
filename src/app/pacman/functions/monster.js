@@ -172,7 +172,7 @@ function getNavigatedMonsterVector(
     if (monster.eatingTime) {
       // monster got eaten
 
-      return { dead: true };
+      return { dead: true, ateMonster: true };
       //return { deadTime: constants.MONSTER_DEAD_TIME };
     }
 
@@ -242,7 +242,11 @@ function getNewMonsterVector(monster, player, time) {
 }
 
 function animateMonster(state, time, player, monster, index) {
-  const { lost, ...monsterVector } = getNewMonsterVector(monster, player, time);
+  const { lost, ateMonster, ...monsterVector } = getNewMonsterVector(
+    monster,
+    player,
+    time
+  );
 
   const newMonsters = state.monsters.slice();
 
@@ -253,6 +257,10 @@ function animateMonster(state, time, player, monster, index) {
 
   if (lost) {
     return { ...state, lost: true };
+  }
+
+  if (ateMonster) {
+    return { ...state, ateMonster: true, monsters: newMonsters };
   }
 
   return { ...state, monsters: newMonsters };

@@ -97,7 +97,7 @@ class Game extends Component {
   }
 
   step() {
-    if (!this.state.playing) return;
+    if (!this.state.playing || this.state.ateMonster) return;
 
     const result = animate(this.state);
     this.setState(result);
@@ -106,7 +106,7 @@ class Game extends Component {
   }
 
   changeDirection(direction) {
-    if (!this.state.playing) return;
+    if (!this.state.playing || this.state.ateMonster) return;
     this.setState(changeDirection(this.state, { direction }));
   }
 
