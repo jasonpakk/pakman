@@ -5,7 +5,7 @@
   #avatar {
     position: relative;
     width: 15vw;
-    margin: 3em;
+    margin: 3vw;
   }
 }
 
@@ -148,6 +148,7 @@
 }
 
 #bioObjects {
+
   img {
     position: absolute;
     width: 2vw;
@@ -320,5 +321,226 @@
         color: black;
       }
     }
+  }
+}
+
+@media (max-aspect-ratio: 1.2) {
+
+  #bioPage {
+    min-height: fit-content;
+    margin-bottom: 10vw;
+
+    #bioContent {
+      margin-top: 20vw;
+    }
+
+    #avatar {
+      width: 30vw;
+    }
+
+    .speechBubble {
+      top: -3%;
+      left: 43%;
+      .speechImage {
+        width: 45vw;
+      }
+
+      .speechText {
+        width: 44vw;
+        font-size: 5vw;
+      }
+    }
+
+    #currently {
+      top: 15%;
+      width: 40vw;
+      height: 23vw;
+      left: 45%;
+    }
+
+    #prev {
+      top: 47%;
+      left: 57%;
+      height: 32vw;
+      width: 35vw;
+    }
+
+    #more {
+      top: 140%;
+      left: 15%;
+      width: 30vw;
+      height: 30vw;
+    }
+
+    #fun {
+      top: 170%;
+      left: 40%;
+      width: 38vw;
+      height: 20vw;
+    }
+    
+    .browser {
+      .header {
+        height: 3.5vw;
+
+        p {
+          font-size: 2.5vw;
+        }
+
+        .title {
+          padding: 0 1.5vw;
+        }
+      }
+
+      .content {
+        padding: 2vw;
+        .entry {
+          p {
+            font-size: 2.5vw;
+          }
+
+          img {
+            width: 2.5vw;
+            margin-right: 1.5vw;
+            margin-left: 0vw;
+          }
+        }
+      }
+    }
+
+    #bioObjects {
+
+      .hoverText {
+        top: 180%;
+        left: 43%;
+        width: 33vw;
+        height: 10vw;
+        
+        p {
+          font-size: 2.5vw;
+        }
+      }
+
+      #badminton {
+        top: 158%;
+        left: 94%;
+        width: 5vw;
+      }
+
+      #catan {
+        top: 150%;
+        left: -3%;
+        width: 11vw;
+      }
+
+      #dartmouth {
+        top: 180%;
+        left: 25%;
+        width: 9vw;
+      }
+
+      #egg {
+        top: 125%;
+        left: 67%;
+        width: 8vw;
+      }
+
+      #headphones {
+        top: 175%;
+        left: 5%;
+        width: 11vw;
+      }
+
+      #korea {
+        top: 125%;
+        left: 44%;
+        width: 7vw;
+      }
+
+      #matcha {
+        top: 175%;
+        left: 90%;
+        width: 8vw;
+      }
+
+      #paddle {
+        top: 145%;
+        left: 77%;
+        width: 7vw;
+      }
+
+      #piano {
+        top: 125%;
+        left: 88%;
+        width: 9vw;
+      }
+
+      #pickleball {
+        top: 150%;
+        left: 88%;
+        width: 3vw;
+      }
+
+      #plane {
+        top: 120%;
+        left: 25%;
+        width: 9vw;
+      }
+
+      #ramen {
+        top: 138%;
+        left: 55%;
+        width: 10vw;
+      }
+
+      #salmon {
+        top: 124%;
+        left: 10%;
+        width: 6vw;
+      }
+
+      #shrimp {
+        top: 131%;
+        left: 7%;
+        width: 6vw;
+      }
+
+      #switch {
+        top: 155%;
+        left: 57%;
+        width: 12vw;
+      }
+
+      #tuna {
+        top: 125%;
+        left: 0%;
+        width: 6vw;
+      }
+
+      #viola {
+        top: 190%;
+        left: 80%;
+        width: 6vw;
+      }
+    }
+
+    .socials {
+      width: 33vw;
+      margin-top: 2vw;
+
+      a {
+        width: 6vw;
+        height: 6vw;
+
+        img {
+          width: 3vw;
+        }
+
+        p {
+          font-size: 4vw;
+        }
+      }
+    }
+
   }
 }
