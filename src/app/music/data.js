@@ -46,6 +46,8 @@ const compositionsList = {
       composer: "leroy anderson",
       samplePage: "/music/sample/christmas_festival.png",
       instrumentation: "3 VIOLAS",
+      listen:
+        "https%3A//api.soundcloud.com/tracks/2035635104%3Fsecret_token%3Ds-ycwmo99oMGk",
     },
     {
       title: "ah! vous dirai-je, maman!",
@@ -53,6 +55,8 @@ const compositionsList = {
       composer: "charles dancla",
       samplePage: "/music/sample/maman3.png",
       instrumentation: "3 VIOLAS",
+      listen:
+        "https%3A//api.soundcloud.com/tracks/2035638016%3Fsecret_token%3Ds-SCZQLEXsF42",
     },
     {
       title: "all i want for christmas is you",
@@ -91,7 +95,7 @@ const compositionsList = {
       samplePage: "/music/sample/concerto_2_cellos.png",
       instrumentation: "3 VIOLAS",
       listen:
-        "https%3A//api.soundcloud.com/tracks/2034845720%3Fsecret_token%3Ds-7iKQpUlCRpb&color=%23046f4b",
+        "https%3A//api.soundcloud.com/tracks/2034845720%3Fsecret_token%3Ds-7iKQpUlCRpb",
     },
     {
       title: "concerto for 2 violins in a minor",
@@ -99,6 +103,8 @@ const compositionsList = {
       composer: "antonio vivaldi",
       samplePage: "/music/sample/concerto_2_violins.png",
       instrumentation: "3 VIOLAS",
+      listen:
+        "https%3A//api.soundcloud.com/tracks/2035642200%3Fsecret_token%3Ds-ICA6KGmqXiF",
     },
 
     {
@@ -108,6 +114,8 @@ const compositionsList = {
       composer: "traditional",
       samplePage: "/music/sample/danny3.png",
       instrumentation: "3 VIOLAS",
+      listen:
+        "https%3A//api.soundcloud.com/tracks/2035636040%3Fsecret_token%3Ds-NE8AaAVJfLN",
     },
     {
       title: "disney medley",
@@ -147,6 +155,8 @@ const compositionsList = {
       composer: "holiday tune",
       samplePage: "/music/sample/most_wonderful.png",
       instrumentation: "3 VIOLAS",
+      listen:
+        "https://api.soundcloud.com/tracks/2035643360%3Fsecret_token%3Ds-0Y9SBpMIdEZ",
     },
     {
       title: "john williams medley",
@@ -244,6 +254,8 @@ const compositionsList = {
       composer: "holiday tune",
       samplePage: "/music/sample/silent_night.png",
       instrumentation: "3 VIOLAS",
+      listen:
+        "https%3A//api.soundcloud.com/tracks/2035639220%3Fsecret_token%3Ds-5z7wNfJbn2U",
     },
     {
       title: "sleigh ride",
