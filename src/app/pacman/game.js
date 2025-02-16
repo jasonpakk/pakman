@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { EAST, NORTH, WEST, SOUTH } from "./constants";
 import getInitialState from "./gameplay/state";
 import { animate, changeDirection } from "./functions";
+import { isMobile } from "react-device-detect";
 
 import Board from "./gameplay/board";
 import Monster from "./gameplay/monster";
@@ -96,6 +97,12 @@ class Game extends Component {
     this.setState(changeDirection(this.state, { direction }));
   }
 
+  triggerStart() {
+    if (!this.state.playing && this.state.countdown === null) {
+      this.startCountdown();
+    }
+  }
+
   restart = () => {
     clearTimeout(this.timers.animate);
     clearTimeout(this.timers.countdown);
@@ -110,7 +117,11 @@ class Game extends Component {
       <div className="gameContainer">
         <div className="info">
           {!this.state.playing && this.state.countdown === null && (
-            <p>Press any key to start!</p>
+            <p>
+              {!isMobile
+                ? "Press any key to start!"
+                : "Swipe in any direction to start!"}
+            </p>
           )}
           {this.state.countdown !== null && (
             <p>Starting in {this.state.countdown}...</p>

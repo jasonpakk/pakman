@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Game from "./game";
+import { useSwipeable } from "react-swipeable";
+import { isMobile } from "react-device-detect";
 import { useRouter } from "next/navigation";
 import "./style.scss";
 
@@ -38,20 +40,39 @@ export default function Pacman(props) {
       setMobileView(mobileView);
     };
 
-    // Set initial grid size on mount
     handleResize();
-
-    // Add event listener for resizing
     window.addEventListener("resize", handleResize);
-
-    // Cleanup on unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
+  const swipeHandlers = useSwipeable({
+    onSwiped: (eventData) => {
+      gameRef.current?.triggerStart();
+
+      const { dir } = eventData;
+      switch (dir) {
+        case "Right":
+          gameRef.current?.changeDirection(0);
+          break;
+        case "Up":
+          gameRef.current?.changeDirection(1);
+          break;
+        case "Left":
+          gameRef.current?.changeDirection(2);
+          break;
+        case "Down":
+          gameRef.current?.changeDirection(3);
+          break;
+        default:
+          break;
+      }
+    },
+  });
+
   return (
-    <div className="gamePage">
+    <div className="gamePage" {...swipeHandlers}>
       <div className="gameFrame">
         <div className="top">
           <img src="/pakman.png" alt="pacman" />
@@ -145,6 +166,14 @@ export default function Pacman(props) {
                 Don't want to play?
                 <br /> Feel free to just click the ghosts above to navigate.
               </p>
+            </div>
+          ) : isMobile ? (
+            <div className="panel">
+              <div id="pacmanText">
+                <img src="/pacman/pacman.png" alt="pacman" />
+                <p>Move me by swiping...</p>
+              </div>
+              <img className="swipe" src="/icons/swipe.png" alt="swipe" />
             </div>
           ) : (
             <div className="panel">
