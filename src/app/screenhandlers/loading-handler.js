@@ -43,13 +43,6 @@ const LoadingHandler = ({ children }) => {
       </div>
     );
   }
-  if (width / height <= 1.2) {
-    return (
-      <div className="mobile-warning">
-        <h2>Sorry, please increase the WIDTH of your screen size.</h2>
-      </div>
-    );
-  }
 
   return showLoadingScreen ? <Loading pathname={pathname} /> : rendered;
 };

@@ -1,6 +1,6 @@
 .homeTitle {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   position: fixed;
@@ -11,17 +11,17 @@
   font-size: 1.5vmin;
 
   img {
-    width: 100%;
+    width: 90vmin;
   }
 
   button {
-    width: 5em;
-    padding: 0.2em 1em;
+    padding: 1vmin 5vmin;
     background-color: #1f61d5;
-    box-shadow: 5px 1px 1px 1px rgba(0, 0, 255, .9);
+    box-shadow: 1vmin 1vmin 0 rgba(0, 0, 255, .5);
     color: white;
-    font-size: 3em;
+    font-size: 4vmin;
     border: none;
+    margin-top: 15vmin;
     
     &:hover {
       background-color: blue;

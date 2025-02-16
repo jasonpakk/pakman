@@ -19,7 +19,6 @@ class Game extends Component {
       ...getInitialState(),
       playing: false,
       countdown: null,
-      gridSize: this.calculateGridSize(),
     };
 
     this.onKey = (evt) => {
@@ -54,29 +53,14 @@ class Game extends Component {
   componentDidMount() {
     if (typeof window === "undefined") return;
     window.addEventListener("keydown", this.onKey);
-    window.addEventListener("resize", this.handleResize);
   }
 
   componentWillUnmount() {
     if (typeof window === "undefined") return;
     window.removeEventListener("keydown", this.onKey);
-    window.addEventListener("resize", this.handleResize);
     clearTimeout(this.timers.animate);
     clearTimeout(this.timers.countdown);
   }
-
-  calculateGridSize() {
-    if (typeof window === "undefined") return;
-    if (window.innerWidth / window.innerHeight >= 2)
-      return Math.floor(window.innerHeight * 0.023);
-    return Math.floor(window.innerWidth * 0.013);
-  }
-
-  handleResize = () => {
-    this.setState({
-      gridSize: this.calculateGridSize(),
-    });
-  };
 
   startCountdown() {
     let count = 3;
