@@ -286,7 +286,7 @@ export default function Botthoven() {
       <div className="projectDetailRow">
         <div
           className="photo"
-          onClick={() => openModal("/projects/botthoven/10.png", "all done :0")}
+          onClick={() => openModal("/projects/botthoven/5.png", "all done :0")}
         >
           <img
             className="wide"
