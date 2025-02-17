@@ -27,6 +27,7 @@ export default function Experience() {
 
       <div id="experienceContent">
         <WorkExperience setBrowserContent={setBrowserContent} />
+
         <SkillsLibrary />
         <p id="clickme">click on an experience to learn more!</p>
         <img id="desk" src="/experience/desk.gif" alt="desk" />

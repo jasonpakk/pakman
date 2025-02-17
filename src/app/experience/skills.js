@@ -2,9 +2,22 @@ import HoverItem from "../components/hover";
 import { isMobile } from "react-device-detect";
 
 export default function SkillsLibrary() {
+  const handleScroll = () => {
+    const timeout = setTimeout(() => {
+      window.scrollTo({
+        top: document.body.scrollHeight - window.innerHeight,
+        behavior: "smooth",
+      });
+    }, 200);
+    return () => clearTimeout(timeout);
+  };
+
   return (
     <div id="cabinetContainer">
       <p id="hoverme">try {isMobile ? "tapping" : "hovering"} :]</p>
+      <p id="exploreText" onClick={() => handleScroll()}>
+        ↓ explore my library of skills ↓
+      </p>
       <img id="cabinet" src="/experience/cabinet.png" alt="cabinet" />
       <div id="cabinetTop">
         <img src="/experience/library.png" alt="library" />
