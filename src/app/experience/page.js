@@ -38,6 +38,8 @@ export default function Experience() {
         browserContent={browserContent}
         setBrowserContent={setBrowserContent}
       />
+
+      <div id="spacing"></div>
     </div>
   );
 }

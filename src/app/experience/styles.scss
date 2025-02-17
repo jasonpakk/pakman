@@ -346,3 +346,225 @@
   }
 
 }
+
+@media (max-aspect-ratio: 1.2) {
+  #experiencePage {
+    height: fit-content;
+
+    #clickme {
+      font-size: 1.6vw;
+      width: 17vw;
+      top: 61.5%;
+      left: 61.5%;
+    }
+
+    #experienceContent {
+      height: 115vw;
+
+      #desk {
+        top: 58%;
+        left: 50%;
+        width: 90vw;
+      }
+
+      #backAvatar {
+        top: 68%;
+        left: 50%;
+        width: 20vw;
+      }
+
+      .shelfContainer {
+        .shelf {
+          width: 20vw;
+        }
+
+        p {
+          font-size: 2vw;
+        }
+      }
+
+      #capitalone {
+        top: 33%;
+        left: 3%;
+
+        .companyImage {
+          width: 25vw;
+        }
+      }
+
+      #mathworks {
+        top: 15%;
+        left: 14%;
+
+        .companyImage {
+          width: 18vw;
+        }
+      }
+
+      #dalilab {
+        top: 15%;
+        left: 55%;
+
+        .companyImage {
+          width: 26vw;
+        }
+      }
+
+      #vitalize {
+        top: 33%;
+        left: 75%;
+
+        .companyImage {
+          width: 18vw;
+        }
+      }
+
+      #cabinetContainer {
+        top: 155%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        #hoverme {
+          left: 70%;
+          font-size: 2.3vw;
+        }
+
+        #cabinet {
+          width: 65vw;
+        }
+
+        .hoverText {
+          bottom: -20%;
+
+          p {
+            font-size: 4vw;
+          }
+        }
+
+        #cabinetTop {
+          img {
+            width: 20vw;
+            margin: 0 3vw;
+          }
+
+          .hoverText {
+            bottom: 85%;
+            left: -10%;
+            text-align: left;
+
+            p {
+              font-size: 3.5vw;
+            }
+          }
+        }
+
+        #cabinetContent {
+          .cabinetRow {
+            img {
+              width: 9vw;
+              height: 9vw;
+            }
+          }
+        }
+      }
+
+      .socials {
+        top: 83%;
+        left: -4%;
+        width: 25vw;
+
+        a {
+          width: 5vw;
+          height: 5vw;
+          border: 0.5vw solid black;
+          box-shadow: 0.2vw 0.2vw 0 white;
+
+          img {
+            width: 2.25vw;
+          }
+
+          p {
+            font-size: 3vw;
+          }
+        }
+      }
+    } 
+    
+    .browser {
+      top: 50%;
+      width: 80vw;
+      height: 50vh;
+      border: 0.5vh solid white;
+
+      .header {
+        border-bottom: 0.5vh solid white;
+
+        .close {
+          font-size: 3vh;
+          padding: 0vh 1vh;
+          border-left: 0.5vh solid white;
+        }
+      }
+
+      .content {
+        padding: 2vh;
+      }
+
+      .contentHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        
+        .companyImage {
+          width: 35vw;
+          margin: 2vh 0;
+          height: auto;
+          align-self: center;
+        }
+
+        .companyInfo {
+          margin: 2vw 3vw;
+          margin-bottom: 5vw;
+          
+          img {
+            width: 2vw;
+            height: 3vw;
+            margin-right: 2vw;
+            margin-left: 1vw;
+          }
+
+          div {
+            p {
+              font-size: 2vw;
+            }
+          }
+        }
+      }
+
+      .experienceEntry {
+        font-size: 2vw;
+        margin: 2vw 1vw;
+
+        b {
+          font-size: 3.5vw;
+          padding-right: 1vw;
+        }
+
+        p {
+          font-size: 2vw;
+        }
+
+        ul {
+          margin: 2vw 5vw;
+
+          li {
+            margin: 2vw 0;
+          }
+        }
+      }
+    }
+
+    #spacing {
+      height: 120vw;
+    }
+  }
+}

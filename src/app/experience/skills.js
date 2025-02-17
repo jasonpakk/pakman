@@ -1,9 +1,10 @@
 import HoverItem from "../components/hover";
+import { isMobile } from "react-device-detect";
 
 export default function SkillsLibrary() {
   return (
     <div id="cabinetContainer">
-      <p id="hoverme">try hovering :]</p>
+      <p id="hoverme">try {isMobile ? "tapping" : "hovering"} :]</p>
       <img id="cabinet" src="/experience/cabinet.png" alt="cabinet" />
       <div id="cabinetTop">
         <img src="/experience/library.png" alt="library" />
