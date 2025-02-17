@@ -27,7 +27,7 @@ export default function Pacman(props) {
     const t = 1 - ratio;
 
     if (ratio > 1.2) {
-      return { gridSize: Math.floor(width * 0.015), mobileView: false };
+      return { gridSize: Math.floor(width * 0.014), mobileView: false };
     }
 
     return { gridSize: width * lerp(0.0155, 0.03, t), mobileView: ratio < 1.2 };
