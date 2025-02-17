@@ -146,6 +146,7 @@ button {
   text-align: center;
   background-color: lightblue;
   color: black;
+  z-index: 1001;
 
   &:hover {
     background-color: black;
@@ -183,6 +184,7 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+
   h2 {
     padding: 10rem 20rem;
     font-size: 10vmin;
@@ -220,5 +222,17 @@ button {
       }
 
     }
+  }
+
+  .modal {
+    .close {
+      font-size: 6vw;
+      padding: 0vw 1.5vw;
+    }
+  }
+
+  .modal-content p {
+    padding: 2vw 4vw;
+    font-size: 3vw;
   }
 }

@@ -218,3 +218,150 @@
     color: gold;
   }
 }
+
+@media (max-aspect-ratio: 1.2) {
+  .projectPage {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
+  .projectHeader {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 8vw;
+
+    img {
+      width: 40vw;
+      margin: 5vw 0;
+    }
+
+    .text {
+      align-items: center;
+      text-align: center;
+
+      h1 {
+        font-size: 8vw;
+      }
+
+      p {
+        font-style: italic;
+        font-size: 3vw;
+        margin: 2vw 0;
+      }
+
+      .entry {
+        margin: 1.5vw 0;
+        align-items: flex-start;
+        max-width: 80%;
+
+        img {
+          width: 3vw;
+          height: 3.5vw;
+          margin: 0;
+          margin-right: 2vw;
+          margin-left: 0;
+        }
+
+        p {
+          font-style: normal;
+          font-size: 2.5vw;
+          margin: 0;
+        }
+      }
+
+      .buttons {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2vw;
+
+        button {
+          border: 0.3vw solid white;
+          padding: 1.5vw 2vw;
+          font-size: 2vw;
+          margin: 1.5vw;
+        }
+      }
+    }
+  }
+
+  .projectDetailRow {
+    flex-direction: column;
+    margin: 0;
+
+    .photo, .video {
+      width: 70vw;
+      margin: 5vw 0;
+
+      p {
+        font-size: 3vw;
+        margin: 2vw 0;
+      }
+    }
+
+    .photo {
+      .wide {
+        width: 70vw;
+      }
+
+      .long {
+        width: 70vw;
+        max-height: 70vw;
+      }
+
+      img {
+        width: 70vw;
+        max-height: 70vw;
+      }
+    }
+
+    .video {
+      width: 70vw;
+      height: 70vw * .5625 + 13vw;
+    }
+
+    .text {
+      width: 100%;
+
+      .title {
+        margin-top: 10vw;
+
+        img {
+          width: 5vw;
+          margin-right: 2vw;
+        }
+
+        h2 {
+          font-size: 6vw;
+        }
+      }
+
+      p {
+        font-size: 3vw;
+      }
+
+      ul {
+        margin-left: 5vw;
+
+        strong {
+          font-size: 3vw;
+          padding-right: 0.5vw;
+        }
+
+        li {
+          font-size: 3vw;
+          margin: 2vw 0;
+
+          a {
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+  }
+
+  .projectPage .backtotop {
+    font-size: 4vw;
+    margin: 6vw 0;
+  }
+}
