@@ -328,7 +328,7 @@
 
   #bioPage {
     min-height: fit-content;
-    margin-bottom: 10vw;
+    height: fit-content;
 
     #bioContent {
       margin-top: 20vw;
@@ -378,7 +378,7 @@
       width: 38vw;
       height: 20vw;
     }
-    
+
     .browser {
       .header {
         height: 3.5vw;
@@ -406,6 +406,12 @@
           }
         }
       }
+    }
+
+    #interestsContainer {
+      background-color: yellow;
+      height: 100vh;
+      display: relative;
     }
 
     #bioObjects {
@@ -541,6 +547,9 @@
         }
       }
     }
-
+    
+    #spacing {
+      height: 71vw;
+    }
   }
 }

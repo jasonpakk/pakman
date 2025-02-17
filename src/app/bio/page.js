@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import BioObjects from "./bioobjects";
 import Socials from "./socials";
+import { isMobile } from "react-device-detect";
 import "./styles.scss";
 
 export default function Bio() {
@@ -78,7 +79,9 @@ export default function Bio() {
           </div>
           <div className="content">
             <div className="entry">
-              <p>hover over any item to learn more!</p>
+              <p>
+                {isMobile ? "tap on " : "hover over "} any item to learn more!
+              </p>
             </div>
           </div>
         </div>
@@ -93,6 +96,8 @@ export default function Bio() {
 
         <BioObjects />
       </div>
+
+      <div id="spacing" />
     </div>
   );
 }
