@@ -8,12 +8,14 @@ const LoadingHandler = ({ children }) => {
   const [showLoadingScreen, setShowLoadingScreen] = useState(false);
   const [rendered, setRendered] = useState(null);
 
-  const [width, setWidth] = useState(window ? window.innerWidth : 0);
-  const [height, setHeight] = useState(window ? window.innerHeight : 0);
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
 
   const pathname = usePathname();
 
   useEffect(() => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
     window.addEventListener("resize", () => {
       setWidth(window.innerWidth);
       setHeight(window.innerHeight);
