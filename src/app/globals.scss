@@ -52,8 +52,9 @@ button {
 
 .loading-screen {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100vw;
   height: 100vh;
   background: black;
@@ -62,8 +63,9 @@ button {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 5vmin;
   z-index: 9999;
+  text-align: center;
 }
 
 .page {
