@@ -1,6 +1,6 @@
 ## pak-man
 
-![Vercel Deploy](https://deploy-badge.vercel.app/vercel/pacman-wheat?style=for-the-badge)
+[![Vercel Deploy](https://deploy-badge.vercel.app/vercel/pacman-wheat?style=for-the-badge)](https://pacman-wheat.vercel.app/)
 
 Personal website (v2), themed around the game pacman.
 
