@@ -167,7 +167,6 @@ button {
     max-height: 85vh;
     display: block;
     margin: auto;
-    //border: 5px solid gray;
   }
 
   p {
@@ -231,6 +230,12 @@ button {
       font-size: 6vw;
       padding: 0vw 1.5vw;
     }
+  }
+
+  .modal-content img {
+    min-height: auto;
+    max-width: 85vw;
+    max-height: 85vh;
   }
 
   .modal-content p {

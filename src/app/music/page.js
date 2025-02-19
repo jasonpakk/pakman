@@ -70,7 +70,7 @@ export default function Music() {
       <img className="divider" src="/music/divider1.png" alt="divider" />
 
       <div className="musicRow">
-        <div className="text" style={{ width: "40%" }}>
+        <div id="thesisText" className="text" style={{ width: "40%" }}>
           <h2>THESIS</h2>
           <p>i double-majored in music & cs at dartmouth.</p>
           <p>
@@ -115,7 +115,7 @@ export default function Music() {
         </div>
       </div>
 
-      <div className="musicRow">
+      <div className="musicRow" id="abroadContainer">
         <div id="abroadImages" className="media">
           <div className="row">
             <HoverItem
@@ -251,7 +251,11 @@ export default function Music() {
 
       <img className="divider" src="/music/divider2.png" alt="divider" />
 
-      <div className="musicRow videoSamples" style={{ margin: "4vw 0" }}>
+      <div
+        id="compositionsContainer"
+        className="musicRow videoSamples"
+        style={{ margin: "4vw 0" }}
+      >
         <div className="video">
           <iframe
             width="100%"
