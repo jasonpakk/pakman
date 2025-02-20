@@ -1,10 +1,11 @@
 import "./globals.scss";
 import LoadingHandler from "./screenhandlers/loading-handler";
 import Script from "next/script";
+import TitleChanger from "./components/title";
 
 export const metadata = {
   title: "pakman",
-  description: "Jason Pak's personal website",
+  description: "Jason Pak's Developer Portfolio",
 };
 
 export default function RootLayout({ children }) {
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         strategy="lazyOnload"
       />
       <body>
+        <TitleChanger />
         <LoadingHandler children={children} />
       </body>
     </html>
