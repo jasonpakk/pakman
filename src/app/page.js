@@ -277,7 +277,7 @@ export default function ParticlesTest() {
           },
           random: false,
           size: false,
-          speed: 5,
+          speed: 3,
           spin: {
             acceleration: 0,
             enable: false,
@@ -301,7 +301,7 @@ export default function ParticlesTest() {
             mode: "delete",
             value: 0,
           },
-          value: 200,
+          value: 100,
         },
         opacity: {
           value: 1,
@@ -336,7 +336,7 @@ export default function ParticlesTest() {
           type: "circle",
         },
         size: {
-          value: 3,
+          value: 2.5,
           animation: {
             count: 0,
             enable: false,
@@ -500,94 +500,164 @@ export default function ParticlesTest() {
       zLayers: 100,
       key: "pacman",
       name: "Pacman",
-      emitters: {
-        autoPlay: true,
-        fill: true,
-        life: {
-          wait: false,
-        },
-        rate: {
-          quantity: 1,
-          delay: 7,
-        },
-        shape: {
-          options: {},
-          replace: {
-            color: false,
-            opacity: false,
+      emitters: [
+        {
+          autoPlay: true,
+          fill: true,
+          life: {
+            wait: false,
           },
-          type: "square",
-        },
-        startCount: 0,
-        size: {
-          mode: "percent",
-          height: 0,
-          width: 0,
-        },
-        particles: {
+          rate: {
+            quantity: 1,
+            delay: 5,
+          },
           shape: {
-            type: "images",
-            options: {
-              images: [
-                {
-                  src: "/pacman/pacman.png",
-                  width: 500,
-                  height: 500,
-                },
-                {
-                  src: "/pacman/pink.png",
-                  width: 500,
-                  height: 500,
-                },
-                {
-                  src: "/pacman/orange.png",
-                  width: 500,
-                  height: 500,
-                },
-                {
-                  src: "/pacman/blue.png",
-                  width: 500,
-                  height: 500,
-                },
-                {
-                  src: "/pacman/red.png",
-                  width: 500,
-                  height: 500,
-                },
-              ],
+            options: {},
+            replace: {
+              color: false,
+              opacity: false,
             },
+            type: "square",
           },
+          startCount: 0,
           size: {
-            value: 40,
+            mode: "percent",
+            height: 0,
+            width: 0,
           },
-          move: {
-            speed: 10,
-            outModes: {
-              default: "none",
-              right: "destroy",
+          particles: {
+            shape: {
+              type: "images",
+              options: {
+                images: [
+                  {
+                    src: "/pacman/pacman.png",
+                    width: 500,
+                    height: 500,
+                  },
+                  {
+                    src: "/pacman/pink.png",
+                    width: 500,
+                    height: 500,
+                  },
+                  {
+                    src: "/pacman/orange.png",
+                    width: 500,
+                    height: 500,
+                  },
+                ],
+              },
             },
-            straight: true,
-          },
-          zIndex: {
-            value: 0,
-          },
-          rotate: {
-            value: {
-              min: 0,
-              max: 360,
+            size: {
+              value: 40,
             },
-            animation: {
-              enable: true,
+            move: {
               speed: 10,
-              sync: true,
+              outModes: {
+                default: "none",
+                right: "destroy",
+              },
+              straight: true,
+            },
+            zIndex: {
+              value: 0,
+            },
+            rotate: {
+              value: {
+                min: 0,
+                max: 360,
+              },
+              animation: {
+                enable: true,
+                speed: 10,
+                sync: true,
+              },
             },
           },
+          position: {
+            x: -5,
+            y: 20,
+          },
         },
-        position: {
-          x: -5,
-          y: 55,
+        {
+          autoPlay: true,
+          fill: true,
+          life: {
+            wait: false,
+          },
+          rate: {
+            quantity: 1,
+            delay: 9,
+          },
+          shape: {
+            options: {},
+            replace: {
+              color: false,
+              opacity: false,
+            },
+            type: "square",
+          },
+          startCount: 0,
+          size: {
+            mode: "percent",
+            height: 0,
+            width: 0,
+          },
+          particles: {
+            shape: {
+              type: "images",
+              options: {
+                images: [
+                  {
+                    src: "/pacman/pacman.png",
+                    width: 500,
+                    height: 500,
+                  },
+                  {
+                    src: "/pacman/blue.png",
+                    width: 500,
+                    height: 500,
+                  },
+                  {
+                    src: "/pacman/red.png",
+                    width: 500,
+                    height: 500,
+                  },
+                ],
+              },
+            },
+            size: {
+              value: 40,
+            },
+            move: {
+              speed: 10,
+              outModes: {
+                default: "none",
+                right: "destroy",
+              },
+              straight: true,
+            },
+            zIndex: {
+              value: 0,
+            },
+            rotate: {
+              value: {
+                min: 0,
+                max: 360,
+              },
+              animation: {
+                enable: true,
+                speed: 10,
+                sync: true,
+              },
+            },
+          },
+          position: {
+            x: -5,
+            y: 75,
+          },
         },
-      },
+      ],
       motion: {
         disable: false,
         reduce: {
