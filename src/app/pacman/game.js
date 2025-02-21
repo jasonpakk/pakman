@@ -64,8 +64,10 @@ class Game extends Component {
   }
 
   startCountdown() {
-    let count = 3;
+    let count = 4;
     this.setState({ countdown: count });
+
+    this.playSound("/sound/start.wav");
 
     this.timers.countdown = setInterval(() => {
       count -= 1;
@@ -109,6 +111,11 @@ class Game extends Component {
     this.setState({ playing: false, countdown: null, ...getInitialState() });
   };
 
+  playSound = (sound) => {
+    const audio = new Audio(sound);
+    audio.play();
+  };
+
   render() {
     const { onEnd, ...otherProps } = this.props;
     const props = { gridSize: this.state.gridSize, ...otherProps };
@@ -124,7 +131,11 @@ class Game extends Component {
             </p>
           )}
           {this.state.countdown !== null && (
-            <p>Starting in {this.state.countdown}...</p>
+            <p>
+              {this.state.countdown > 3
+                ? `Ready?`
+                : `Starting in ${this.state.countdown}...`}
+            </p>
           )}
           {this.state.lost && <p>Game Over!</p>}
         </div>

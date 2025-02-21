@@ -6,7 +6,7 @@ import {
   getNewPosition,
   snapToTrack,
 } from "./movement";
-import { useRouter } from "next/router";
+import { playSound, stopSound } from "./helpers";
 
 function getAvailableVectors({
   newPosition,
@@ -171,7 +171,7 @@ function getNavigatedMonsterVector(
   if (distanceFromPlayer < constants.PLAYER_RADIUS * 1.8) {
     if (monster.eatingTime) {
       // monster got eaten
-
+      playSound("/sound/eat_ghost.wav");
       return { dead: true, ateMonster: true };
       //return { deadTime: constants.MONSTER_DEAD_TIME };
     }
@@ -202,6 +202,11 @@ function getNewMonsterVector(monster, player, time) {
     };
   }
   */
+
+  // if previously eating time, but now no longer:
+  if (monster.eatingTime && monster.eatingTime <= time) {
+    stopSound("/sound/fright.wav");
+  }
 
   const eatingTime = Math.max(0, monster.eatingTime - time);
 

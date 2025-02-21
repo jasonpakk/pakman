@@ -1,4 +1,6 @@
 import { PLAYER_SPEED, EATING_TIME_SECONDS } from "../constants";
+import { playSound } from "./helpers";
+
 import { getNewPosition, getChangedVector, orderPolarity } from "./movement";
 
 function getEatenFood(food, player, newPosition) {
@@ -54,6 +56,10 @@ function eatMonsters(state) {
   };
 }
 
+let play1 = true;
+const foodSound1 = new Audio("/sound/food1.wav");
+const foodSound2 = new Audio("/sound/food2.wav");
+
 export function animatePlayer(state, time) {
   const newVector = getNewPlayerVector(state.player, time);
   const eatenFoodIndex = getEatenFood(
@@ -63,6 +69,9 @@ export function animatePlayer(state, time) {
   );
   const food = state.food.slice();
   if (eatenFoodIndex > -1) {
+    play1 ? foodSound1.play() : foodSound2.play();
+    play1 = !play1;
+
     food[eatenFoodIndex].eaten = true;
   }
 
@@ -78,6 +87,7 @@ export function animatePlayer(state, time) {
   };
 
   if (eating) {
+    playSound("/sound/fright.wav", true);
     return eatMonsters(nextState);
   }
 

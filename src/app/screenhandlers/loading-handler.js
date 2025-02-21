@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Loading from "./pacman-loading";
 
