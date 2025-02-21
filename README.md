@@ -1,8 +1,14 @@
-## pak-man
+## pakman (Personal Website v2)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cdf29c66-7c82-4180-ab82-f2a58a4a3d4e/deploy-status)](https://app.netlify.com/sites/pak-man/deploys)
 
 [![Vercel Deploy](https://deploy-badge.vercel.app/vercel/pacman-wheat?style=for-the-badge)](https://pacman-wheat.vercel.app/)
 
 Personal website (v2), themed around the game pacman.
+
+Deployed at [https://jasonpak.me/](https://jasonpak.me/)
+
+
+## Local Development
 
 To run locally,
 ```bash
