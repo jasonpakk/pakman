@@ -66,6 +66,18 @@ button {
   font-size: 5vmin;
   z-index: 9999;
   text-align: center;
+
+  img {
+    width: 30vmax;
+    height: 15vmax;
+    margin-bottom: 1vmax;
+    object-fit: cover;
+  }
+
+  h2 {
+    margin: 0 10vw;
+    font-size: 5vmin;
+  }
 }
 
 .page {

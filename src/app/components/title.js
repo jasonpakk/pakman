@@ -12,7 +12,7 @@ export default function TitleChanger() {
       setTitleString((prev) => {
         return prev.substring(1) + prev.charAt(0);
       });
-    }, 150);
+    }, 100);
 
     return () => clearInterval(interval);
   }, []);
